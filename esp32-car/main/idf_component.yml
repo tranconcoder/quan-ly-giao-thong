@@ -1,0 +1,8 @@
+## IDF Component Manager Manifest File
+dependencies:
+  # bluetooth-setup:
+  #   path: './components/bluetooth-setup'
+  l2cap-server:
+    path: './components/l2cap-server'
+  idf:
+    version: '>=4.1.0'

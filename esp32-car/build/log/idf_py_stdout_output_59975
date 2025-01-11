@@ -1,0 +1,297 @@
+�������06c9ch �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:6276
+load:0x40078000,len:15724
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 10 2025 11:50:12[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=342bch (213692) map[0m
+[0;32mI (149) esp_image: segment 1: paddr=000442e4 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=00044308 vaddr=3ffbdb60 size=0506ch ( 20588) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=0004937c vaddr=40080000 size=06c9ch ( 27804) load[0m
+[0;32mI (169) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=d570ch (874252) map[0m
+[0;32mI (416) esp_image: segment 5: paddr=00125734 vaddr=40086c9c size=14398h ( 82840) load[0m
+[0;32mI (456) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (457) boot: Disabling RNG early entropy source...[0m
+[0;32mI (467) cpu_start: Multicore app[0m
+[0;32mI (475) cpu_start: Pro cpu start user code[0m
+[0;32mI (475) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (475) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     esp32-car[0m
+[0;32mI (479) app_init: App version:      84e979f[0m
+[0;32mI (483) app_init: Compile time:     Jan 10 2025 16:47:13[0m
+[0;32mI (488) app_init: ELF file SHA256:  692edfc34...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (501) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (505) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (515) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFD2BC0 len 0000D440 (53 KiB): DRAM[0m
+[0;32mI (535) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (541) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (546) heap_init: At 4009B034 len 00004FCC (19 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;32mI (559) coexist: coex firmware version: 49a8cdc[0m
+[0;32mI (563) main_task: Started on CPU0[0m
+[0;32mI (573) main_task: Calling app_main()[0m
+[0;32mI (573) BTDM_INIT: BT controller compile version [20b459d][0m
+[0;32mI (583) BTDM_INIT: Bluetooth MAC: c8:2e:18:25:e0:82[0m
+[0;32mI (583) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (583) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (663) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+[0;32mI (1263) GAP: Own address:[c8:2e:18:25:e0:82][0m
+[0;32mI (1283) GAP: event: 10[0m
+[0;32mI (1293) main_task: Returned from app_main()[0m
+[0;32mI (1303) GAP: Discovery started.[0m
+[0;32mI (2443) GAP: Device found: c0:23:8d:4f:24:1d[0m
+[0;32mI (2443) GAP: --Class of Device: 0xc043c[0m
+[0;32mI (2443) GAP: --RSSI: -92[0m
+[0;32mI (2443) GAP: Found a target device, address c0:23:8d:4f:24:1d, name [TV] Samsung AU8100 50 TV[0m
+[0;32mI (2453) GAP: Cancel device discovery ...[0m
+[0;32mI (2453) GAP: Device discovery stopped.[0m
+[0;32mI (2453) GAP: Discover services ...[0m
+[0;33mW (4773) BT_HCI: hcif conn complete: hdl 0x81, st 0x0[0m
+[0;32mI (4773) GAP: event: 16[0m
+[0;32mI (6343) GAP: Services for device c0:23:8d:4f:24:1d found[0m
+[0;32mI (6343) GAP: --110a[0m
+[0;32mI (6343) GAP: --110b[0m
+[0;32mI (6343) GAP: --110e[0m
+[0;32mI (6343) GAP: --1112[0m
+[0;32mI (6343) GAP: --111f[0m
+[0;32mI (6343) GAP: --11349b5f-8000-0080-0010-000001110000[0m
+[0;32mI (6353) GAP: --13349b5f-8000-0080-0010-000001110000[0m
+[0;32mI (6353) GAP: --12349b5f-8000-0080-0010-000001110000[0m
+[0;32mI (6363) GAP: --fe367157-44fc-089c-3b45-7c21bc003be2[0m
+[0;32mI (6363) GAP: --ade3d529-c784-4f63-a987-eb69f70ee816[0m
+[0;33mW (10203) BT_HCI: hcif disc complete: hdl 0x81, rsn 0x13[0m
+[0;32mI (10203) GAP: event: 17[0m
+[0;33mW (30193) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (30193) GAP: event: 16[0m
+[0;33mW (30243) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000[0m
+[0;32mI (32193) GAP: event: 4[0m
+[0;33mW (36483) BT_HCI: hci cmd send: disconnect: hdl 0x80, rsn:0x13[0m
+[0;33mW (36553) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x16[0m
+[0;32mI (36553) GAP: event: 17[0m
+ause of checksum failure, mode(0)
+[0;32mI (1273) GAP: Own address:[c8:2e:18:25:e0:82][0m
+[0;32mI (1273) GAP: event: 10[0m
+[0;32mI (1273) main_task: Returned from app_main()[0m
+[0;32mI (1293) GAP: Discovery started.[0m
+[0;32mI (4783) GAP: Device found: c0:23:8d:4f:24:1d[0m
+[0;32mI (4783) GAP: --Class of Device: 0xc043c[0m
+[0;32mI (4783) GAP: --RSSI: -93[0m
+[0;32mI (4783) GAP: Found a target device, address c0:23:8d:4f:24:1d, name [TV] Samsung AU8100 50 TV[0m
+[0;32mI (4793) GAP: Cancel device discovery ...[0m
+[0;32mI (4793) GAP: Device discovery stopped.[0m
+[0;32mI (4803) GAP: Discover services ...[0m
+[0;33mW (9933) BT_SDP: SDP - Rcvd conn cnf with error: 0x4  CID 0x40[0m
+
+[0;33mW (9933) BT_HCI: hcif conn complete: hdl 0xfff, st 0x4[0m
+[0;32mI (9933) GAP: event: 16[0m
+[0;32mI (9933) GAP: Services for device c0:23:8d:4f:24:1d not found[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:6276
+load:0x40078000,len:15724
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 10 2025 11:50:12[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=342bch (213692) map[0m
+[0;32mI (149) esp_image: segment 1: paddr=000442e4 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=00044308 vaddr=3ffbdb60 size=0506ch ( 20588) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=0004937c vaddr=40080000 size=06c9ch ( 27804) load[0m
+[0;32mI (169) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=d570ch (874252) map[0m
+[0;32mI (416) esp_image: segment 5: paddr=00125734 vaddr=40086c9c size=14398h ( 82840) load[0m
+[0;32mI (456) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (457) boot: Disabling RNG early entropy source...[0m
+[0;32mI (467) cpu_start: Multicore app[0m
+[0;32mI (475) cpu_start: Pro cpu start user code[0m
+[0;32mI (475) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (475) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     esp32-car[0m
+[0;32mI (479) app_init: App version:      84e979f[0m
+[0;32mI (483) app_init: Compile time:     Jan 10 2025 16:47:13[0m
+[0;32mI (488) app_init: ELF file SHA256:  692edfc34...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (501) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (505) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (515) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFD2BC0 len 0000D440 (53 KiB): DRAM[0m
+[0;32mI (535) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (541) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (546) heap_init: At 4009B034 len 00004FCC (19 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;32mI (559) coexist: coex firmware version: 49a8cdc[0m
+[0;32mI (563) main_task: Started on CPU0[0m
+[0;32mI (573) main_task: Calling app_main()[0m
+[0;32mI (583) BTDM_INIT: BT controller compile version [20b459d][0m
+[0;32mI (583) BTDM_INIT: Bluetooth MAC: c8:2e:18:25:e0:82[0m
+[0;32mI (583) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (663) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (1273) GAP: Own address:[c8:2e:18:25:e0:82][0m
+[0;32mI (1283) GAP: event: 10[0m
+[0;32mI (1283) main_task: Returned from app_main()[0m
+[0;32mI (1293) GAP: Discovery started.[0m
+[0;32mI (1363) GAP: Device found: a4:cc:b3:9e:59:6d[0m
+[0;32mI (1363) GAP: --Class of Device: 0x5a420c[0m
+[0;32mI (1363) GAP: --RSSI: -46[0m
+[0;32mI (1363) GAP: Found a target device, address a4:cc:b3:9e:59:6d, name [0m
+[0;32mI (1373) GAP: Cancel device discovery ...[0m
+[0;32mI (1373) GAP: Device discovery stopped.[0m
+[0;32mI (1383) GAP: Discover services ...[0m
+[0;33mW (5863) BT_HCI: hcif conn complete: hdl 0x81, st 0x0[0m
+[0;32mI (5863) GAP: event: 16[0m
+[0;33mW (6133) BT_HCI: hcif link supv_to changed: hdl 0x81, supv_to 8000[0m
+[0;32mI (7003) GAP: Services for device a4:cc:b3:9e:59:6d found[0m
+[0;32mI (7003) GAP: --110a[0m
+[0;32mI (7003) GAP: --1105[0m
+[0;32mI (7003) GAP: --1115[0m
+[0;32mI (7003) GAP: --1116[0m
+[0;32mI (7003) GAP: --112d[0m
+[0;32mI (7003) GAP: --110e[0m
+[0;32mI (7003) GAP: --112f[0m
+[0;32mI (7003) GAP: --1112[0m
+[0;32mI (7013) GAP: --111f[0m
+[0;32mI (7013) GAP: --1132[0m
+[0;32mI (7013) GAP: --98a1997e-4d48-6784-ea11-a2363671b998[0m
+[0;32mI (7013) GAP: --98a1997e-4d48-6784-ea11-a236c0fc0000[0m
+[0;32mI (7023) GAP: --73d4cd88-a3ac-b4b6-3549-a2008fab1f11[0m
+[0;32mI (7023) GAP: --b2e5dac9-7a91-dfad-8943-f08320ddfbfa[0m
+[0;32mI (7033) GAP: --71faee95-55cc-9d80-a54b-4fe9d566dce9[0m
+[0;32mI (7033) GAP: --221e7eb0-4e50-5d8b-2747-795f630be5ce[0m
+[0;33mW (10993) BT_HCI: hci cmd send: disconnect: hdl 0x81, rsn:0x13[0m
+[0;33mW (11093) BT_HCI: hcif disc complete: hdl 0x81, rsn 0x16[0m
+[0;32mI (11093) GAP: event: 17[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:6276
+load:0x40078000,len:15724
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 10 2025 11:50:12[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=342bch (213692) map[0m
+[0;32mI (149) esp_image: segment 1: paddr=000442e4 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=00044308 vaddr=3ffbdb60 size=0506ch ( 20588) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=0004937c vaddr=40080000 size=06c9ch ( 27804) load[0m
+[0;32mI (169) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=d570ch (874252) map[0m
+[0;32mI (416) esp_image: segment 5: paddr=00125734 vaddr=40086c9c size=14398h ( 82840) load[0m
+[0;32mI (456) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (457) boot: Disabling RNG early entropy source...[0m
+[0;32mI (467) cpu_start: Multicore app[0m
+[0;32mI (475) cpu_start: Pro cpu start user code[0m
+[0;32mI (475) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (475) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     esp32-car[0m
+[0;32mI (479) app_init: App version:      84e979f[0m
+[0;32mI (483) app_init: Compile time:     Jan 10 2025 16:47:13[0m
+[0;32mI (488) app_init: ELF file SHA256:  692edfc34...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (501) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (505) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (515) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (530) heap_init: At 3FFD2BC0 len 0000D440 (53 KiB): DRAM[0m
+[0;32mI (535) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (541) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (546) heap_init: At 4009B034 len 00004FCC (19 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;32mI (559) coexist: coex firmware version: 49a8cdc[0m
+[0;32mI (563) main_task: Started on CPU0[0m
+[0;32mI (573) main_task: Calling app_main()[0m
+[0;32mI (583) BTDM_INIT: BT controller compile version [20b459d][0m
+[0;32mI (583) BTDM_INIT: Bluetooth MAC: c8:2e:18:25:e0:82[0m
+[0;32mI (583) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (1233) GAP: Own address:[c8:2e:18:25:e0:82][0m
+[0;32mI (1233) GAP: event: 10[0m
+[0;32mI (1243) main_task: Returned from app_main()[0m
+[0;32mI (1253) GAP: Discovery started.[0m
+[0;32mI (1283) GAP: Device found: c0:23:8d:4f:24:1d[0m
+[0;32mI (1293) GAP: --Class of Device: 0xc043c[0m
+[0;32mI (1293) GAP: --RSSI: -94[0m
+[0;32mI (1293) GAP: Found a target device, address c0:23:8d:4f:24:1d, name [0m
+[0;32mI (1293) GAP: Cancel device discovery ...[0m
+[0;32mI (1303) GAP: Device discovery stopped.[0m
+[0;32mI (1303) GAP: Discover services ...[0m
+[0;33mW (2363) BT_HCI: hcif conn complete: hdl 0x81, st 0x0[0m
+[0;32mI (2373) GAP: event: 16[0m
+[0;33mW (2403) BT_HCI: hcif link supv_to changed: hdl 0x81, supv_to 8000[0m
+[0;32mI (3653) GAP: Services for device c0:23:8d:4f:24:1d found[0m
+[0;32mI (3653) GAP: --110a[0m
+[0;32mI (3653) GAP: --110b[0m
+[0;32mI (3653) GAP: --110e[0m
+[0;32mI (3653) GAP: --1112[0m
+[0;32mI (3653) GAP: --111f[0m
+[0;32mI (3653) GAP: --11349b5f-8000-0080-0010-000001110000[0m
+[0;32mI (3653) GAP: --13349b5f-8000-0080-0010-000001110000[0m
+[0;32mI (3663) GAP: --12349b5f-8000-0080-0010-000001110000[0m
+[0;32mI (3663) GAP: --fe367157-44fc-089c-3b45-7c21bc003be2[0m
+[0;32mI (3673) GAP: --ade3d529-c784-4f63-a987-eb69f70ee816[0m
+[0;33mW (7383) BT_HCI: hcif disc complete: hdl 0x81, rsn 0x13[0m
+[0;32mI (7383) GAP: event: 17[0m

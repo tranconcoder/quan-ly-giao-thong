@@ -1,0 +1,95 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build/bootloader/esp-idf/esptool_py && /home/tvconss/.espressif/python_env/idf5.4_py3.12_env/bin/python /home/tvconss/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build/bootloader/bootloader.bin
+Bootloader binary size 0x6570 bytes. 0xa90 bytes (9%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/esp32-car.c.obj
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable esp32-car.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build/esp32-car.bin
+[9/10] cd /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build/esp-idf/esptool_py && /home/tvconss/.espressif/python_env/idf5.4_py3.12_env/bin/python /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build/partition_table/partition-table.bin /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build/esp32-car.bin
+esp32-car.bin binary size 0x129af0 bytes. Smallest app partition is 0x177000 bytes. 0x4d510 bytes (21%) free.
+[9/10] cd /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/tvconss/esp/esp-idf -D "SERIAL_TOOL=/home/tvconss/.espressif/python_env/idf5.4_py3.12_env/bin/python;;/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build -P /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x1000 bootloader/bootloader.bin 0x10000 esp32-car.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: c8:2e:18:25:e0:80
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 4MB
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00139fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 25968 bytes to 16362...
+Writing at 0x00001000... (100 %)
+Wrote 25968 bytes (16362 compressed) at 0x00001000 in 0.5 seconds (effective 424.3 kbit/s)...
+Hash of data verified.
+Compressed 1219312 bytes to 715318...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d8a3... (4 %)
+Writing at 0x0002d196... (6 %)
+Writing at 0x00038f67... (9 %)
+Writing at 0x000432c9... (11 %)
+Writing at 0x0004d08a... (13 %)
+Writing at 0x00053034... (15 %)
+Writing at 0x00058969... (18 %)
+Writing at 0x0005eb86... (20 %)
+Writing at 0x00064523... (22 %)
+Writing at 0x0006a13f... (25 %)
+Writing at 0x0006fcc0... (27 %)
+Writing at 0x00075787... (29 %)
+Writing at 0x0007c99b... (31 %)
+Writing at 0x000828c7... (34 %)
+Writing at 0x00088d3c... (36 %)
+Writing at 0x0008ef52... (38 %)
+Writing at 0x0009537e... (40 %)
+Writing at 0x0009bc7d... (43 %)
+Writing at 0x000a1cdc... (45 %)
+Writing at 0x000a7dd6... (47 %)
+Writing at 0x000add45... (50 %)
+Writing at 0x000b4089... (52 %)
+Writing at 0x000ba117... (54 %)
+Writing at 0x000c06ef... (56 %)
+Writing at 0x000c62ab... (59 %)
+Writing at 0x000cc757... (61 %)
+Writing at 0x000d250b... (63 %)
+Writing at 0x000d7f84... (65 %)
+Writing at 0x000ddbf9... (68 %)
+Writing at 0x000e3de0... (70 %)
+Writing at 0x000e9a71... (72 %)
+Writing at 0x000ef4f0... (75 %)
+Writing at 0x000f5056... (77 %)
+Writing at 0x000fb397... (79 %)
+Writing at 0x0010108b... (81 %)
+Writing at 0x0010738b... (84 %)
+Writing at 0x0010d09d... (86 %)
+Writing at 0x00114224... (88 %)
+Writing at 0x0011d151... (90 %)
+Writing at 0x00124203... (93 %)
+Writing at 0x00129aea... (95 %)
+Writing at 0x0012f799... (97 %)
+Writing at 0x00135874... (100 %)
+Wrote 1219312 bytes (715318 compressed) at 0x00010000 in 16.0 seconds (effective 608.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.0 seconds (effective 1640.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

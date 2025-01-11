@@ -1,0 +1,9 @@
+{
+	"git.ignoreLimitWarning": true,
+	"files.associations": {
+		"*.js": "javascript",
+		"freertosconfig.h": "c",
+		"ringbuf.h": "c",
+		"stdbool.h": "c"
+	}
+}
