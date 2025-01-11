@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         // Grant permissions
         for (String permission : permissionList)
             if (checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED)

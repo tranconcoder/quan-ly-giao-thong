@@ -3,6 +3,7 @@ package com.example.carremote.ui.home;
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothSocket;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -35,7 +36,9 @@ public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
     private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
     private PreviewView previewView;
+    private float dX, dY;
 
+    @SuppressLint("ClickableViewAccessibility")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 //        HomeViewModel homeViewModel =
@@ -140,6 +143,33 @@ public class HomeFragment extends Fragment {
                         Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                     return false;
+                }
+            });
+
+
+            // Handle move camera preview
+            binding.previewView.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    switch (event.getAction()) {
+
+                        case MotionEvent.ACTION_DOWN:
+
+                            dX = binding.previewView.getX() - event.getRawX();
+                            dY = binding.previewView.getY() - event.getRawY();
+                            break;
+
+                        case MotionEvent.ACTION_MOVE:
+                            binding.previewView.animate()
+                                    .x(event.getRawX() + dX)
+                                    .y(event.getRawY() + dY)
+                                    .setDuration(0)
+                                    .start();
+                            break;
+                        default:
+                            return false;
+                    }
+                    return true;
                 }
             });
         } catch (Exception e) {

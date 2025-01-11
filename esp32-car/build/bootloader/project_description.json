@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "bootloader",
-    "project_version":    "a52380da-dirty",
+    "project_version":    "25c1b884-dirty",
     "project_path":       "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/subproject",
     "idf_path":           "/home/tvconss/esp/esp-idf",
     "build_dir":          "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build/bootloader",

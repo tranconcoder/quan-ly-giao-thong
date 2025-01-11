@@ -124,7 +124,6 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
             snprintf(data, param->data_ind.len + 1, "%s", param->data_ind.data);
 
             ESP_LOGI("DATA", "%s", data);
-
             free(data);
         }
 #else
@@ -188,29 +187,16 @@ void esp_bt_gap_cb(esp_bt_gap_cb_event_t event, esp_bt_gap_cb_param_t *param)
         }
         else
         {
-            ESP_LOGI(SPP_TAG, "Input pin code: 8888");
+            ESP_LOGI(SPP_TAG, "Input pin code: 0000");
             esp_bt_pin_code_t pin_code;
-            pin_code[0] = '8';
-            pin_code[1] = '8';
-            pin_code[2] = '8';
-            pin_code[3] = '8';
+            pin_code[0] = '0';
+            pin_code[1] = '0';
+            pin_code[2] = '0';
+            pin_code[3] = '0';
             esp_bt_gap_pin_reply(param->pin_req.bda, true, 4, pin_code);
         }
         break;
     }
-
-#if (CONFIG_EXAMPLE_SSP_ENABLED == true)
-    case ESP_BT_GAP_CFM_REQ_EVT:
-        ESP_LOGI(SPP_TAG, "ESP_BT_GAP_CFM_REQ_EVT Please compare the numeric value: %" PRIu32, param->cfm_req.num_val);
-        esp_bt_gap_ssp_confirm_reply(param->cfm_req.bda, true);
-        break;
-    case ESP_BT_GAP_KEY_NOTIF_EVT:
-        ESP_LOGI(SPP_TAG, "ESP_BT_GAP_KEY_NOTIF_EVT passkey:%" PRIu32, param->key_notif.passkey);
-        break;
-    case ESP_BT_GAP_KEY_REQ_EVT:
-        ESP_LOGI(SPP_TAG, "ESP_BT_GAP_KEY_REQ_EVT Please enter passkey!");
-        break;
-#endif
 
     case ESP_BT_GAP_MODE_CHG_EVT:
         ESP_LOGI(SPP_TAG, "ESP_BT_GAP_MODE_CHG_EVT mode:%d bda:[%s]", param->mode_chg.mode,
@@ -290,13 +276,6 @@ void app_main(void)
         ESP_LOGE(SPP_TAG, "%s spp init failed: %s", __func__, esp_err_to_name(ret));
         return;
     }
-
-#if (CONFIG_EXAMPLE_SSP_ENABLED == true)
-    /* Set default parameters for Secure Simple Pairing */
-    esp_bt_sp_param_t param_type = ESP_BT_SP_IOCAP_MODE;
-    esp_bt_io_cap_t iocap = ESP_BT_IO_CAP_IO;
-    esp_bt_gap_set_security_param(param_type, &iocap, sizeof(uint8_t));
-#endif
 
     /*
      * Set default parameters for Legacy Pairing

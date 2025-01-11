@@ -31,6 +31,7 @@ android {
     }
 }
 
+
 dependencies {
     def camerax_version = "1.2.2"
     implementation "androidx.camera:camera-core:${camerax_version}"
@@ -52,4 +53,5 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
+
 }
