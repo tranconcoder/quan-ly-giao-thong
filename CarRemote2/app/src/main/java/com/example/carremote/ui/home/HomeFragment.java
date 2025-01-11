@@ -67,8 +67,9 @@ public class HomeFragment extends Fragment {
                 }
             }, ContextCompat.getMainExecutor(mainActivity));
 
-            // Setup esp32 cam preview
-            binding.previewView2.setVideoURI(Uri.parse("android.resource://" + mainActivity.getPackageName() + "/" + R.raw.esp32_cam));
+            // Setup cabin camera preview
+            Uri uri = Uri.parse(String.format("android.resource://%s/%d", mainActivity.getPackageName(), R.raw.esp32_cam));
+            binding.previewView2.setVideoURI(uri);
             binding.previewView2.start();
 
             if (bluetoothSocket == null || outputStream == null)
@@ -94,6 +95,7 @@ public class HomeFragment extends Fragment {
                 }
             });
 
+
             binding.btnDown.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
@@ -113,6 +115,7 @@ public class HomeFragment extends Fragment {
                 }
             });
 
+
             binding.btnLeft.setOnTouchListener(new View.OnTouchListener() {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
@@ -131,6 +134,7 @@ public class HomeFragment extends Fragment {
                     return false;
                 }
             });
+
 
             binding.btnRight.setOnTouchListener(new View.OnTouchListener() {
                 @Override
