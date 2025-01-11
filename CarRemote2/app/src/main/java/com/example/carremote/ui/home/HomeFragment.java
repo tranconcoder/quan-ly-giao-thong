@@ -2,6 +2,7 @@ package com.example.carremote.ui.home;
 
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothSocket;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -24,6 +25,7 @@ import androidx.lifecycle.LifecycleOwner;
 
 import com.example.carremote.BluetoothConnect;
 import com.example.carremote.MainActivity;
+import com.example.carremote.R;
 import com.example.carremote.databinding.FragmentHomeBinding;
 import com.google.common.util.concurrent.ListenableFuture;
 
@@ -65,6 +67,9 @@ public class HomeFragment extends Fragment {
                 }
             }, ContextCompat.getMainExecutor(mainActivity));
 
+            // Setup esp32 cam preview
+            binding.previewView2.setVideoURI(Uri.parse("android.resource://" + mainActivity.getPackageName() + "/" + R.raw.esp32_cam));
+            binding.previewView2.start();
 
             if (bluetoothSocket == null || outputStream == null)
                 throw new IOException("Bluetooth connection failed");
@@ -152,20 +157,21 @@ public class HomeFragment extends Fragment {
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
                     switch (event.getAction()) {
-
                         case MotionEvent.ACTION_DOWN:
-
                             dX = binding.previewView.getX() - event.getRawX();
                             dY = binding.previewView.getY() - event.getRawY();
                             break;
 
                         case MotionEvent.ACTION_MOVE:
+                            float x = Math.min(Math.max(event.getRawX() + dX, 20), root.getWidth() - binding.previewView.getWidth() - 20);
+                            float y = Math.min(Math.max(event.getRawY() + dY, 20), root.getHeight() - binding.previewView.getHeight() - 20);
+
                             binding.previewView.animate()
-                                    .x(event.getRawX() + dX)
-                                    .y(event.getRawY() + dY)
+                                    .x(x).y(y)
                                     .setDuration(0)
                                     .start();
                             break;
+
                         default:
                             return false;
                     }
@@ -195,7 +201,6 @@ public class HomeFragment extends Fragment {
 
         preview.setSurfaceProvider(previewView.getSurfaceProvider());
 
-        Camera camera = cameraProvider.bindToLifecycle((LifecycleOwner) this, cameraSelector, preview);
-
+        /* Camera camera = */ cameraProvider.bindToLifecycle((LifecycleOwner) this, cameraSelector, preview);
     }
 }

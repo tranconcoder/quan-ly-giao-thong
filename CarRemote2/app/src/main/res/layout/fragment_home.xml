@@ -33,7 +33,7 @@
         android:textStyle="bold"
         />
 
-    <androidx.camera.view.PreviewView
+    <VideoView
         android:id="@+id/previewView2"
         android:layout_width="match_parent"
         android:layout_height="240dp"
