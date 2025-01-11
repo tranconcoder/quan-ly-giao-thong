@@ -50,10 +50,11 @@
                 android:layout_weight="1"
                 >
                 <Button
+                    android:id="@+id/btnBsmLeft"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_centerInParent="true"
-                    android:backgroundTint="@color/inactive"
+                    android:backgroundTint="@color/bsm_inactive"
                     />
             </RelativeLayout>
 
@@ -75,10 +76,11 @@
                 android:layout_weight="1"
                 >
                 <Button
+                    android:id="@+id/btnBsmRight"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_centerInParent="true"
-                    android:backgroundTint="@color/inactive"
+                    android:backgroundTint="@color/bsm_inactive"
                     />
             </RelativeLayout>
         </LinearLayout>
