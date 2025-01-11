@@ -11,15 +11,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Điều khiển xe hơi"
-        android:textSize="12sp"
+        android:textSize="18sp"
         android:textAlignment="center"
-        android:paddingVertical="10dp"
+        android:paddingVertical="30dp"
         android:textStyle="bold"
+        />
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
         />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:layout_marginTop="30dp"
         android:weightSum="3">
 
         <TextView

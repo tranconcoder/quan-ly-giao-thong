@@ -30,21 +30,10 @@ public class BluetoothConnect {
 
     private String esp32mac = "c8:2e:18:25:e0:82".toUpperCase();
 
-    private static ArrayList<String> permissionList = new ArrayList<>(){{
-        add(android.Manifest.permission.BLUETOOTH);
-        add(android.Manifest.permission.BLUETOOTH_SCAN);
-        add(android.Manifest.permission.BLUETOOTH_CONNECT);
-        add(Manifest.permission.BLUETOOTH_ADVERTISE);
-    }};
 
     @SuppressLint({"MissingPermission", "NewApi"})
     public BluetoothConnect(Activity context) {
         this.context = context;
-
-        // Grant permissions
-        for (String permission : permissionList)
-            if (context.checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED)
-                context.requestPermissions(new String[]{permission}, 0);
 
         // Initialize Bluetooth adapter
         bluetoothManager = (BluetoothManager) context.getSystemService(context.BLUETOOTH_SERVICE)  ;

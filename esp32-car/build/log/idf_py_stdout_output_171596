@@ -1,0 +1,158 @@
+��� segment 2�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:6276
+load:0x40078000,len:15724
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 10 2025 11:50:12[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=346ach (214700) map[0m
+[0;32mI (149) esp_image: segment 1: paddr=000446d4 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=000446f8 vaddr=3ffbdb60 size=0506ch ( 20588) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=0004976c vaddr=40080000 size=068ach ( 26796) load[0m
+[0;32mI (169) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=d67e8h (878568) map[0m
+[0;32mI (417) esp_image: segment 5: paddr=00126810 vaddr=400868ac size=13934h ( 80180) load[0m
+[0;32mI (456) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (456) boot: Disabling RNG early entropy source...[0m
+[0;32mI (467) cpu_start: Multicore app[0m
+[0;32mI (475) cpu_start: Pro cpu start user code[0m
+[0;32mI (475) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (475) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     esp32-car[0m
+[0;32mI (479) app_init: App version:      a52380da-dirty[0m
+[0;32mI (484) app_init: Compile time:     Jan 11 2025 16:14:26[0m
+[0;32mI (489) app_init: ELF file SHA256:  a6b538765...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (501) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (505) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (515) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFD29E0 len 0000D620 (53 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (541) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (547) heap_init: At 4009A1E0 len 00005E20 (23 KiB): IRAM[0m
+[0;32mI (553) spi_flash: detected chip: generic[0m
+[0;32mI (556) spi_flash: flash io: dio[0m
+[0;32mI (559) coexist: coex firmware version: 49a8cdc[0m
+[0;32mI (564) main_task: Started on CPU0[0m
+[0;32mI (574) main_task: Calling app_main()[0m
+[0;32mI (574) BTDM_INIT: BT controller compile version [20b459d][0m
+[0;32mI (584) BTDM_INIT: Bluetooth MAC: c8:2e:18:25:e0:82[0m
+[0;32mI (584) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (584) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (664) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+[0;32mI (1264) SPP_ACCEPTOR_DEMO: event: 10[0m
+[0;32mI (1264) SPP_ACCEPTOR_DEMO: ESP_SPP_INIT_EVT[0m
+[0;32mI (1274) SPP_ACCEPTOR_DEMO: ESP_SPP_START_EVT handle:129 sec_id:55 scn:1[0m
+[0;32mI (1274) SPP_ACCEPTOR_DEMO: event: 10[0m
+[0;32mI (1274) SPP_ACCEPTOR_DEMO: Own address:[c8:2e:18:25:e0:82][0m
+[0;32mI (1274) main_task: Returned from app_main()[0m
+[0;33mW (45934) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (45934) SPP_ACCEPTOR_DEMO: event: 16[0m
+[0;33mW (45934) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000[0m
+[0;32mI (46034) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_PIN_REQ_EVT min_16_digit:0[0m
+[0;32mI (46034) SPP_ACCEPTOR_DEMO: Input pin code: 1234[0m
+[0;32mI (50224) SPP_ACCEPTOR_DEMO: authentication success: Xiaomi 13T bda:[a4:cc:b3:9e:59:6d][0m
+[0;32mI (50234) SPP_ACCEPTOR_DEMO: event: 21[0m
+[0;33mW (50244) BT_APPL: new conn_srvc id:26, app_id:255[0m
+[0;32mI (50254) SPP_ACCEPTOR_DEMO: ESP_SPP_SRV_OPEN_EVT status:0 handle:129, rem_bda:[a4:cc:b3:9e:59:6d][0m
+[0;32mI (51364) SPP_ACCEPTOR_DEMO: ESP_SPP_DATA_IND_EVT len:8 handle:129[0m
+[0;32mI (51364) DATA: UP-START��?[0m
+
+assert failed: block_locate_free tlsf_control_functions.h:618 (block_size(block) >= *size)
+
+
+Backtrace: 0x40081b51:0x3ffd6960 0x40091cad:0x3ffd6980 0x40098319:0x3ffd69a0 0x40097184:0x3ffd6ac0 0x40096b5d:0x3ffd6ae0 0x400823d1:0x3ffd6b00 0x400824dd:0x3ffd6b20 0x4008250d:0x3ffd6b50 0x40082683:0x3ffd6b70 0x40082227:0x3ffd6b90 0x4010c487:0x3ffd6be0 0x4010df17:0x3ffd6c10 0x4010d3c7:0x3ffd6c30 0x401238fd:0x3ffd6c50 0x4018b79a:0x3ffd6c70 0x401772d6:0x3ffd6c90 0x4001791d:0x3ffd6cb0 0x40177cdd:0x3ffd6cd0 0x40177db9:0x3ffd6d10 0x400188f5:0x3ffd6d40 0x401775ff:0x3ffd6d80 0x4017cf99:0x3ffd6da0 0x40089fb6:0x3ffd6dc0 0x40019d11:0x3ffd6df0 0x40055b4d:0x3ffd6e10 0x4017509b:0x3ffd6e30 0x401756fd:0x3ffd6e50 0x400926a9:0x3ffd6e80
+
+
+
+
+ELF file SHA256: a6b538765
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:6276
+load:0x40078000,len:15724
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 10 2025 11:50:12[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=346ach (214700) map[0m
+[0;32mI (149) esp_image: segment 1: paddr=000446d4 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=000446f8 vaddr=3ffbdb60 size=0506ch ( 20588) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=0004976c vaddr=40080000 size=068ach ( 26796) load[0m
+[0;32mI (169) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=d67e8h (878568) map[0m
+[0;32mI (417) esp_image: segment 5: paddr=00126810 vaddr=400868ac size=13934h ( 80180) load[0m
+[0;32mI (456) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (456) boot: Disabling RNG early entropy source...[0m
+[0;32mI (467) cpu_start: Multicore app[0m
+[0;32mI (475) cpu_start: Pro cpu start user code[0m
+[0;32mI (475) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (475) app_init: Application information:[0m
+[0;32mI (475) app_init: Project name:     esp32-car[0m
+[0;32mI (479) app_init: App version:      a52380da-dirty[0m
+[0;32mI (484) app_init: Compile time:     Jan 11 2025 16:14:26[0m
+[0;32mI (489) app_init: ELF file SHA256:  a6b538765...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (501) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (505) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (515) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFD29E0 len 0000D620 (53 KiB): DRAM[0m
+[0;32mI (536) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (541) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (547) heap_init: At 4009A1E0 len 00005E20 (23 KiB): IRAM[0m
+[0;32mI (553) spi_flash: detected chip: generic[0m
+[0;32mI (556) spi_flash: flash io: dio[0m
+[0;32mI (559) coexist: coex firmware version: 49a8cdc[0m
+[0;32mI (563) main_task: Started on CPU0[0m
+[0;32mI (573) main_task: Calling app_main()[0m
+[0;32mI (583) BTDM_INIT: BT controller compile version [20b459d][0m
+[0;32mI (583) BTDM_INIT: Bluetooth MAC: c8:2e:18:25:e0:82[0m
+[0;32mI (583) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (1243) SPP_ACCEPTOR_DEMO: ESP_SPP_INIT_EVT[0m
+[0;32mI (1253) SPP_ACCEPTOR_DEMO: ESP_SPP_START_EVT handle:129 sec_id:55 scn:1[0m
+[0;32mI (1253) SPP_ACCEPTOR_DEMO: event: 10[0m
+[0;32mI (1263) SPP_ACCEPTOR_DEMO: Own address:[c8:2e:18:25:e0:82][0m
+[0;32mI (1263) main_task: Returned from app_main()[0m

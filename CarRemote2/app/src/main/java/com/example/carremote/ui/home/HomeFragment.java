@@ -11,18 +11,30 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.camera.core.Camera;
+import androidx.camera.core.CameraSelector;
+import androidx.camera.core.Preview;
+import androidx.camera.lifecycle.ProcessCameraProvider;
+import androidx.camera.view.CameraController;
+import androidx.camera.view.PreviewView;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LifecycleOwner;
 
 import com.example.carremote.BluetoothConnect;
 import com.example.carremote.MainActivity;
 import com.example.carremote.databinding.FragmentHomeBinding;
+import com.google.common.util.concurrent.ListenableFuture;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.concurrent.ExecutionException;
 
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
+    private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
+    private PreviewView previewView;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -38,6 +50,18 @@ public class HomeFragment extends Fragment {
             BluetoothConnect bluetoothConnect = mainActivity.bluetoothConnect;
             BluetoothSocket bluetoothSocket = bluetoothConnect.connect();
             OutputStream outputStream = bluetoothSocket.getOutputStream();
+
+            // Setup camera preview
+            this.cameraProviderFuture = ProcessCameraProvider.getInstance(mainActivity);
+            previewView = binding.previewView;
+            cameraProviderFuture.addListener(() -> {
+                try {
+                    ProcessCameraProvider cameraProvider = cameraProviderFuture.get();
+                    bindPreview(cameraProvider);
+                } catch (ExecutionException | InterruptedException e) {
+                }
+            }, ContextCompat.getMainExecutor(mainActivity));
+
 
             if (bluetoothSocket == null || outputStream == null)
                 throw new IOException("Bluetooth connection failed");
@@ -129,5 +153,19 @@ public class HomeFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    void bindPreview(@NonNull ProcessCameraProvider cameraProvider) {
+        Preview preview = new Preview.Builder()
+                .build();
+
+        CameraSelector cameraSelector = new CameraSelector.Builder()
+                .requireLensFacing(CameraSelector.LENS_FACING_FRONT)
+                .build();
+
+        preview.setSurfaceProvider(previewView.getSurfaceProvider());
+
+        Camera camera = cameraProvider.bindToLifecycle((LifecycleOwner) this, cameraSelector, preview);
+
     }
 }

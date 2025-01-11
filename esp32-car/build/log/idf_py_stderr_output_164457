@@ -1,0 +1,28 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081b51: panic_abort at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/esp_system/panic.c:454
+0x40091cad: esp_system_abort at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/esp_system/port/esp_system_chip.c:92
+0x40098319: __assert_func at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/newlib/assert.c:80
+0x40097184: block_locate_free at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/heap/tlsf/tlsf_control_functions.h:618 (discriminator 1)
+ (inlined by) tlsf_malloc at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/heap/tlsf/tlsf.c:443 (discriminator 1)
+0x40096b5d: multi_heap_malloc_impl at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/heap/multi_heap.c:209
+0x400823d1: aligned_or_unaligned_alloc at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/heap/heap_caps_base.c:77
+0x400824dd: heap_caps_aligned_alloc_base at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/heap/heap_caps_base.c:150
+0x4008250d: heap_caps_malloc_base at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/heap/heap_caps_base.c:170
+0x40082683: heap_caps_calloc_base at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/heap/heap_caps_base.c:284
+0x40082227: heap_caps_calloc_prefer at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/heap/heap_caps.c:228
+0x4010c48f: osi_calloc_func at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bt/common/osi/allocator.c:230
+0x400f9491: hci_get_cmd_buf at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bt/host/bluedroid/stack/include/stack/hcimsgs.h:58
+0x400fa655: btsnd_hcic_host_num_xmitted_pkts at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bt/host/bluedroid/stack/hcic/hcicmds.c:1323
+0x40123555: hci_packet_complete at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bt/host/bluedroid/hci/hci_hal_h4.c:272
+0x4012356e: hci_hal_h4_hdl_rx_packet at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bt/host/bluedroid/hci/hci_hal_h4.c:430
+0x40123851: hci_upstream_data_handler at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bt/host/bluedroid/hci/hci_hal_h4.c:236
+0x4010e596: osi_thread_generic_event_handler at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bt/common/osi/thread.c:425
+0x4010e46b: osi_thread_run at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bt/common/osi/thread.c:165
+0x400926a9: vPortTaskWrapper at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

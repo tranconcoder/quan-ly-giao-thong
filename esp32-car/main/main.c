@@ -19,6 +19,7 @@
 #include "esp_gap_bt_api.h"
 #include "esp_bt_device.h"
 #include "esp_spp_api.h"
+#include "esp_heap_caps.h"
 
 #include "time.h"
 #include "sys/time.h"
@@ -119,7 +120,12 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
                  param->data_ind.len, param->data_ind.handle);
         if (param->data_ind.len < 128)
         {
-            ESP_LOG_BUFFER_HEX("", param->data_ind.data, param->data_ind.len);
+            char *data = malloc(param->data_ind.len + 1);
+            snprintf(data, param->data_ind.len + 1, "%s", param->data_ind.data);
+
+            ESP_LOGI("DATA", "%s", data);
+
+            free(data);
         }
 #else
         gettimeofday(&time_new, NULL);
@@ -182,12 +188,12 @@ void esp_bt_gap_cb(esp_bt_gap_cb_event_t event, esp_bt_gap_cb_param_t *param)
         }
         else
         {
-            ESP_LOGI(SPP_TAG, "Input pin code: 1234");
+            ESP_LOGI(SPP_TAG, "Input pin code: 8888");
             esp_bt_pin_code_t pin_code;
-            pin_code[0] = '1';
-            pin_code[1] = '2';
-            pin_code[2] = '3';
-            pin_code[3] = '4';
+            pin_code[0] = '8';
+            pin_code[1] = '8';
+            pin_code[2] = '8';
+            pin_code[3] = '8';
             esp_bt_gap_pin_reply(param->pin_req.bda, true, 4, pin_code);
         }
         break;
