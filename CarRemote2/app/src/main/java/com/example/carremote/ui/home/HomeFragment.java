@@ -38,6 +38,8 @@ public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
     private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
     private PreviewView previewView;
+    BluetoothSocket bluetoothSocket;
+    OutputStream outputStream;
     private float dX, dY;
 
     @SuppressLint("ClickableViewAccessibility")
@@ -53,8 +55,9 @@ public class HomeFragment extends Fragment {
         try {
             MainActivity mainActivity = (MainActivity) getActivity();
             BluetoothConnect bluetoothConnect = mainActivity.bluetoothConnect;
-            BluetoothSocket bluetoothSocket = bluetoothConnect.connect();
-            OutputStream outputStream = bluetoothSocket.getOutputStream();
+
+            bluetoothSocket = bluetoothConnect.connect();
+            outputStream = bluetoothSocket.getOutputStream();
 
             // Setup camera preview
             this.cameraProviderFuture = ProcessCameraProvider.getInstance(mainActivity);
@@ -74,6 +77,21 @@ public class HomeFragment extends Fragment {
 
             if (bluetoothSocket == null || outputStream == null)
                 throw new IOException("Bluetooth connection failed");
+
+
+            binding.btnReconnect.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        bluetoothSocket = bluetoothConnect.connect();
+                        outputStream = bluetoothSocket.getOutputStream();
+
+                        Toast.makeText(mainActivity, "Reconnect success!", Toast.LENGTH_SHORT).show();
+                    } catch (IOException e) {
+                        Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
 
             binding.btnUp.setOnTouchListener(new View.OnTouchListener() {
                 @SuppressLint("ClickableViewAccessibility")

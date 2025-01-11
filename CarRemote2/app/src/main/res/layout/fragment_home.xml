@@ -125,10 +125,17 @@
             android:layout_height="80dp"
             android:weightSum="3">
 
-            <TextView
+            <Button
+                android:id="@+id/btnReconnect"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Reconnect"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#9C27B0"
+                />
 
             <Button
                 android:id="@+id/btn_down"
