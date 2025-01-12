@@ -156,6 +156,7 @@
             android:orientation="vertical"
             >
             <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchAdas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Chế độ an toàn (ADAS)"
@@ -163,6 +164,7 @@
                 />
 
             <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchSleepDetect"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Phát hiện buồn ngủ khi lái xe"
@@ -170,6 +172,7 @@
                 />
 
             <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchBlindSpot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cảnh báo điểm mù"
@@ -177,6 +180,7 @@
                 />
 
             <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchLaneKeeping"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Giữ làn tự động"

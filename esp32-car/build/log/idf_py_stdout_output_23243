@@ -724,4 +724,104 @@ entry 0x4008063c
 [0;33mW (1618904) BT_APPL: new conn_srvc id:26, app_id:255[0m
 [0;32mI (1618904) SPP_ACCEPTOR_DEMO: ESP_SPP_SRV_OPEN_EVT status:0 handle:385, rem_bda:[a4:cc:b3:9e:59:6d][0m
 [0;33mW (1623914) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 792, status 0x0[0m
-[0;32mI (1623914) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:
+[0;32mI (1623914) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:2 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (1624764) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0[0m
+[0;32mI (1624774) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:0 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (1624844) BT_RFCOMM: port_rfc_closed RFCOMM connection in server:1 state 2 closed: Closed (res: 19)[0m
+[0;32mI (1624844) SPP_ACCEPTOR_DEMO: ESP_SPP_CLOSE_EVT status:0 handle:385 close_by_remote:1[0m
+[0;33mW (1624864) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x41 current:0x0[0m
+[0;33mW (1624864) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x41[0m
+[0;33mW (1626184) BT_APPL: new conn_srvc id:26, app_id:255[0m
+[0;32mI (1626184) SPP_ACCEPTOR_DEMO: ESP_SPP_SRV_OPEN_EVT status:0 handle:129, rem_bda:[a4:cc:b3:9e:59:6d][0m
+[0;32mI (1629234) SPP_ACCEPTOR_DEMO: ESP_SPP_DATA_IND_EVT len:11 handle:129[0m
+[0;32mI (1629234) DATA: RIGHT_START[0m
+[0;32mI (1629294) SPP_ACCEPTOR_DEMO: ESP_SPP_DATA_IND_EVT len:10 handle:129[0m
+[0;32mI (1629294) DATA: RIGHT_STOP[0m
+[0;32mI (1629414) SPP_ACCEPTOR_DEMO: ESP_SPP_DATA_IND_EVT len:11 handle:129[0m
+[0;32mI (1629414) DATA: RIGHT_START[0m
+[0;32mI (1629454) SPP_ACCEPTOR_DEMO: ESP_SPP_DATA_IND_EVT len:10 handle:129[0m
+[0;32mI (1629454) DATA: RIGHT_STOP[0m
+[0;32mI (1629544) SPP_ACCEPTOR_DEMO: ESP_SPP_DATA_IND_EVT len:11 handle:129[0m
+[0;32mI (1629544) DATA: RIGHT_START[0m
+[0;32mI (1629614) SPP_ACCEPTOR_DEMO: ESP_SPP_DATA_IND_EVT len:10 handle:129[0m
+[0;32mI (1629614) DATA: RIGHT_STOP[0m
+[0;32mI (1629674) SPP_ACCEPTOR_DEMO: ESP_SPP_DATA_IND_EVT len:11 handle:129[0m
+[0;32mI (1629674) DATA: RIGHT_START[0m
+[0;32mI (1629744) SPP_ACCEPTOR_DEMO: ESP_SPP_DATA_IND_EVT len:10 handle:129[0m
+[0;32mI (1629744) DATA: RIGHT_STOP[0m
+[0;32mI (1629784) SPP_ACCEPTOR_DEMO: ESP_SPP_DATA_IND_EVT len:11 handle:129[0m
+[0;32mI (1629784) DATA: RIGHT_START[0m
+[0;32mI (1629844) SPP_ACCEPTOR_DEMO: ESP_SPP_DATA_IND_EVT len:10 handle:129[0m
+[0;32mI (1629844) DATA: RIGHT_STOP[0m
+[0;33mW (1634064) BT_RFCOMM: port_rfc_closed RFCOMM connection in server:1 state 2 closed: Closed (res: 19)[0m
+[0;32mI (1634064) SPP_ACCEPTOR_DEMO: ESP_SPP_CLOSE_EVT status:0 handle:129 close_by_remote:1[0m
+[0;33mW (1634084) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x41 current:0x0[0m
+[0;33mW (1634084) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x41[0m
+[0;33mW (1635524) BT_APPL: new conn_srvc id:26, app_id:255[0m
+[0;32mI (1635524) SPP_ACCEPTOR_DEMO: ESP_SPP_SRV_OPEN_EVT status:0 handle:385, rem_bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (1640554) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 792, status 0x0[0m
+[0;32mI (1640554) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:2 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (1790594) BT_RFCOMM: port_rfc_closed RFCOMM connection in server:1 state 2 closed: Closed (res: 19)[0m
+[0;32mI (1790594) SPP_ACCEPTOR_DEMO: ESP_SPP_CLOSE_EVT status:0 handle:385 close_by_remote:1[0m
+[0;33mW (1792574) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0[0m
+[0;32mI (1792574) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:0 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (1792594) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 792, status 0x0[0m
+[0;32mI (1792594) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:2 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (1793074) BT_HCI: hci cmd send: unsniff: hdl 0x81[0m
+[0;33mW (1793074) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x41 current:0x0[0m
+[0;33mW (1793074) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x41[0m
+[0;33mW (1793564) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0[0m
+[0;32mI (1793564) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:0 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (1793694) BT_APPL: new conn_srvc id:26, app_id:255[0m
+[0;32mI (1793694) SPP_ACCEPTOR_DEMO: ESP_SPP_SRV_OPEN_EVT status:0 handle:129, rem_bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (1798714) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 792, status 0x0[0m
+[0;32mI (1798714) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:2 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (1997504) BT_RFCOMM: port_rfc_closed RFCOMM connection in server:1 state 2 closed: Closed (res: 19)[0m
+[0;32mI (1997514) SPP_ACCEPTOR_DEMO: ESP_SPP_CLOSE_EVT status:0 handle:129 close_by_remote:1[0m
+[0;33mW (1998994) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0[0m
+[0;32mI (1998994) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:0 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (1999004) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x41 current:0x0[0m
+[0;33mW (1999004) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x41[0m
+[0;33mW (1999004) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 792, status 0x0[0m
+[0;32mI (1999014) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:2 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (1999494) BT_HCI: hci cmd send: unsniff: hdl 0x81[0m
+[0;33mW (1999984) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0[0m
+[0;32mI (1999984) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:0 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (2000194) BT_APPL: new conn_srvc id:26, app_id:255[0m
+[0;32mI (2000194) SPP_ACCEPTOR_DEMO: ESP_SPP_SRV_OPEN_EVT status:0 handle:385, rem_bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (2005234) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 792, status 0x0[0m
+[0;32mI (2005234) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:2 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (2098494) BT_RFCOMM: port_rfc_closed RFCOMM connection in server:1 state 2 closed: Closed (res: 19)[0m
+[0;32mI (2098494) SPP_ACCEPTOR_DEMO: ESP_SPP_CLOSE_EVT status:0 handle:385 close_by_remote:1[0m
+[0;33mW (2100464) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0[0m
+[0;32mI (2100464) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:0 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (2100494) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x41 current:0x0[0m
+[0;33mW (2100494) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x41[0m
+[0;33mW (2104494) BT_HCI: hci cmd send: disconnect: hdl 0x81, rsn:0x13[0m
+[0;33mW (2104574) BT_HCI: hcif disc complete: hdl 0x81, rsn 0x16[0m
+[0;32mI (2104574) SPP_ACCEPTOR_DEMO: event: 17[0m
+[0;33mW (2232464) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (2232474) SPP_ACCEPTOR_DEMO: event: 16[0m
+[0;33mW (2232514) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000[0m
+[0;33mW (2232784) BT_APPL: new conn_srvc id:26, app_id:255[0m
+[0;32mI (2232784) SPP_ACCEPTOR_DEMO: ESP_SPP_SRV_OPEN_EVT status:0 handle:129, rem_bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (2237794) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 792, status 0x0[0m
+[0;32mI (2237794) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:2 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (2348464) BT_RFCOMM: port_rfc_closed RFCOMM connection in server:1 state 2 closed: Closed (res: 19)[0m
+[0;32mI (2348464) SPP_ACCEPTOR_DEMO: ESP_SPP_CLOSE_EVT status:0 handle:129 close_by_remote:1[0m
+[0;33mW (2350444) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0[0m
+[0;32mI (2350444) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:0 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (2350464) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x41 current:0x0[0m
+[0;33mW (2350464) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x41[0m
+[0;33mW (2354464) BT_HCI: hci cmd send: disconnect: hdl 0x80, rsn:0x13[0m
+[0;33mW (2354544) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x16[0m
+[0;32mI (2354554) SPP_ACCEPTOR_DEMO: event: 17[0m
+[0;33mW (2396104) BT_HCI: hcif conn complete: hdl 0x81, st 0x0[0m
+[0;32mI (2396104) SPP_ACCEPTOR_DEMO: event: 16[0m
+[0;33mW (2396164) BT_HCI: hcif link supv_to changed: hdl 0x81, supv_to 8000[0m
+[0;33mW (2396394) BT_APPL: new conn_srvc id:26, app_id:255[0m
+[0;32mI (2396394) SPP_ACCEPTOR_DEMO: ESP_SPP_SRV_OPEN_EVT status:0 handle:385, rem_bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (2401414) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 792, status 0x0[0m
+[0;32mI (2401414) SPP_ACCEPTOR_DEMO: ESP_BT_GAP_MODE_CHG_EVT mode:2 bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (3255314) BT_RFCOMM: port_rfc_closed RFCOMM connection in server:1 state 2 closed: Closed (res: 19)[0m
+[0;32

@@ -9,16 +9,13 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.camera.core.Camera;
 import androidx.camera.core.CameraSelector;
 import androidx.camera.core.Preview;
 import androidx.camera.lifecycle.ProcessCameraProvider;
-import androidx.camera.view.CameraController;
 import androidx.camera.view.PreviewView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -112,13 +109,13 @@ public class HomeFragment extends Fragment {
             if (bluetoothSocket == null || outputStream == null)
                 throw new IOException("Bluetooth connection failed");
 
+            // Handle touch up down event
             List<TouchUpDownEvent> touchEvent = new ArrayList<>() {{
                 add(new TouchUpDownEvent(binding.btnUp, BluetoothCommand.UP_START.toString(), BluetoothCommand.UP_STOP.toString()));
                 add(new TouchUpDownEvent(binding.btnDown, BluetoothCommand.DOWN_START.toString(), BluetoothCommand.DOWN_STOP.toString()));
                 add(new TouchUpDownEvent(binding.btnLeft, BluetoothCommand.LEFT_START.toString(), BluetoothCommand.LEFT_STOP.toString()));
                 add(new TouchUpDownEvent(binding.btnRight, BluetoothCommand.RIGHT_START.toString(), BluetoothCommand.RIGHT_STOP.toString()));
             }};
-
             touchEvent.forEach(item -> {
                 item.getElement().setOnTouchListener(new View.OnTouchListener() {
                     @Override
@@ -133,6 +130,27 @@ public class HomeFragment extends Fragment {
                             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                         }
                         return false;
+                    }
+                });
+            });
+
+            // Handle toggle switch
+            List<SwitchEvent> switchEvents = new ArrayList<>() {{
+                add(new SwitchEvent(binding.switchAdas, BluetoothCommand.ADAS_ON.toString(), BluetoothCommand.ADAS_OFF.toString()));
+                add(new SwitchEvent(binding.switchSleepDetect, BluetoothCommand.SLEEP_DETECT_ON.toString(), BluetoothCommand.SLEEP_DETECT_OFF.toString()));
+                add(new SwitchEvent(binding.switchBlindSpot, BluetoothCommand.BLIND_SPOT_ON.toString(), BluetoothCommand.BLIND_SPOT_OFF.toString()));
+                add(new SwitchEvent(binding.switchLaneKeeping, BluetoothCommand.LANE_KEEPING_ON.toString(), BluetoothCommand.LANE_KEEPING_OFF.toString()));
+            }};
+            switchEvents.forEach(item -> {
+                item.getSwitchCompat().setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    try {
+                        if (isChecked) {
+                            outputStream.write(item.getEnableCommand().getBytes());
+                        } else {
+                            outputStream.write(item.getDisableCommand().getBytes());
+                        }
+                    } catch (IOException e) {
+                        Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
             });
