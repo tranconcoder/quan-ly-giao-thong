@@ -42,6 +42,7 @@ public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
     private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
+
     private PreviewView previewView;
     private BluetoothSocket bluetoothSocket;
     private OutputStream outputStream;
