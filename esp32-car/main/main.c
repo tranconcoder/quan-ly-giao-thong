@@ -116,6 +116,7 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
          * rather than in this callback directly. Since the printing takes too much time, it may stuck the Bluetooth
          * stack and also have a effect on the throughput!
          */
+        // esp_spp_write(param->data_ind.handle, 10, (uint8_t *)"Hello SPP");
         ESP_LOGI(SPP_TAG, "ESP_SPP_DATA_IND_EVT len:%d handle:%" PRIu32,
                  param->data_ind.len, param->data_ind.handle);
         if (param->data_ind.len < 128)

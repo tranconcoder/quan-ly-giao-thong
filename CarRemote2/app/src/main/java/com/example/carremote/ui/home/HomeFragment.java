@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.camera.core.Camera;
 import androidx.camera.core.CameraSelector;
 import androidx.camera.core.Preview;
@@ -23,6 +24,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleOwner;
 
+import com.example.carremote.BluetoothCommand;
 import com.example.carremote.BluetoothConnect;
 import com.example.carremote.MainActivity;
 import com.example.carremote.R;
@@ -30,7 +32,10 @@ import com.example.carremote.databinding.FragmentHomeBinding;
 import com.google.common.util.concurrent.ListenableFuture;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class HomeFragment extends Fragment {
@@ -38,8 +43,9 @@ public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
     private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
     private PreviewView previewView;
-    BluetoothSocket bluetoothSocket;
-    OutputStream outputStream;
+    private BluetoothSocket bluetoothSocket;
+    private OutputStream outputStream;
+    private InputStream inputStream;
     private float dX, dY;
 
     @SuppressLint("ClickableViewAccessibility")
@@ -51,6 +57,32 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        return root;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
+
+    public void bindPreview(@NonNull ProcessCameraProvider cameraProvider) {
+        Preview preview = new Preview.Builder()
+                .build();
+
+        CameraSelector cameraSelector = new CameraSelector.Builder()
+                .requireLensFacing(CameraSelector.LENS_FACING_FRONT)
+                .build();
+
+        preview.setSurfaceProvider(previewView.getSurfaceProvider());
+
+        /* Camera camera = */ cameraProvider.bindToLifecycle((LifecycleOwner) this, cameraSelector, preview);
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         try {
             MainActivity mainActivity = (MainActivity) getActivity();
@@ -58,9 +90,10 @@ public class HomeFragment extends Fragment {
 
             bluetoothSocket = bluetoothConnect.connect();
             outputStream = bluetoothSocket.getOutputStream();
+            inputStream = bluetoothSocket.getInputStream();
 
             // Setup camera preview
-            this.cameraProviderFuture = ProcessCameraProvider.getInstance(mainActivity);
+            this.cameraProviderFuture = ProcessCameraProvider.getInstance(getContext());
             previewView = binding.previewView;
             cameraProviderFuture.addListener(() -> {
                 try {
@@ -78,101 +111,30 @@ public class HomeFragment extends Fragment {
             if (bluetoothSocket == null || outputStream == null)
                 throw new IOException("Bluetooth connection failed");
 
+            List<TouchUpDownEvent> touchEvent = new ArrayList<>() {{
+                add(new TouchUpDownEvent(binding.btnUp, BluetoothCommand.UP_START.toString(), BluetoothCommand.UP_STOP.toString()));
+                add(new TouchUpDownEvent(binding.btnDown, BluetoothCommand.DOWN_START.toString(), BluetoothCommand.DOWN_STOP.toString()));
+                add(new TouchUpDownEvent(binding.btnLeft, BluetoothCommand.LEFT_START.toString(), BluetoothCommand.LEFT_STOP.toString()));
+                add(new TouchUpDownEvent(binding.btnRight, BluetoothCommand.RIGHT_START.toString(), BluetoothCommand.RIGHT_STOP.toString()));
+            }};
 
-            binding.btnReconnect.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    try {
-                        bluetoothSocket = bluetoothConnect.connect();
-                        outputStream = bluetoothSocket.getOutputStream();
-
-                        Toast.makeText(mainActivity, "Reconnect success!", Toast.LENGTH_SHORT).show();
-                    } catch (IOException e) {
-                        Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                }
-            });
-
-            binding.btnUp.setOnTouchListener(new View.OnTouchListener() {
-                @SuppressLint("ClickableViewAccessibility")
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    try {
-                        switch (event.getAction()) {
-                            case MotionEvent.ACTION_DOWN:
-                                outputStream.write("UP-START".getBytes());
-                                break;
-                            case MotionEvent.ACTION_UP:
-                                outputStream.write("UP-END".getBytes());
-                                break;
+            touchEvent.forEach(item -> {
+                item.getElement().setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        try {
+                            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                                outputStream.write(item.getStartCommand().getBytes());
+                            } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                                outputStream.write(item.getEndCommand().getBytes());
+                            }
+                        } catch (IOException e) {
+                            Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                         }
-                    } catch (IOException e) {
-                        Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                        return false;
                     }
-                    return false;
-                }
+                });
             });
-
-
-            binding.btnDown.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    try {
-                        switch (event.getAction()) {
-                            case MotionEvent.ACTION_DOWN:
-                                outputStream.write("DOWN-START".getBytes());
-                                break;
-                            case MotionEvent.ACTION_UP:
-                                outputStream.write("DOWN-END".getBytes());
-                                break;
-                        }
-                    } catch (IOException e) {
-                        Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                    return false;
-                }
-            });
-
-
-            binding.btnLeft.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    try {
-                        switch (event.getAction()) {
-                            case MotionEvent.ACTION_DOWN:
-                                outputStream.write("LEFT-START".getBytes());
-                                break;
-                            case MotionEvent.ACTION_UP:
-                                outputStream.write("LEFT-END".getBytes());
-                                break;
-                        }
-                    } catch (IOException e) {
-                        Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                    return false;
-                }
-            });
-
-
-            binding.btnRight.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    try {
-                        switch (event.getAction()) {
-                            case MotionEvent.ACTION_DOWN:
-                                outputStream.write("RIGHT-START".getBytes());
-                                break;
-                            case MotionEvent.ACTION_UP:
-                                outputStream.write("RIGHT-END".getBytes());
-                                break;
-                        }
-                    } catch (IOException e) {
-                        Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                    return false;
-                }
-            });
-
 
             // Handle move camera preview
             binding.previewView.setOnTouchListener(new View.OnTouchListener() {
@@ -185,44 +147,58 @@ public class HomeFragment extends Fragment {
                             break;
 
                         case MotionEvent.ACTION_MOVE:
-                            float x = Math.min(Math.max(event.getRawX() + dX, 20), root.getWidth() - binding.previewView.getWidth() - 20);
-                            float y = Math.min(Math.max(event.getRawY() + dY, 20), root.getHeight() - binding.previewView.getHeight() - 20);
+                            float x = Math.min(Math.max(event.getRawX() + dX, 20), getView().getWidth() - binding.previewView.getWidth() - 20);
+                            float y = Math.min(Math.max(event.getRawY() + dY, 20), getView().getHeight() - binding.previewView.getHeight() - 20);
 
-                            binding.previewView.animate()
+                            binding.previewView
+                                    .animate()
                                     .x(x).y(y)
                                     .setDuration(0)
                                     .start();
                             break;
 
-                        default:
-                            return false;
+                        case MotionEvent.ACTION_UP:
+                            // Move to edge
+                            float previewCenterX = binding.previewView.getX() + (binding.previewView.getWidth() / 2);
+                            float previewCenterY = binding.previewView.getY() + (binding.previewView.getHeight() / 2);
+
+                            if (previewCenterX < getView().getWidth() / 2) {
+                                binding.previewView
+                                        .animate()
+                                        .x(20)
+                                        .setDuration(0)
+                                        .start();
+                            } else {
+                                binding.previewView
+                                        .animate()
+                                        .x(getView().getWidth() - binding.previewView.getWidth() - 20)
+                                        .setDuration(0)
+                                        .start();
+                            }
+
+                            break;
                     }
+
                     return true;
+                }
+            });
+
+            // Handle reconnect button
+            binding.btnReconnect.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        bluetoothSocket = bluetoothConnect.connect();
+                        outputStream = bluetoothSocket.getOutputStream();
+                        inputStream = bluetoothSocket.getInputStream();
+                    } catch (IOException e) {
+                        Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
                 }
             });
         } catch (Exception e) {
             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+            Log.e("tag", e.getMessage(), e);
         }
-
-        return root;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
-    }
-
-    void bindPreview(@NonNull ProcessCameraProvider cameraProvider) {
-        Preview preview = new Preview.Builder()
-                .build();
-
-        CameraSelector cameraSelector = new CameraSelector.Builder()
-                .requireLensFacing(CameraSelector.LENS_FACING_FRONT)
-                .build();
-
-        preview.setSurfaceProvider(previewView.getSurfaceProvider());
-
-        /* Camera camera = */ cameraProvider.bindToLifecycle((LifecycleOwner) this, cameraSelector, preview);
     }
 }
