@@ -1,9 +1,0 @@
-[0/1] Re-running CMake...
--- Building ESP-IDF components for target esp32
-NOTICE: Using component placed at /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/main/components/l2cap-server for dependency "l2cap-server", specified in /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/main/idf_component.yml
-NOTICE: Processing 2 dependencies:
-NOTICE: [1/2] l2cap-server (*) (/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/main/components/l2cap-server)
-NOTICE: [2/2] idf (5.4.0)
--- Configuring incomplete, errors occurred!
-FAILED: build.ninja 
-/usr/bin/cmake --regenerate-during-build -S/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car -B/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build

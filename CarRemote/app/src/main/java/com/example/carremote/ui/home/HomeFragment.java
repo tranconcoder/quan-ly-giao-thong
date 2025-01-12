@@ -21,6 +21,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleOwner;
 
+import com.example.carremote.BLE;
 import com.example.carremote.BluetoothCommand;
 import com.example.carremote.BluetoothConnect;
 import com.example.carremote.MainActivity;
