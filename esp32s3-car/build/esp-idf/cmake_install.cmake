@@ -554,11 +554,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/l2cap-server/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/main/cmake_install.cmake")
 endif()
 

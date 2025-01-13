@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        this.bluetoothConnect = new BluetoothConnect(this);
+        this.bluetoothConnect = new BluetoothConnect(MainActivity.this);
     }
 
     @Override

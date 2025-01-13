@@ -213,7 +213,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=esp32-car
+CMAKE_PROJECT_NAME:STATIC=ble50_sec_gatts_demo
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=3.6.2
@@ -365,6 +365,15 @@ USE_SHARED_MBEDTLS_LIBRARY:BOOL=OFF
 USE_STATIC_MBEDTLS_LIBRARY:BOOL=ON
 
 //Value Computed by CMake
+ble50_sec_gatts_demo_BINARY_DIR:STATIC=/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build
+
+//Value Computed by CMake
+ble50_sec_gatts_demo_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+ble50_sec_gatts_demo_SOURCE_DIR:STATIC=/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car
+
+//Value Computed by CMake
 esp-idf_BINARY_DIR:STATIC=/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf
 
 //Value Computed by CMake
@@ -372,15 +381,6 @@ esp-idf_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 esp-idf_SOURCE_DIR:STATIC=/home/tvconss/esp/esp-idf
-
-//Value Computed by CMake
-esp32-car_BINARY_DIR:STATIC=/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build
-
-//Value Computed by CMake
-esp32-car_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-esp32-car_SOURCE_DIR:STATIC=/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car
 
 //Dependencies for the target
 everest_LIB_DEPENDS:STATIC=general;__idf_cxx;general;__idf_newlib;general;__idf_freertos;general;__idf_esp_hw_support;general;__idf_heap;general;__idf_log;general;__idf_soc;general;__idf_hal;general;__idf_esp_rom;general;__idf_esp_common;general;__idf_esp_system;general;__idf_xtensa;
@@ -543,7 +543,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=119
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=118
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -39,7 +39,7 @@ public class GalleryFragment extends Fragment {
 
         MainActivity mainActivity = (MainActivity) getActivity();
         BluetoothConnect bluetoothConnect = mainActivity.bluetoothConnect;
-        BluetoothGatt gatt = bluetoothConnect.connectGatt();
+
     }
 
     @Override

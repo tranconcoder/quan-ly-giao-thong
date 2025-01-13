@@ -10,7 +10,7 @@
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/CMakeFiles/flash.dir
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/CMakeFiles/encrypted-flash.dir
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/CMakeFiles/_project_elf_src.dir
-/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/CMakeFiles/esp32-car.elf.dir
+/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/CMakeFiles/ble50_sec_gatts_demo.elf.dir
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/CMakeFiles/size.dir
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/CMakeFiles/size-files.dir
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/CMakeFiles/size-components.dir
@@ -836,13 +836,6 @@
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/wifi_provisioning/CMakeFiles/install.dir
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/wifi_provisioning/CMakeFiles/install/local.dir
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/wifi_provisioning/CMakeFiles/install/strip.dir
-/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/l2cap-server/CMakeFiles/__idf_l2cap-server.dir
-/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/l2cap-server/CMakeFiles/edit_cache.dir
-/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/l2cap-server/CMakeFiles/rebuild_cache.dir
-/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/l2cap-server/CMakeFiles/list_install_components.dir
-/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/l2cap-server/CMakeFiles/install.dir
-/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/l2cap-server/CMakeFiles/install/local.dir
-/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/l2cap-server/CMakeFiles/install/strip.dir
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/main/CMakeFiles/__idf_main.dir
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/main/CMakeFiles/edit_cache.dir
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build/esp-idf/main/CMakeFiles/rebuild_cache.dir

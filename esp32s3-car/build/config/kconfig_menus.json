@@ -6297,6 +6297,34 @@
     {
         "children": [
             {
+                "children": [],
+                "depends_on": null,
+                "help": "This config the example id for CI test. Only for internal used.",
+                "id": "EXAMPLE_CI_ID",
+                "name": "EXAMPLE_CI_ID",
+                "range": null,
+                "title": null,
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "This config the pipeline id for CI test. Only for internal used.",
+                "id": "EXAMPLE_CI_PIPELINE_ID",
+                "name": "EXAMPLE_CI_PIPELINE_ID",
+                "range": null,
+                "title": "The pipeline id for CI test",
+                "type": "int"
+            }
+        ],
+        "depends_on": null,
+        "id": "example-ble50-security-gatt-server-config",
+        "title": "Example 'BLE50 SECURITY GATT SERVER' Config",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
                 "children": [
                     {
                         "children": [],

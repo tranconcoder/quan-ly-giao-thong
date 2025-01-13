@@ -1,9 +1,17 @@
 package com.example.carremote.ui.home;
 
 import android.annotation.SuppressLint;
+import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothSocket;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.ServiceConnection;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -20,10 +28,12 @@ import androidx.camera.view.PreviewView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.example.carremote.BLE;
 import com.example.carremote.BluetoothCommand;
 import com.example.carremote.BluetoothConnect;
+import com.example.carremote.BluetoothLeService;
 import com.example.carremote.MainActivity;
 import com.example.carremote.R;
 import com.example.carremote.databinding.FragmentHomeBinding;
@@ -43,15 +53,18 @@ public class HomeFragment extends Fragment {
 
     private PreviewView previewView;
     private BluetoothSocket bluetoothSocket;
+    private BluetoothGatt bluetoothGatt;
     private OutputStream outputStream;
     private InputStream inputStream;
     private float dX, dY;
+    private BluetoothLeService bluetoothService;
+
 
     @SuppressLint("ClickableViewAccessibility")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-//        HomeViewModel homeViewModel =
-//                new ViewModelProvider(this).get(HomeViewModel.class);
+        HomeViewModel homeViewModel =
+                new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -87,9 +100,16 @@ public class HomeFragment extends Fragment {
             MainActivity mainActivity = (MainActivity) getActivity();
             BluetoothConnect bluetoothConnect = mainActivity.bluetoothConnect;
 
+
+            Intent gattServiceIntent = new Intent(mainActivity, BluetoothLeService.class);
+            mainActivity.bindService(gattServiceIntent, serviceConnection, Context.BIND_AUTO_CREATE);
+
+
             bluetoothSocket = bluetoothConnect.connect();
-            outputStream = bluetoothSocket.getOutputStream();
-            inputStream = bluetoothSocket.getInputStream();
+//            bluetoothGatt   = bluetoothConnect.connectGatt();
+            outputStream    = bluetoothSocket.getOutputStream();
+            inputStream     = bluetoothSocket.getInputStream();
+
 
             // Setup camera preview
             this.cameraProviderFuture = ProcessCameraProvider.getInstance(getContext());
@@ -220,5 +240,57 @@ public class HomeFragment extends Fragment {
             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
             Log.e("tag", e.getMessage(), e);
         }
+    }
+
+    private ServiceConnection serviceConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            bluetoothService = ((BluetoothLeService.LocalBinder) service).getService();
+            if (bluetoothService != null) {
+                if (!bluetoothService.initialize()) {
+                    Log.e("tag", "Unable to initialize Bluetooth");
+                    getActivity().finish();
+                }
+                // perform device connection
+
+                bluetoothService.connect("24:ec:4a:3a:2b:ee");
+
+
+            }
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            bluetoothService = null;
+        }
+    };
+
+    private final BroadcastReceiver gattUpdateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            final String action = intent.getAction();
+            if (BluetoothLeService.ACTION_GATT_CONNECTED.equals(action)) {
+                Toast.makeText(context, "BLE connected", Toast.LENGTH_SHORT).show();
+            } else if (BluetoothLeService.ACTION_GATT_DISCONNECTED.equals(action)) {
+                Toast.makeText(context, "BLE disconnected", Toast.LENGTH_SHORT).show();
+            }
+        }
+    };
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if (bluetoothService != null) {
+            final boolean result = bluetoothService.connect("24:ec:4a:3a:2b:ee");
+            Log.d("tag", "Connect request result=" + result);
+        }
+    }
+
+    private static IntentFilter makeGattUpdateIntentFilter() {
+        final IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(BluetoothLeService.ACTION_GATT_CONNECTED);
+        intentFilter.addAction(BluetoothLeService.ACTION_GATT_DISCONNECTED);
+        return intentFilter;
     }
 }
