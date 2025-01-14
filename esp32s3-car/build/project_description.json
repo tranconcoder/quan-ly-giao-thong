@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "ble50_sec_gatts_demo",
-    "project_version":    "95d10b02-dirty",
+    "project_version":    "4ac33e65-dirty",
     "project_path":       "/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car",
     "idf_path":           "/home/tvconss/esp/esp-idf",
     "build_dir":          "/home/tvconss/Workspace/quan-ly-giao-thong/esp32s3-car/build",
@@ -11,7 +11,7 @@
     "app_elf":            "ble50_sec_gatts_demo.elf",
     "app_bin":            "ble50_sec_gatts_demo.bin",
     "build_type":         "flash_app",
-    "git_revision":       "v5.4-dirty",
+    "git_revision":       "v5.4",
     "target":             "esp32s3",
     "rev":                "",
     "min_rev":            "0",

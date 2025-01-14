@@ -1,0 +1,217 @@
+[Y��0:�ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x9 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 14 2025 20:54:48[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=22d08h (142600) map[0m
+[0;32mI (113) esp_image: segment 1: paddr=00032d30 vaddr=3fc98a00 size=040dch ( 16604) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00036e14 vaddr=40374000 size=09204h ( 37380) load[0m
+[0;32mI (126) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=83484h (537732) map[0m
+[0;32mI (221) esp_image: segment 4: paddr=000c34ac vaddr=4037d204 size=0b790h ( 46992) load[0m
+[0;32mI (231) esp_image: segment 5: paddr=000cec44 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (239) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (240) boot: Disabling RNG early entropy source...[0m
+[0;32mI (250) cpu_start: Multicore app[0m
+[0;32mI (259) cpu_start: Pro cpu start user code[0m
+[0;32mI (259) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (259) app_init: Application information:[0m
+[0;32mI (259) app_init: Project name:     ble50_sec_gatts_demo[0m
+[0;32mI (264) app_init: App version:      4ac33e65-dirty[0m
+[0;32mI (268) app_init: Compile time:     Jan 14 2025 20:54:41[0m
+[0;32mI (273) app_init: ELF file SHA256:  63990a08b...[0m
+[0;32mI (278) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (281) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (285) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (289) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (293) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (299) heap_init: At 3FCA0C98 len 00048A78 (290 KiB): RAM[0m
+[0;32mI (304) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (310) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (315) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (321) spi_flash: detected chip: boya[0m
+[0;32mI (324) spi_flash: flash io: dio[0m
+[0;33mW (327) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (339) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (345) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (352) coexist: coex firmware version: 49a8cdc[0m
+[0;32mI (370) coexist: coexist rom version e7ae62f[0m
+[0;32mI (371) main_task: Started on CPU0[0m
+[0;32mI (381) main_task: Calling app_main()[0m
+[0;32mI (391) BLE_INIT: BT controller compile version [d752dea][0m
+[0;32mI (391) BLE_INIT: Bluetooth MAC: 24:ec:4a:3a:2b:ee[0m
+[0;32mI (391) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;33mW (391) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (431) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+[0;32mI (451) SEC_GATTS_DEMO: app_main init bluetooth[0m
+[0;32mI (491) SEC_GATTS_DEMO: Local identity root[0m
+[0;32mI (491) SEC_GATTS_DEMO: Local encryption root[0m
+[0;32mI (491) SEC_GATTS_DEMO: GATT server register, status 0[0m
+[0;32mI (501) SEC_GATTS_DEMO: Attribute table create successfully, num_handle 8[0m
+[0;32mI (501) SEC_GATTS_DEMO: Local privacy config, status 0[0m
+[0;32mI (501) SEC_GATTS_DEMO: Extended advertising params set, status 0[0m
+[0;32mI (511) SEC_GATTS_DEMO: Extended advertising data set, status 0[0m
+[0;32mI (511) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (551) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (551) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (631) SEC_GATTS_DEMO: Connected, conn_id 0, remote 6c:44:0e:b2:bd:38[0m
+[1;31mE (8471) BT_BTM: Device not found[0m
+
+[0;33mW (8471) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (8481) SEC_GATTS_DEMO: Disconnected, remote 6c:44:0e:b2:bd:38, reason 0x13[0m
+[0;32mI (8481) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 6c:44:0e:b2:bd:38[0m
+[0;32mI (8491) SEC_GATTS_DEMO: Pairing failed, reason 0x66[0m
+[0;32mI (8491) SEC_GATTS_DEMO: Bonded devices number zero[0m
+
+[0;32mI (8501) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (26701) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (26701) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (26761) SEC_GATTS_DEMO: Connected, conn_id 0, remote 60:39:3b:6c:7a:68[0m
+[0;32mI (27151) SEC_GATTS_DEMO: Connection params update, status 0, conn_int 6, latency 0, timeout 500[0m
+[0;32mI (27731) SEC_GATTS_DEMO: Connection params update, status 0, conn_int 39, latency 0, timeout 500[0m
+[0;32mI (30471) SEC_GATTS_DEMO: Bonded devices number zero[0m
+
+[0;32mI (30471) main_task: Returned from app_main()[0m
+[0;33mW (39141) BT_SMP: FOR LE SC LTK IS USED INSTEAD OF STK[0m
+[0;32mI (39381) SEC_GATTS_DEMO: Key exchanged, key_type ESP_LE_KEY_LENC[0m
+[0;32mI (39381) SEC_GATTS_DEMO: Key exchanged, key_type ESP_LE_KEY_PENC[0m
+[0;32mI (39381) SEC_GATTS_DEMO: Key exchanged, key_type ESP_LE_KEY_LID[0m
+[0;32mI (39481) SEC_GATTS_DEMO: Key exchanged, key_type ESP_LE_KEY_PID[0m
+[0;32mI (39481) SEC_GATTS_DEMO: peer addr 60:39:3b:6c:7a:68[0m
+[0;32mI (39531) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (39531) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (39531) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (39531) SEC_GATTS_DEMO: [0] addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;33mW (1274641) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1274641) SEC_GATTS_DEMO: Disconnected, remote 60:39:3b:6c:7a:68, reason 0x13[0m
+[0;32mI (1274651) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (3306831) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (3306831) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (3306961) SEC_GATTS_DEMO: Connected, conn_id 0, remote 60:39:3b:6c:7a:68[0m
+[0;32mI (3307301) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (3307301) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (3307311) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (3307311) SEC_GATTS_DEMO: [0] addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;33mW (3322611) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (3322611) SEC_GATTS_DEMO: Disconnected, remote 60:39:3b:6c:7a:68, reason 0x13[0m
+[0;32mI (3322611) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (3324901) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (3324901) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (3325001) SEC_GATTS_DEMO: Connected, conn_id 0, remote 60:39:3b:6c:7a:68[0m
+[0;32mI (3325191) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (3325191) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (3325201) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (3325201) SEC_GATTS_DEMO: [0] addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;33mW (3472571) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (3472571) SEC_GATTS_DEMO: Disconnected, remote 60:39:3b:6c:7a:68, reason 0x13[0m
+[0;32mI (3472571) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (3475001) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (3475001) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (3475061) SEC_GATTS_DEMO: Connected, conn_id 0, remote 60:39:3b:6c:7a:68[0m
+[0;32mI (3475401) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (3475401) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (3475411) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (3475411) SEC_GATTS_DEMO: [0] addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;33mW (3502701) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (3502701) SEC_GATTS_DEMO: Disconnected, remote 60:39:3b:6c:7a:68, reason 0x13[0m
+[0;32mI (3502701) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (3504541) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (3504541) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (3504651) SEC_GATTS_DEMO: Connected, conn_id 0, remote 60:39:3b:6c:7a:68[0m
+[0;32mI (3504851) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (3504851) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (3504851) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (3504861) SEC_GATTS_DEMO: [0] addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;33mW (3559551) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (3559551) SEC_GATTS_DEMO: Disconnected, remote 60:39:3b:6c:7a:68, reason 0x13[0m
+[0;32mI (3559551) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (3560771) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (3560771) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (3560871) SEC_GATTS_DEMO: Connected, conn_id 0, remote 60:39:3b:6c:7a:68[0m
+[0;32mI (3561061) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (3561061) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (3561071) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (3561071) SEC_GATTS_DEMO: [0] addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;33mW (3567151) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (3567151) SEC_GATTS_DEMO: Disconnected, remote 60:39:3b:6c:7a:68, reason 0x13[0m
+[0;32mI (3567161) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (3569141) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (3569141) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (3569201) SEC_GATTS_DEMO: Connected, conn_id 0, remote 60:39:3b:6c:7a:68[0m
+[0;32mI (3569401) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (3569401) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (3569401) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (3569411) SEC_GATTS_DEMO: [0] addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;33mW (3596011) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (3596021) SEC_GATTS_DEMO: Disconnected, remote 60:39:3b:6c:7a:68, reason 0x13[0m
+[0;32mI (3596021) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (3598321) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (3598321) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (3598401) SEC_GATTS_DEMO: Connected, conn_id 0, remote 60:39:3b:6c:7a:68[0m
+[0;32mI (3598601) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (3598601) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (3598611) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (3598611) SEC_GATTS_DEMO: [0] addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;33mW (3644771) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (3644771) SEC_GATTS_DEMO: Disconnected, remote 60:39:3b:6c:7a:68, reason 0x13[0m
+[0;32mI (3644771) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (3646801) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (3646801) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (3646871) SEC_GATTS_DEMO: Connected, conn_id 0, remote 60:39:3b:6c:7a:68[0m
+[0;32mI (3647061) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (3647061) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (3647071) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (3647071) SEC_GATTS_DEMO: [0] addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;33mW (3672751) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (3672751) SEC_GATTS_DEMO: Disconnected, remote 60:39:3b:6c:7a:68, reason 0x13[0m
+[0;32mI (3672761) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (3675021) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (3675021) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (3675091) SEC_GATTS_DEMO: Connected, conn_id 0, remote 60:39:3b:6c:7a:68[0m
+[0;32mI (3675291) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (3675291) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (3675301) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (3675301) SEC_GATTS_DEMO: [0] addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;33mW (3848901) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (3848901) SEC_GATTS_DEMO: Disconnected, remote 60:39:3b:6c:7a:68, reason 0x13[0m
+[0;32mI (3848901) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (3851571) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (3851571) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (3851631) SEC_GATTS_DEMO: Connected, conn_id 0, remote 60:39:3b:6c:7a:68[0m
+[0;32mI (3851971) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (3851971) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (3851981) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (3851981) SEC_GATTS_DEMO: [0] addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (3852021) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (3852021) SEC_GATTS_DEMO: 48 65 6c 6c 6f 2c 20 45 53 50 33 32 21[0m
+[0;33mW (3869711) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (3869711) SEC_GATTS_DEMO: Disconnected, remote 60:39:3b:6c:7a:68, reason 0x13[0m
+[0;32mI (3869721) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (3871591) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (3871591) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (3871661) SEC_GATTS_DEMO: Connected, conn_id 0, remote 60:39:3b:6c:7a:68[0m
+[0;32mI (3871861) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (3871861) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (3871871) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (3871871) SEC_GATTS_DEMO: [0] addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (3871911) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (3871911) SEC_GATTS_DEMO: 48 65 6c 6c 6f 2c 20 45 53 50 33 32 21[0m
