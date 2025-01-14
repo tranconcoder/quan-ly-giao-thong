@@ -17,6 +17,7 @@ import android.bluetooth.le.BluetoothLeScanner;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.icu.text.Edits;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -31,6 +32,7 @@ import androidx.core.app.ActivityCompat;
 import java.io.IOException;
 import java.security.Provider;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
@@ -137,23 +139,27 @@ public class BluetoothConnect extends Service {
                 Log.i(Global.TAG.toString(), "Discovered services success!");
 
                 // get services
-                BluetoothGattService service = gatt.getServices().get(2);
-                BluetoothGattCharacteristic characteristic = service.getCharacteristics().stream().findFirst().orElse(null);
-
-                Log.d(Global.TAG.toString(), "Service: " + service.getUuid().toString());
-                Log.d(Global.TAG.toString(), "Characteristic: " + characteristic.getUuid().toString());
+                for (BluetoothGattService service : gatt.getServices()) {
+                    Log.d(Global.TAG.toString(), "Service: " + service.getUuid().toString());
+                    for (BluetoothGattCharacteristic characteristic : service.getCharacteristics()) {
+                        Log.d(Global.TAG.toString(), "Characteristic: " + characteristic.getUuid().toString());
+                    }
+                }
+                List<BluetoothGattService> services = gatt.getServices();
+                BluetoothGattService service = services.get(services.size() - 1);
+                BluetoothGattCharacteristic characteristic = service.getCharacteristics().get(2);
 
                 // set characteristic
-                characteristic.setWriteType(BluetoothGattCharacteristic.WRITE_TYPE_DEFAULT);
-                boolean setCharactersticSuccess = characteristic.setValue("Hello, ESP32!".getBytes());
+                byte[] data = new byte[5000];
+                for (int i = 0; i < data.length; i++) {
+                    data[i] = (byte)(i % 256);
+                }
+                characteristic.setValue(data);
 
                 // write characteristic
-                boolean result = gatt.writeCharacteristic(characteristic);
-                if (result) {
-                    Log.i(Global.TAG.toString(), "Write characteristic success!");
-                } else {
-                    Log.e(Global.TAG.toString(), "Write characteristic failed!");
-                }
+                gatt.beginReliableWrite();
+                gatt.writeCharacteristic(characteristic);
+                gatt.executeReliableWrite();
             } else {
                 // failed to discover services
                 Log.e(Global.TAG.toString(), "Discovered services failed!");
@@ -163,6 +169,17 @@ public class BluetoothConnect extends Service {
         @Override
         public void onServiceChanged(@NonNull BluetoothGatt gatt) {
             Toast.makeText(context, "Service changed!", Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onCharacteristicWrite(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic, int status) {
+            super.onCharacteristicWrite(gatt, characteristic, status);
+
+            if (status == BluetoothGatt.GATT_SUCCESS) {
+                Log.i(Global.TAG.toString(), "Write characteristic success!");
+            } else {
+                Log.e(Global.TAG.toString(), "Write characteristic failed!");
+            }
         }
     };
 

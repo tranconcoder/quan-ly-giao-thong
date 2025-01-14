@@ -1,0 +1,1885 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x9 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 14 2025 20:54:48[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=22d08h (142600) map[0m
+[0;32mI (113) esp_image: segment 1: paddr=00032d30 vaddr=3fc98a00 size=040dch ( 16604) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00036e14 vaddr=40374000 size=09204h ( 37380) load[0m
+[0;32mI (126) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=83484h (537732) map[0m
+[0;32mI (221) esp_image: segment 4: paddr=000c34ac vaddr=4037d204 size=0b790h ( 46992) load[0m
+[0;32mI (231) esp_image: segment 5: paddr=000cec44 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (239) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (240) boot: Disabling RNG early entropy source...[0m
+[0;32mI (250) cpu_start: Multicore app[0m
+[0;32mI (259) cpu_start: Pro cpu start user code[0m
+[0;32mI (259) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (259) app_init: Application information:[0m
+[0;32mI (259) app_init: Project name:     ble50_sec_gatts_demo[0m
+[0;32mI (264) app_init: App version:      4ac33e65-dirty[0m
+[0;32mI (268) app_init: Compile time:     Jan 14 2025 20:54:41[0m
+[0;32mI (273) app_init: ELF file SHA256:  63990a08b...[0m
+[0;32mI (278) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (281) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (285) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (289) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (293) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (299) heap_init: At 3FCA0C98 len 00048A78 (290 KiB): RAM[0m
+[0;32mI (304) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (310) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (315) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (321) spi_flash: detected chip: boya[0m
+[0;32mI (324) spi_flash: flash io: dio[0m
+[0;33mW (327) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (339) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (345) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (352) coexist: coex firmware version: 49a8cdc[0m
+[0;32mI (370) coexist: coexist rom version e7ae62f[0m
+[0;32mI (371) main_task: Started on CPU0[0m
+[0;32mI (381) main_task: Calling app_main()[0m
+[0;32mI (391) BLE_INIT: BT controller compile version [d752dea][0m
+[0;32mI (391) BLE_INIT: Bluetooth MAC: 24:ec:4a:3a:2b:ee[0m
+[0;32mI (391) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (431) SEC_GATTS_DEMO: app_main init bluetooth[0m
+[0;32mI (461) SEC_GATTS_DEMO: GATT server register, status 0[0m
+[0;32mI (461) SEC_GATTS_DEMO: Attribute table create successfully, num_handle 8[0m
+[0;32mI (461) SEC_GATTS_DEMO: Local privacy config, status 0[0m
+[0;32mI (461) SEC_GATTS_DEMO: Extended advertising params set, status 0[0m
+[0;32mI (471) SEC_GATTS_DEMO: Extended advertising data set, status 0[0m
+[0;32mI (481) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (6181) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (6181) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (6251) SEC_GATTS_DEMO: Connected, conn_id 0, remote 60:39:3b:6c:7a:68[0m
+[0;32mI (6441) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;32mI (6441) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (6451) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (6451) SEC_GATTS_DEMO: [0] addr_type 1, addr 60:39:3b:6c:7a:68[0m
+[0;33mW (30481) BT_HCI: hci cmd send: disconnect: hdl 0x1, rsn:0x13[0m
+[0;32mI (30481) main_task: Returned from app_main()[0m
+[0;33mW (30521) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x16[0m
+[0;32mI (30531) SEC_GATTS_DEMO: Disconnected, remote 60:39:3b:6c:7a:68, reason 0x16[0m
+[0;32mI (30541) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (31161) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (31161) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (31261) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (61261) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (61261) SEC_GATTS_DEMO: Pairing failed, reason 0x63[0m
+[0;32mI (61261) SEC_GATTS_DEMO: Bonded devices number zero[0m
+
+[0;33mW (64261) BT_HCI: hci cmd send: disconnect: hdl 0x1, rsn:0x13[0m
+[0;33mW (64261) BT_BTM: btm_sec_clr_temp_auth_service() - no dev CB[0m
+
+[0;32mI (64261) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x16[0m
+[0;32mI (64271) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[1;31mE (64311) BT_BTM: Device not found[0m
+
+[0;33mW (64311) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x16[0m
+[0;32mI (64981) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (64981) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (65041) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (65441) SEC_GATTS_DEMO: Connection params update, status 0, conn_int 6, latency 0, timeout 500[0m
+[0;32mI (65721) SEC_GATTS_DEMO: Connection params update, status 0, conn_int 39, latency 0, timeout 500[0m
+[0;32mI (95051) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (95051) SEC_GATTS_DEMO: Pairing failed, reason 0x63[0m
+[0;32mI (95051) SEC_GATTS_DEMO: Bonded devices number zero[0m
+
+[0;33mW (98051) BT_HCI: hci cmd send: disconnect: hdl 0x2, rsn:0x13[0m
+[0;33mW (98051) BT_BTM: btm_sec_clr_temp_auth_service() - no dev CB[0m
+
+[0;32mI (98051) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x16[0m
+[0;32mI (98061) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[1;31mE (98091) BT_BTM: Device not found[0m
+
+[0;33mW (98101) BT_HCI: hcif disc complete: hdl 0x2, rsn 0x16[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x15a0
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xd20
+load:0x403cb700,len:0x2ee4
+entry 0x403c8928
+[0;32mI (27) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 14 2025 20:54:48[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=22d08h (142600) map[0m
+[0;32mI (114) esp_image: segment 1: paddr=00032d30 vaddr=3fc98a00 size=040dch ( 16604) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00036e14 vaddr=40374000 size=09204h ( 37380) load[0m
+[0;32mI (126) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=83484h (537732) map[0m
+[0;32mI (221) esp_image: segment 4: paddr=000c34ac vaddr=4037d204 size=0b790h ( 46992) load[0m
+[0;32mI (231) esp_image: segment 5: paddr=000cec44 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (239) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (240) boot: Disabling RNG early entropy source...[0m
+[0;32mI (250) cpu_start: Multicore app[0m
+[0;32mI (259) cpu_start: Pro cpu start user code[0m
+[0;32mI (259) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (259) app_init: Application information:[0m
+[0;32mI (259) app_init: Project name:     ble50_sec_gatts_demo[0m
+[0;32mI (264) app_init: App version:      4ac33e65-dirty[0m
+[0;32mI (268) app_init: Compile time:     Jan 14 2025 20:54:41[0m
+[0;32mI (274) app_init: ELF file SHA256:  63990a08b...[0m
+[0;32mI (278) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (281) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (285) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (289) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (293) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (300) heap_init: At 3FCA0C98 len 00048A78 (290 KiB): RAM[0m
+[0;32mI (305) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (310) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (315) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (321) spi_flash: detected chip: boya[0m
+[0;32mI (324) spi_flash: flash io: dio[0m
+[0;33mW (327) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (339) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (345) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (352) coexist: coex firmware version: 49a8cdc[0m
+[0;32mI (370) coexist: coexist rom version e7ae62f[0m
+[0;32mI (371) main_task: Started on CPU0[0m
+[0;32mI (381) main_task: Calling app_main()[0m
+[0;32mI (391) BLE_INIT: BT controller compile version [d752dea][0m
+[0;32mI (391) BLE_INIT: Bluetooth MAC: 24:ec:4a:3a:2b:ee[0m
+[0;32mI (391) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;32mI (431) SEC_GATTS_DEMO: app_main init bluetooth[0m
+[0;32mI (451) SEC_GATTS_DEMO: GATT server register, status 0[0m
+[0;32mI (451) SEC_GATTS_DEMO: Attribute table create successfully, num_handle 8[0m
+[0;32mI (451) SEC_GATTS_DEMO: Local privacy config, status 0[0m
+[0;32mI (461) SEC_GATTS_DEMO: Extended advertising params set, status 0[0m
+[0;32mI (461) SEC_GATTS_DEMO: Extended advertising data set, status 0[0m
+[0;32mI (471) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (30471) SEC_GATTS_DEMO: Bonded devices number zero[0m
+
+[0;32mI (30471) main_task: Returned from app_main()[0m
+[0;32mI (49801) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (49801) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (49891) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;33mW (51651) BT_SMP: FOR LE SC LTK IS USED INSTEAD OF STK[0m
+[0;32mI (51841) SEC_GATTS_DEMO: Key exchanged, key_type ESP_LE_KEY_LENC[0m
+[0;32mI (51841) SEC_GATTS_DEMO: Key exchanged, key_type ESP_LE_KEY_PENC[0m
+[0;32mI (51841) SEC_GATTS_DEMO: Key exchanged, key_type ESP_LE_KEY_LID[0m
+[0;32mI (51941) SEC_GATTS_DEMO: Key exchanged, key_type ESP_LE_KEY_PID[0m
+[0;32mI (51941) SEC_GATTS_DEMO: peer addr 77:77:2a:20:ee:1a[0m
+[0;32mI (51991) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (51991) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (51991) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (51991) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (52241) SEC_GATTS_DEMO: Connection params update, status 0, conn_int 6, latency 0, timeout 500[0m
+[0;32mI (52621) SEC_GATTS_DEMO: Connection params update, status 0, conn_int 39, latency 0, timeout 500[0m
+[0;33mW (188791) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (188791) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (188791) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (190751) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (190751) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (190841) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (191031) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (191031) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (191041) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (191041) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;33mW (388581) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (388581) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (388581) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (391301) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (391301) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (391361) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (391701) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (391701) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (391701) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (391711) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (391751) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (391751) SEC_GATTS_DEMO: 48 65 6c 6c 6f 2c 20 45 53 50 33 32 21[0m
+[0;33mW (419531) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (419531) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (419541) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (420931) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (420931) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (421001) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (421191) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (421191) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (421201) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (421201) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (421241) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (421241) SEC_GATTS_DEMO: 48 65 6c 6c 6f 2c 20 45 53 50 33 32 21[0m
+[0;33mW (443521) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (443521) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (443521) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (446681) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (446681) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (446791) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (446981) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (446981) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (446991) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (446991) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;33mW (477651) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (477651) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (477651) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (479351) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (479351) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (479401) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (479751) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (479751) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (479751) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (479751) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (479791) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (479791) SEC_GATTS_DEMO: 48 65 6c 6c 6f 2c 20 45 53 50 33 32 21[0m
+[0;33mW (526251) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (526251) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (526261) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (526861) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (526861) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (526941) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (527131) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (527131) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (527141) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (527141) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (527231) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (527231) SEC_GATTS_DEMO: 48 65 6c 6c 6f 2c 20 45 53 50 33 32 21[0m
+[0;33mW (585831) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (585831) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (585831) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (587931) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (587931) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (588021) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (588221) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (588221) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (588231) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (588231) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;33mW (631951) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (631951) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (631951) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (633761) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (633761) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (633851) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (634051) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (634051) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (634051) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (634061) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;33mW (651161) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (651161) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (651161) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (651701) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (651701) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (651791) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (651991) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (651991) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (651991) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (652001) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;33mW (676901) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (676901) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (676901) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (689631) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (689631) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (689721) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (689921) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (689921) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (689921) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (689931) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (689961) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (689971) SEC_GATTS_DEMO: 68 65 6c 6c 6f 20 77 6f 72 6c 64 21[0m
+[0;33mW (787081) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (787081) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (787081) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (789201) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (789201) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (789271) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (789471) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (789471) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (789481) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (789481) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (789521) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (789521) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (789521) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (789711) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (789711) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (789711) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (789811) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (789811) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (789811) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (789911) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (789911) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (789911) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (790001) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (790011) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (790011) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (790101) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (790101) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (790101) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (790201) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (790201) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (790201) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (790301) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (790301) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (790301) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (790391) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (790401) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (790401) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (790491) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (790491) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (790491) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (790591) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (790591) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (790591) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (790691) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (790691) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (790691) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (790781) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (790791) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (790791) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (790881) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (790881) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (790881) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (790981) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (790981) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (790981) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (791081) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (791081) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (791081) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (791171) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (791181) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (791181) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (791271) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (791271) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (791271) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (791371) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (791371) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (791371) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (791471) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (791471) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (791471) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (791561) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (791571) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (791571) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (791661) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (791661) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (791661) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (791761) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (791761) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (791761) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (791861) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (791861) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (791861) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (791951) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (791961) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (791961) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (792051) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (792051) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (792051) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (792151) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (792151) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (792151) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (792251) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (792251) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (792251) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (792341) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (792351) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00[0m
+[0;33mW (801311) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (801321) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (801321) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (803561) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (803561) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (803661) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (803851) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (803851) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (803861) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (803861) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (803901) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (803901) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (803901) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (804091) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (804091) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;32mI (804091) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (804191) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (804191) SEC_GATTS_DEMO: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[0m
+[0;33mW (822081) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (822081) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (822091) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (823001) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (823001) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (823061) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (823261) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (823261) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (823261) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (823261) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (823301) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (823301) SEC_GATTS_DEMO: 01 00 01 01 00 00 01 00 00 00 01 00 00 01 01 00[0m
+[0;32mI (823301) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (823501) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (823501) SEC_GATTS_DEMO: 01 01 01 00 01 01 00 00 01 00 00 00 01 01 00 00[0m
+[0;32mI (823501) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (823601) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (823601) SEC_GATTS_DEMO: 00 01 00 00 00 01 00 01 00 00 00 00 01 00 01 00[0m
+[0;32mI (823601) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (823691) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (823691) SEC_GATTS_DEMO: 01 01 00 01 01 01 00 01 01 00 01 01 01 00 00 01[0m
+[0;32mI (823691) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (823791) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (823791) SEC_GATTS_DEMO: 01 01 01 01 00 01 01 00 00 01 00 00 00 01 01 00[0m
+[0;32mI (823791) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (823891) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (823891) SEC_GATTS_DEMO: 00 01 00 00 00 01 00 00 00 00 00 00 01 00 00 00[0m
+[0;32mI (823891) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (823991) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (823991) SEC_GATTS_DEMO: 00 00 00 01 01 00 00 00 00 01 00 00 00 01 00 00[0m
+[0;32mI (823991) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (824081) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (824081) SEC_GATTS_DEMO: 01 00 00 00 00 01 00 00 00 01 01 00 01 00 01 00[0m
+[0;32mI (824081) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (824181) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (824181) SEC_GATTS_DEMO: 00 01 00 01 01 01 01 01 00 00 01 00 01 00 00 01[0m
+[0;32mI (824181) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (824281) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (824281) SEC_GATTS_DEMO: 01 01 01 01 01 00 01 01 01 00 01 01 01 00 01 01[0m
+[0;32mI (824281) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (824381) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (824381) SEC_GATTS_DEMO: 01 00 01 00 01 00 00 01 01 00 00 01 01 01 01 01[0m
+[0;32mI (824381) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (824471) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (824471) SEC_GATTS_DEMO: 01 01 00 00 01 01 00 00 00 01 01 00 01 01 00 01[0m
+[0;32mI (824471) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (824571) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (824571) SEC_GATTS_DEMO: 00 00 00 01 00 00 00 01 00 00 00 00 01 01 01 00[0m
+[0;32mI (824571) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (824671) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (824671) SEC_GATTS_DEMO: 00 01 00 00 01 00 01 01 00 00 01 00 00 01 01 00[0m
+[0;32mI (824671) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (824771) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (824771) SEC_GATTS_DEMO: 01 00 01 00 00 01 00 01 01 01 00 00 01 00 00 00[0m
+[0;32mI (824771) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (824861) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (824861) SEC_GATTS_DEMO: 00 01 00 00 01 01 01 00 00 00 01 00 01 00 01 01[0m
+[0;32mI (824861) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (824961) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (824961) SEC_GATTS_DEMO: 01 00 00 01 01 01 01 01 00 01 01 00 00 00 01 00[0m
+[0;32mI (824961) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (825061) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (825061) SEC_GATTS_DEMO: 00 00 01 01 01 01 01 01 01 00 00 01 01 00 00 01[0m
+[0;32mI (825061) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (825161) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (825161) SEC_GATTS_DEMO: 00 00 00 00 01 01 01 00 01 00 00 00 00 01 00 01[0m
+[0;32mI (825161) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (825251) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (825251) SEC_GATTS_DEMO: 01 01 01 00 00 01 01 00 00 01 00 00 00 00 00 01[0m
+[0;32mI (825251) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (825351) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (825351) SEC_GATTS_DEMO: 01 01 01 00 00 01 01 00 00 00 01 00 00 00 00 00[0m
+[0;32mI (825351) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (825451) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (825451) SEC_GATTS_DEMO: 00 01 01 01 01 01 00 01 01 00 01 00 00 00 00 00[0m
+[0;32mI (825451) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (825551) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (825551) SEC_GATTS_DEMO: 01 01 00 00 00 00 00 00 00 01 01 00 01 01 01 01[0m
+[0;32mI (825551) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (825641) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (825641) SEC_GATTS_DEMO: 00 01 00 01 01 01 00 00 01 01 00 01 01 00 00 01[0m
+[0;32mI (825641) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (825741) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (825741) SEC_GATTS_DEMO: 01 00 00 00 01 00 01 00 01 00 00 00 00 00 00 00[0m
+[0;32mI (825741) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (825841) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (825841) SEC_GATTS_DEMO: 01 00 00 01 01 01 00 00 01 00 01 00 01 01 01 01[0m
+[0;32mI (825841) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (825941) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (825941) SEC_GATTS_DEMO: 01 00 01 01 01 01 01 00 00 01 00 01 01 00 00 01[0m
+[0;32mI (825941) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (826031) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (826031) SEC_GATTS_DEMO: 00 01 00 00 00 00 01 01 00 01 00 00 00 00[0m
+[0;33mW (834131) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (834131) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (834131) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (836361) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (836361) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (836421) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (836611) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (836611) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (836621) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (836621) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (836661) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (836661) SEC_GATTS_DEMO: 00 01 01 00 01 01 01 00 00 01 00 01 00 00 01 00[0m
+[0;32mI (836661) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (836861) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (836861) SEC_GATTS_DEMO: 01 01 01 01 00 01 00 01 01 00 01 01 01 01 01 01[0m
+[0;32mI (836861) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (837001) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (837001) SEC_GATTS_DEMO: 01 00 00 01 01 00 01 00 00 00 01 01 00 01 01 00[0m
+[0;32mI (837001) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (837151) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (837151) SEC_GATTS_DEMO: 01 01 00 00 01 00 01 01 01 00 00 00 00 01 01 00[0m
+[0;32mI (837151) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (837251) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (837251) SEC_GATTS_DEMO: 01 01 00 00 00 01 01 00 01 00 00 00 01 01 01 01[0m
+[0;32mI (837251) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (837341) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (837341) SEC_GATTS_DEMO: 00 00 01 01 01 00 00 00 01 00 01 01 01 00 01 00[0m
+[0;32mI (837341) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (837441) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (837441) SEC_GATTS_DEMO: 00 00 00 00 01 00 00 01 01 00 00 00 01 01 01 01[0m
+[0;32mI (837441) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (837541) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (837541) SEC_GATTS_DEMO: 01 01 01 00 01 01 01 00 00 00 00 00 01 01 00 00[0m
+[0;32mI (837541) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (837641) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (837641) SEC_GATTS_DEMO: 00 01 01 00 00 01 00 01 01 01 00 00 01 01 01 00[0m
+[0;32mI (837641) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (837731) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (837731) SEC_GATTS_DEMO: 01 00 00 00 01 00 01 00 00 00 01 00 01 00 00 01[0m
+[0;32mI (837731) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (837881) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (837881) SEC_GATTS_DEMO: 01 01 00 00 01 00 00 01 00 01 00 01 00 01 00 00[0m
+[0;32mI (837881) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (837981) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (837981) SEC_GATTS_DEMO: 01 00 00 01 00 01 01 01 00 00 01 00 01 01 00 01[0m
+[0;32mI (837981) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (838071) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (838081) SEC_GATTS_DEMO: 01 01 01 00 00 01 01 00 00 01 00 01 01 00 00 01[0m
+[0;32mI (838081) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (838171) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (838171) SEC_GATTS_DEMO: 00 01 01 00 01 01 01 01 01 01 00 00 00 00 01 01[0m
+[0;32mI (838171) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (838271) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (838271) SEC_GATTS_DEMO: 00 01 00 01 01 00 00 01 00 00 01 01 00 00 00 00[0m
+[0;32mI (838271) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (838371) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (838371) SEC_GATTS_DEMO: 00 01 01 01 01 01 01 01 00 00 00 01 01 00 01 00[0m
+[0;32mI (838371) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (838511) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (838511) SEC_GATTS_DEMO: 01 00 01 01 00 01 01 00 01 00 00 00 01 01 01 01[0m
+[0;32mI (838521) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (838611) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (838611) SEC_GATTS_DEMO: 01 00 00 00 00 00 00 00 01 01 00 01 01 00 01 01[0m
+[0;32mI (838611) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (838711) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (838711) SEC_GATTS_DEMO: 00 01 00 01 01 01 00 01 00 01 00 01 01 01 01 01[0m
+[0;32mI (838711) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (838811) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (838811) SEC_GATTS_DEMO: 01 00 01 01 00 00 01 01 00 01 01 00 01 01 01 00[0m
+[0;32mI (838811) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (838901) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (838901) SEC_GATTS_DEMO: 00 00 01 01 00 01 00 00 00 01 00 00 00 00 01 00[0m
+[0;32mI (838901) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (839001) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (839001) SEC_GATTS_DEMO: 01 01 00 01 01 01 01 00 01 00 00 00 00 00 00 00[0m
+[0;32mI (839001) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (839101) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (839101) SEC_GATTS_DEMO: 01 00 00 01 01 01 00 01 00 00 01 00 01 00 01 01[0m
+[0;32mI (839101) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (839201) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (839201) SEC_GATTS_DEMO: 01 00 01 01 00 01 01 00 01 00 00 01 00 00 01 01[0m
+[0;32mI (839201) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (839291) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (839291) SEC_GATTS_DEMO: 01 00 01 00 00 00 00 00 00 00 00 01 01 01 00 00[0m
+[0;32mI (839291) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (839391) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (839391) SEC_GATTS_DEMO: 00 01 01 01 01 00 01 01 00 00 01 01 00 01 01 00[0m
+[0;32mI (839391) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (839541) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (839541) SEC_GATTS_DEMO: 01 00 00 00 01 00 00 01 01 00 01 00 00 01 01 01[0m
+[0;32mI (839541) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (839631) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (839641) SEC_GATTS_DEMO: 01 01 01 01 01 01 01 01 01 00 01 00 01 00[0m
+[0;33mW (863471) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (863481) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (863481) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (864991) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (865001) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (865081) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (865281) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (865281) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (865291) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (865291) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (865331) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (865331) SEC_GATTS_DEMO: 01 01 00 00 00[0m
+[0;33mW (879081) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (879081) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (879081) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (880781) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (880791) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (880881) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (881131) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (881131) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (881131) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (881131) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;33mW (892821) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (892821) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (892831) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (893761) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (893761) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (893851) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (894051) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (894051) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (894051) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (894051) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (894091) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (894091) SEC_GATTS_DEMO: 01 01 01 00 00 01 00 01 00 00 01 01 00 00 00 01[0m
+[0;32mI (894091) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (894291) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (894291) SEC_GATTS_DEMO: 01 00 01 00 00 00 00 01 01 01 00 00 01 01 00 00[0m
+[0;32mI (894291) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (894381) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (894381) SEC_GATTS_DEMO: 00 00 01 00 00 01 00 00 00 00 00 01 01 00 01 01[0m
+[0;32mI (894381) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (894481) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (894481) SEC_GATTS_DEMO: 00 01 01 01 01 00 01 00 00 01 00 00 00 01 01 01[0m
+[0;32mI (894481) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (894581) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (894581) SEC_GATTS_DEMO: 00 00 01 01 01 01 01 00 01 00 00 00 01 01 01 00[0m
+[0;32mI (894581) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (894681) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (894681) SEC_GATTS_DEMO: 00 01 01 01 01 01 00 00 00 00 00 00 01 00 00 01[0m
+[0;32mI (894681) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (894771) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (894771) SEC_GATTS_DEMO: 01 00 01 00 01 01 01 00 01 01 01 00 00 00 01 01[0m
+[0;32mI (894771) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (894871) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (894871) SEC_GATTS_DEMO: 00 00 00 01 00 00 01 01 00 01 00 00 00 01 01 00[0m
+[0;32mI (894871) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (894971) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (894971) SEC_GATTS_DEMO: 01 00 01 01 01 00 01 00 01 01 00 01 01 00 00 00[0m
+[0;32mI (894971) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (895071) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (895071) SEC_GATTS_DEMO: 01 00 00 00 00 00 00 01 01 01 00 00 00 01 00 01[0m
+[0;32mI (895071) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (895161) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (895161) SEC_GATTS_DEMO: 00 01 00 01 01 01 01 00 00 01 01 00 01 01 01 00[0m
+[0;32mI (895171) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (895261) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (895261) SEC_GATTS_DEMO: 01 01 00 01 01 00 01 00 00 00 00 00 01 00 01 01[0m
+[0;32mI (895261) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (895361) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (895361) SEC_GATTS_DEMO: 01 00 01 00 01 01 01 01 00 01 01 01 00 00 00 00[0m
+[0;32mI (895361) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (895461) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (895461) SEC_GATTS_DEMO: 01 00 00 01 00 00 01 01 00 01 01 00 00 00 00 00[0m
+[0;32mI (895461) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (895561) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (895561) SEC_GATTS_DEMO: 00 01 00 01 01 00 00 01 00 01 00 00 01 01 00 00[0m
+[0;32mI (895561) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (895651) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (895651) SEC_GATTS_DEMO: 00 00 01 00 00 00 01 00 00 00 00 01 01 00 00 01[0m
+[0;32mI (895651) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (895751) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (895751) SEC_GATTS_DEMO: 00 00 01 00 01 01 01 00 01 00 00 00 01 00 00 00[0m
+[0;32mI (895751) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (895851) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (895851) SEC_GATTS_DEMO: 01 00 00 00 01 01 01 01 00 01 01 01 01 01 00 00[0m
+[0;32mI (895851) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (895941) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (895941) SEC_GATTS_DEMO: 00 00 01 01 01 00 01 01 01 00 01 00 01 01 01 01[0m
+[0;32mI (895951) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (896041) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (896041) SEC_GATTS_DEMO: 01 00 00 01 00 01 01 01 00 00 00 00 00 01 00 00[0m
+[0;32mI (896041) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (896141) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (896141) SEC_GATTS_DEMO: 01 00 00 00 00 00 00 01 00 00 00 01 00 01 00 00[0m
+[0;32mI (896141) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (896241) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (896241) SEC_GATTS_DEMO: 00 00 01 01 00 00 01 00 00 01 00 00 01 00 01 00[0m
+[0;32mI (896241) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (896331) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (896331) SEC_GATTS_DEMO: 01 01 01 00 01 01 00 00 00 00 00 00 01 01 01 01[0m
+[0;32mI (896341) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (896431) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (896431) SEC_GATTS_DEMO: 01 00 01 00 01 01 00 01 00 01 00 00 01 00 01 01[0m
+[0;32mI (896431) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (896531) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (896531) SEC_GATTS_DEMO: 00 00 00 01 00 01 00 01 00 00 00 00 00 00 01 00[0m
+[0;32mI (896531) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (896631) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (896631) SEC_GATTS_DEMO: 00 00 00 00 01 01 00 00 01 01 01 01 00 01 01 01[0m
+[0;32mI (896631) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (896721) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (896721) SEC_GATTS_DEMO: 00 01 00 01 01 01 00 00 01 00 00 00 01 00 00 00[0m
+[0;32mI (896731) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (896821) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (896821) SEC_GATTS_DEMO: 01 01 00 00 01 00 01 01 01 01 01 01 01 00 01 01[0m
+[0;32mI (896821) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (896921) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (896921) SEC_GATTS_DEMO: 00 00 00 00 01 01 00 00[0m
+[0;33mW (904911) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (904911) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (904921) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (907021) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (907021) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (907111) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (907361) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (907361) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (907361) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (907371) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (907371) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (907381) SEC_GATTS_DEMO: 01 00 00 01 01 00 00 00 01 00 01 00 01 01 00 00[0m
+[0;32mI (907381) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (907551) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (907551) SEC_GATTS_DEMO: 01 00 01 00 00 00 01 01 01 01 01 00 00 00 00 01[0m
+[0;32mI (907551) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (907641) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (907651) SEC_GATTS_DEMO: 00 00 01 01 01 01 00 01 00 01 00 01 01 00 01 00[0m
+[0;32mI (907651) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (907741) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (907741) SEC_GATTS_DEMO: 01 00 00 00 00 01 01 01 00 01 00 01 01 01 01 00[0m
+[0;32mI (907741) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (907841) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (907841) SEC_GATTS_DEMO: 01 00 01 00 01 01 01 01 00 01 01 01 00 00 00 01[0m
+[0;32mI (907841) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (907941) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (907941) SEC_GATTS_DEMO: 01 00 00 00 00 00 00 01 01 00 00 00 01 01 01 01[0m
+[0;32mI (907941) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (908031) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (908041) SEC_GATTS_DEMO: 00 01 01 01 00 00 00 00 00 01 01 01 00 01 01 01[0m
+[0;32mI (908041) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (908131) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (908131) SEC_GATTS_DEMO: 01 01 01 01 01 01 01 01 01 01 01 01 00 01 00 00[0m
+[0;32mI (908131) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (908231) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (908231) SEC_GATTS_DEMO: 00 01 01 01 00 01 01 01 00 01 00 00 01 01 00 00[0m
+[0;32mI (908231) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (908331) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (908331) SEC_GATTS_DEMO: 00 00 01 00 01 00 00 01 00 00 01 01 01 01 01 00[0m
+[0;32mI (908331) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (908421) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (908431) SEC_GATTS_DEMO: 00 00 01 01 01 01 01 01 01 01 01 00 01 01 00 01[0m
+[0;32mI (908431) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (908521) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (908521) SEC_GATTS_DEMO: 01 00 00 00 00 01 00 01 01 01 00 00 01 00 01 01[0m
+[0;32mI (908521) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (908621) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (908621) SEC_GATTS_DEMO: 00 00 01 00 00 00 01 01 01 01 01 01 00 01 00 01[0m
+[0;32mI (908621) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (908721) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (908721) SEC_GATTS_DEMO: 01 00 00 01 01 01 00 00 01 01 01 01 00 01 00 00[0m
+[0;32mI (908721) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (908811) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (908821) SEC_GATTS_DEMO: 01 00 00 00 01 00 00 01 00 01 01 01 01 01 00 00[0m
+[0;32mI (908821) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (908911) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (908911) SEC_GATTS_DEMO: 00 01 01 00 01 01 00 01 00 00 01 01 01 00 01 01[0m
+[0;32mI (908911) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (909011) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (909011) SEC_GATTS_DEMO: 00 01 01 01 01 01 01 01 01 00 00 00 00 00 00 01[0m
+[0;32mI (909011) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (909111) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (909111) SEC_GATTS_DEMO: 00 01 01 01 01 01 00 01 01 01 01 01 00 00 00 01[0m
+[0;32mI (909111) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (909201) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (909211) SEC_GATTS_DEMO: 00 01 00 01 00 01 01 01 00 01 00 01 00 01 01 01[0m
+[0;32mI (909211) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (909301) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (909301) SEC_GATTS_DEMO: 00 00 00 00 01 01 00 01 01 00 00 01 01 01 00 00[0m
+[0;32mI (909301) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (909401) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (909401) SEC_GATTS_DEMO: 00 00 00 00 00 01 00 01 01 00 01 00 01 01 01 00[0m
+[0;32mI (909401) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (909501) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (909501) SEC_GATTS_DEMO: 01 00 00 01 01 01 00 00 00 01 01 01 01 00 01 01[0m
+[0;32mI (909501) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (909591) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (909601) SEC_GATTS_DEMO: 00 01 01 01 01 00 01 01 00 00 00 00 01 00 01 01[0m
+[0;32mI (909601) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (909691) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (909691) SEC_GATTS_DEMO: 01 01 01 01 00 01 00 00 01 00 00 01 01 01 01 00[0m
+[0;32mI (909691) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (909841) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (909841) SEC_GATTS_DEMO: 01 01 01 00 01 01 00 01 01 01 01 00 01 01 00 00[0m
+[0;32mI (909841) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (909941) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (909941) SEC_GATTS_DEMO: 01 01 01 01 01 00 00 00 00 00 00 01 01 00 01 01[0m
+[0;32mI (909941) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (910031) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (910031) SEC_GATTS_DEMO: 00 01 00 00 00 00 01 01 00 00 01 01 00 00 01 01[0m
+[0;32mI (910031) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (910131) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (910131) SEC_GATTS_DEMO: 01 00 00 00 00 01 01 01 00 00 01 01 00 01 01 00[0m
+[0;32mI (910131) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (910231) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (910231) SEC_GATTS_DEMO: 00 01 00 01 01 00 01 01[0m
+[0;33mW (1244681) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1244681) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1244681) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1247291) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1247291) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1247361) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1247751) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1247751) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1247751) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1247761) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1247801) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1247801) SEC_GATTS_DEMO: 01 01 01 00 00 01 00 00 01 00 01 01 01 01 00 00[0m
+[0;32mI (1247801) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (1247991) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1247991) SEC_GATTS_DEMO: 01 01 01 01 00 01 01 01 01 00 00 01 01 00 01 00[0m
+[0;32mI (1247991) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (1248091) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1248091) SEC_GATTS_DEMO: 01 00 01 00 01 01 01 01 00 00 00 00 01 01 01 01[0m
+[0;32mI (1248091) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (1248191) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1248191) SEC_GATTS_DEMO: 01 00 01 01 00 01 01 00 00 01 00 00 00 00 00 00[0m
+[0;32mI (1248191) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (1248281) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1248281) SEC_GATTS_DEMO: 01 00 01 00 01 01 00 00 01 01 01 01 01 01 01 01[0m
+[0;32mI (1248281) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1248381) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1248381) SEC_GATTS_DEMO: 00 00 01 00 01 00 00 01 01 00 00 00 00 01 00 01[0m
+[0;32mI (1248381) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (1248481) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1248481) SEC_GATTS_DEMO: 00 00 00 01 01 00 00 00 01 00 01 01 01 01 01 01[0m
+[0;32mI (1248481) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (1248581) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1248581) SEC_GATTS_DEMO: 01 00 00 00 00 00 00 00 01 00 00 01 00 01 01 01[0m
+[0;32mI (1248581) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (1248671) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1248671) SEC_GATTS_DEMO: 01 01 01 01 00 00 01 00 00 00 01 01 00 00 01 00[0m
+[0;32mI (1248671) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (1248821) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1248821) SEC_GATTS_DEMO: 00 01 01 01 01 00 00 00 00 00 00 01 00 00 00 01[0m
+[0;32mI (1248821) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1248921) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1248921) SEC_GATTS_DEMO: 01 00 01 01 00 00 01 01 01 00 01 01 01 01 00 00[0m
+[0;32mI (1248921) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1249011) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1249021) SEC_GATTS_DEMO: 01 01 00 00 01 01 00 01 01 01 00 00 01 00 01 00[0m
+[0;32mI (1249021) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (1249111) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1249111) SEC_GATTS_DEMO: 01 00 01 00 00 01 00 01 00 00 01 01 01 00 01 00[0m
+[0;32mI (1249111) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (1249211) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1249211) SEC_GATTS_DEMO: 01 01 01 00 01 00 01 01 01 01 00 01 00 01 00 01[0m
+[0;32mI (1249211) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (1249311) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1249311) SEC_GATTS_DEMO: 01 00 01 00 01 00 01 01 01 01 00 01 00 01 01 00[0m
+[0;32mI (1249311) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (1249401) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1249411) SEC_GATTS_DEMO: 01 01 00 01 00 01 01 01 01 00 01 01 00 00 00 01[0m
+[0;32mI (1249411) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1249501) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1249501) SEC_GATTS_DEMO: 00 01 00 01 01 00 01 01 00 01 01 00 01 00 01 01[0m
+[0;32mI (1249501) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1249601) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1249601) SEC_GATTS_DEMO: 00 00 00 01 00 01 00 01 00 01 00 00 00 01 00 00[0m
+[0;32mI (1249601) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (1249701) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1249701) SEC_GATTS_DEMO: 01 01 01 01 00 00 00 00 00 01 00 01 01 00 00 01[0m
+[0;32mI (1249701) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (1249791) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1249801) SEC_GATTS_DEMO: 00 01 00 00 01 01 00 01 00 00 01 00 01 00 00 00[0m
+[0;32mI (1249801) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1249891) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1249891) SEC_GATTS_DEMO: 00 01 00 01 00 01 01 00 01 01 01 01 00 00 00 00[0m
+[0;32mI (1249891) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (1249991) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1249991) SEC_GATTS_DEMO: 01 01 00 01 01 00 01 01 01 00 00 00 01 00 01 01[0m
+[0;32mI (1249991) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (1250091) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1250091) SEC_GATTS_DEMO: 01 00 01 00 00 00 00 01 01 01 00 00 01 01 00 01[0m
+[0;32mI (1250091) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1250181) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1250191) SEC_GATTS_DEMO: 01 00 01 01 00 01 00 01 00 01 01 01 01 00 00 01[0m
+[0;32mI (1250191) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1250281) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1250281) SEC_GATTS_DEMO: 00 01 00 00 01 01 01 01 00 00 01 00 01 00 01 01[0m
+[0;32mI (1250281) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (1250381) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1250381) SEC_GATTS_DEMO: 00 00 00 00 01 00 00 01 01 01 01 01 00 00 01 00[0m
+[0;32mI (1250381) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1250481) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1250481) SEC_GATTS_DEMO: 01 00 01 00 00 00 00 00 00 01 01 00 00 01 00 00[0m
+[0;32mI (1250481) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1250571) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1250581) SEC_GATTS_DEMO: 01 00 00 00 00 00 00 00 01 00 01 00 01 00 00 01[0m
+[0;32mI (1250581) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (1250671) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1250671) SEC_GATTS_DEMO: 01 00 01 01 00 01 00 00[0m
+[0;33mW (1257451) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1257451) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1257451) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1260111) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1260121) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1260181) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1260381) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1260381) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1260381) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1260391) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1260421) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1260421) SEC_GATTS_DEMO: 00 01 00 01 01 01 00 01 00 00 01 00 00 01 01 01[0m
+[0;32mI (1260421) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1260621) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1260621) SEC_GATTS_DEMO: 01 00 00 01 00 01 01 01 01 01 01 01 01 00 01 00[0m
+[0;32mI (1260621) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (1260721) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1260721) SEC_GATTS_DEMO: 00 01 00 01 00 00 00 01 01 00 01 00 01 01 00 01[0m
+[0;32mI (1260721) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (1260811) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1260811) SEC_GATTS_DEMO: 00 01 00 00 00 01 00 01 00 01 00 01 00 00 00 01[0m
+[0;32mI (1260811) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1260911) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1260911) SEC_GATTS_DEMO: 00 00 00 00 01 01 00 00 01 01 00 01 01 00 00 01[0m
+[0;32mI (1260911) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (1261011) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1261011) SEC_GATTS_DEMO: 01 01 01 00 01 00 01 01 01 01 01 00 01 01 00 01[0m
+[0;32mI (1261011) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (1261111) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1261111) SEC_GATTS_DEMO: 00 01 00 01 00 00 00 01 01 00 00 01 01 00 01 00[0m
+[0;32mI (1261111) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (1261201) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1261201) SEC_GATTS_DEMO: 00 01 00 01 01 00 00 01 00 00 00 01 01 01 01 00[0m
+[0;32mI (1261201) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (1261301) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1261301) SEC_GATTS_DEMO: 01 00 01 01 00 01 00 01 01 01 00 00 01 01 00 00[0m
+[0;32mI (1261301) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (1261401) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1261401) SEC_GATTS_DEMO: 00 00 01 00 00 00 01 01 01 01 00 01 00 00 01 01[0m
+[0;32mI (1261401) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (1261501) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1261501) SEC_GATTS_DEMO: 01 00 01 00 00 00 00 00 01 00 00 01 01 01 01 00[0m
+[0;32mI (1261501) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1261591) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1261591) SEC_GATTS_DEMO: 00 00 00 01 00 00 01 01 01 01 00 00 00 01 00 00[0m
+[0;32mI (1261591) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (1261691) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1261691) SEC_GATTS_DEMO: 00 01 01 01 00 00 01 01 00 00 00 01 00 01 00 00[0m
+[0;32mI (1261691) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (1261791) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1261791) SEC_GATTS_DEMO: 01 01 01 00 00 00 01 01 00 01 01 01 01 01 00 00[0m
+[0;32mI (1261791) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1261891) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1261891) SEC_GATTS_DEMO: 00 00 00 01 01 00 01 00 00 01 01 00 00 01 01 01[0m
+[0;32mI (1261891) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (1261981) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1261981) SEC_GATTS_DEMO: 00 00 00 00 00 00 01 01 01 00 00 00 01 01 00 00[0m
+[0;32mI (1261981) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (1262081) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1262081) SEC_GATTS_DEMO: 00 00 00 01 00 01 01 00 00 01 01 00 00 00 01 01[0m
+[0;32mI (1262081) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (1262181) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1262181) SEC_GATTS_DEMO: 01 00 01 01 00 01 00 00 01 00 01 01 01 01 01 00[0m
+[0;32mI (1262181) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (1262281) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1262281) SEC_GATTS_DEMO: 00 01 00 00 01 01 00 01 00 01 00 00 00 00 00 00[0m
+[0;32mI (1262281) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (1262371) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1262371) SEC_GATTS_DEMO: 01 00 01 00 00 00 01 01 00 00 00 01 01 01 01 00[0m
+[0;32mI (1262371) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (1262471) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1262471) SEC_GATTS_DEMO: 00 00 01 00 00 01 00 01 01 00 01 00 00 01 00 00[0m
+[0;32mI (1262471) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1262571) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1262571) SEC_GATTS_DEMO: 00 00 00 01 01 00 01 00 00 00 01 01 00 01 00 00[0m
+[0;32mI (1262571) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (1262671) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1262671) SEC_GATTS_DEMO: 00 00 00 01 00 00 00 00 01 01 01 01 00 01 01 01[0m
+[0;32mI (1262671) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (1262761) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1262761) SEC_GATTS_DEMO: 01 01 01 01 01 01 00 01 00 01 00 00 01 00 01 00[0m
+[0;32mI (1262761) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1262861) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1262861) SEC_GATTS_DEMO: 00 01 00 01 00 01 00 01 00 00 00 01 01 01 00 01[0m
+[0;32mI (1262861) SEC_GATTS_DEMO: 00 01[0m
+[0;32mI (1262961) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1262961) SEC_GATTS_DEMO: 00 01 00 00 01 01 01 01 01 01 00 00 01 00 00 01[0m
+[0;32mI (1262961) SEC_GATTS_DEMO: 01 00[0m
+[0;32mI (1263061) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1263061) SEC_GATTS_DEMO: 00 00 00 00 00 01 01 01 00 01 00 01 01 01 01 01[0m
+[0;32mI (1263061) SEC_GATTS_DEMO: 01 01[0m
+[0;32mI (1263151) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1263151) SEC_GATTS_DEMO: 01 00 00 00 00 01 00 00 01 01 01 01 00 00 00 00[0m
+[0;32mI (1263151) SEC_GATTS_DEMO: 00 00[0m
+[0;32mI (1263251) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1263251) SEC_GATTS_DEMO: 01 00 00 00 00 01 01 00[0m
+[0;33mW (1321951) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1321951) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1321951) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1324461) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1324461) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1324531) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1324731) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1324731) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1324731) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1324741) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1324781) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1324781) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1324781) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1324971) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1324971) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1324971) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1325071) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1325071) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1325071) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1325171) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1325171) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45[0m
+[0;32mI (1325171) SEC_GATTS_DEMO: 46 47[0m
+[0;32mI (1325261) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1325261) SEC_GATTS_DEMO: 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57[0m
+[0;32mI (1325261) SEC_GATTS_DEMO: 58 59[0m
+[0;32mI (1325361) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1325361) SEC_GATTS_DEMO: 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69[0m
+[0;32mI (1325361) SEC_GATTS_DEMO: 6a 6b[0m
+[0;32mI (1325461) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1325461) SEC_GATTS_DEMO: 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b[0m
+[0;32mI (1325461) SEC_GATTS_DEMO: 7c 7d[0m
+[0;32mI (1325561) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1325561) SEC_GATTS_DEMO: 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d[0m
+[0;32mI (1325561) SEC_GATTS_DEMO: 8e 8f[0m
+[0;32mI (1325651) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1325651) SEC_GATTS_DEMO: 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f[0m
+[0;32mI (1325651) SEC_GATTS_DEMO: a0 a1[0m
+[0;32mI (1325751) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1325751) SEC_GATTS_DEMO: a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1[0m
+[0;32mI (1325751) SEC_GATTS_DEMO: b2 b3[0m
+[0;32mI (1325851) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1325851) SEC_GATTS_DEMO: b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3[0m
+[0;32mI (1325851) SEC_GATTS_DEMO: c4 c5[0m
+[0;32mI (1325951) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1325951) SEC_GATTS_DEMO: c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5[0m
+[0;32mI (1325951) SEC_GATTS_DEMO: d6 d7[0m
+[0;32mI (1326041) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1326041) SEC_GATTS_DEMO: d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7[0m
+[0;32mI (1326041) SEC_GATTS_DEMO: e8 e9[0m
+[0;32mI (1326141) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1326141) SEC_GATTS_DEMO: ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9[0m
+[0;32mI (1326141) SEC_GATTS_DEMO: fa fb[0m
+[0;32mI (1326241) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1326241) SEC_GATTS_DEMO: fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b[0m
+[0;32mI (1326241) SEC_GATTS_DEMO: 0c 0d[0m
+[0;32mI (1326341) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1326341) SEC_GATTS_DEMO: 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d[0m
+[0;32mI (1326341) SEC_GATTS_DEMO: 1e 1f[0m
+[0;32mI (1326431) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1326431) SEC_GATTS_DEMO: 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f[0m
+[0;32mI (1326431) SEC_GATTS_DEMO: 30 31[0m
+[0;32mI (1326531) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1326531) SEC_GATTS_DEMO: 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41[0m
+[0;32mI (1326531) SEC_GATTS_DEMO: 42 43[0m
+[0;32mI (1326631) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1326631) SEC_GATTS_DEMO: 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53[0m
+[0;32mI (1326631) SEC_GATTS_DEMO: 54 55[0m
+[0;32mI (1326731) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1326731) SEC_GATTS_DEMO: 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65[0m
+[0;32mI (1326731) SEC_GATTS_DEMO: 66 67[0m
+[0;32mI (1326821) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1326821) SEC_GATTS_DEMO: 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77[0m
+[0;32mI (1326821) SEC_GATTS_DEMO: 78 79[0m
+[0;32mI (1326921) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1326921) SEC_GATTS_DEMO: 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89[0m
+[0;32mI (1326921) SEC_GATTS_DEMO: 8a 8b[0m
+[0;32mI (1327021) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1327021) SEC_GATTS_DEMO: 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b[0m
+[0;32mI (1327021) SEC_GATTS_DEMO: 9c 9d[0m
+[0;32mI (1327121) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1327121) SEC_GATTS_DEMO: 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad[0m
+[0;32mI (1327121) SEC_GATTS_DEMO: ae af[0m
+[0;32mI (1327211) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1327211) SEC_GATTS_DEMO: b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf[0m
+[0;32mI (1327221) SEC_GATTS_DEMO: c0 c1[0m
+[0;32mI (1327311) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1327311) SEC_GATTS_DEMO: c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1[0m
+[0;32mI (1327311) SEC_GATTS_DEMO: d2 d3[0m
+[0;32mI (1327411) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1327411) SEC_GATTS_DEMO: d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3[0m
+[0;32mI (1327411) SEC_GATTS_DEMO: e4 e5[0m
+[0;32mI (1327511) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1327511) SEC_GATTS_DEMO: e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3 f4 f5[0m
+[0;32mI (1327511) SEC_GATTS_DEMO: f6 f7[0m
+[0;32mI (1327601) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1327601) SEC_GATTS_DEMO: f8 f9 fa fb fc fd fe ff[0m
+[0;33mW (1394201) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1394201) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1394201) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1395851) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1395851) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1395961) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1396151) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1396151) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1396161) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1396161) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1396201) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1396201) SEC_GATTS_DEMO: 68 65 6c 6c 6f 20 77 6f 72 6c 64 21[0m
+[0;33mW (1409751) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1409751) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1409751) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1411281) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1411281) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1411361) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1411561) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1411561) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1411561) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1411571) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1411601) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1411611) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1411611) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1411851) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1411851) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1411851) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1411951) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1411951) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1411951) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1412041) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1412041) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45[0m
+[0;32mI (1412041) SEC_GATTS_DEMO: 46 47[0m
+[0;32mI (1412141) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1412141) SEC_GATTS_DEMO: 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57[0m
+[0;32mI (1412141) SEC_GATTS_DEMO: 58 59[0m
+[0;32mI (1412241) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1412241) SEC_GATTS_DEMO: 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69[0m
+[0;32mI (1412241) SEC_GATTS_DEMO: 6a 6b[0m
+[0;32mI (1412341) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1412341) SEC_GATTS_DEMO: 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b[0m
+[0;32mI (1412341) SEC_GATTS_DEMO: 7c 7d[0m
+[0;32mI (1412431) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1412431) SEC_GATTS_DEMO: 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d[0m
+[0;32mI (1412431) SEC_GATTS_DEMO: 8e 8f[0m
+[0;32mI (1412531) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1412531) SEC_GATTS_DEMO: 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f[0m
+[0;32mI (1412531) SEC_GATTS_DEMO: a0 a1[0m
+[0;32mI (1412631) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1412631) SEC_GATTS_DEMO: a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1[0m
+[0;32mI (1412631) SEC_GATTS_DEMO: b2 b3[0m
+[0;32mI (1412731) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1412731) SEC_GATTS_DEMO: b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3[0m
+[0;32mI (1412731) SEC_GATTS_DEMO: c4 c5[0m
+[0;32mI (1412821) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1412821) SEC_GATTS_DEMO: c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5[0m
+[0;32mI (1412821) SEC_GATTS_DEMO: d6 d7[0m
+[0;32mI (1412921) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1412921) SEC_GATTS_DEMO: d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7[0m
+[0;32mI (1412921) SEC_GATTS_DEMO: e8 e9[0m
+[0;32mI (1413021) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1413021) SEC_GATTS_DEMO: ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9[0m
+[0;32mI (1413021) SEC_GATTS_DEMO: fa fb[0m
+[0;32mI (1413121) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1413121) SEC_GATTS_DEMO: fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b[0m
+[0;32mI (1413121) SEC_GATTS_DEMO: 0c 0d[0m
+[0;32mI (1413211) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1413211) SEC_GATTS_DEMO: 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d[0m
+[0;32mI (1413211) SEC_GATTS_DEMO: 1e 1f[0m
+[0;32mI (1413311) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1413311) SEC_GATTS_DEMO: 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f[0m
+[0;32mI (1413311) SEC_GATTS_DEMO: 30 31[0m
+[0;32mI (1413411) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1413411) SEC_GATTS_DEMO: 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41[0m
+[0;32mI (1413411) SEC_GATTS_DEMO: 42 43[0m
+[0;32mI (1413511) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1413511) SEC_GATTS_DEMO: 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53[0m
+[0;32mI (1413511) SEC_GATTS_DEMO: 54 55[0m
+[0;32mI (1413601) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1413601) SEC_GATTS_DEMO: 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65[0m
+[0;32mI (1413601) SEC_GATTS_DEMO: 66 67[0m
+[0;32mI (1413701) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1413701) SEC_GATTS_DEMO: 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77[0m
+[0;32mI (1413701) SEC_GATTS_DEMO: 78 79[0m
+[0;32mI (1413801) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1413801) SEC_GATTS_DEMO: 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89[0m
+[0;32mI (1413801) SEC_GATTS_DEMO: 8a 8b[0m
+[0;32mI (1413901) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1413901) SEC_GATTS_DEMO: 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b[0m
+[0;32mI (1413901) SEC_GATTS_DEMO: 9c 9d[0m
+[0;32mI (1414041) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1414041) SEC_GATTS_DEMO: 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad[0m
+[0;32mI (1414041) SEC_GATTS_DEMO: ae af[0m
+[0;32mI (1414141) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1414141) SEC_GATTS_DEMO: b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf[0m
+[0;32mI (1414141) SEC_GATTS_DEMO: c0 c1[0m
+[0;32mI (1414241) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1414241) SEC_GATTS_DEMO: c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1[0m
+[0;32mI (1414241) SEC_GATTS_DEMO: d2 d3[0m
+[0;32mI (1414331) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1414331) SEC_GATTS_DEMO: d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3[0m
+[0;32mI (1414341) SEC_GATTS_DEMO: e4 e5[0m
+[0;32mI (1414431) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1414431) SEC_GATTS_DEMO: e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3[0m
+[0;33mW (1424041) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1424041) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1424041) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1425591) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1425591) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1425651) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1425991) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1425991) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1425991) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1426001) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1426041) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1426041) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1426041) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1426231) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1426231) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1426231) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1426331) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1426331) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31[0m
+[0;33mW (1439101) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1439101) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1439101) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1441801) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1441801) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1441881) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1442081) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1442081) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1442081) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1442091) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1442121) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1442121) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1442121) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1442321) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1442321) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1442321) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1442421) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1442421) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1442421) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1442511) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1442511) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45[0m
+[0;32mI (1442511) SEC_GATTS_DEMO: 46 47[0m
+[0;32mI (1442611) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1442611) SEC_GATTS_DEMO: 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57[0m
+[0;32mI (1442611) SEC_GATTS_DEMO: 58 59[0m
+[0;32mI (1442711) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1442711) SEC_GATTS_DEMO: 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69[0m
+[0;32mI (1442711) SEC_GATTS_DEMO: 6a 6b[0m
+[0;32mI (1442811) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1442811) SEC_GATTS_DEMO: 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b[0m
+[0;32mI (1442811) SEC_GATTS_DEMO: 7c 7d[0m
+[0;32mI (1442901) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1442901) SEC_GATTS_DEMO: 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d[0m
+[0;32mI (1442901) SEC_GATTS_DEMO: 8e 8f[0m
+[0;32mI (1443001) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1443001) SEC_GATTS_DEMO: 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f[0m
+[0;32mI (1443001) SEC_GATTS_DEMO: a0 a1[0m
+[0;32mI (1443101) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1443101) SEC_GATTS_DEMO: a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1[0m
+[0;32mI (1443101) SEC_GATTS_DEMO: b2 b3[0m
+[0;32mI (1443201) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1443201) SEC_GATTS_DEMO: b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3[0m
+[0;32mI (1443201) SEC_GATTS_DEMO: c4 c5[0m
+[0;32mI (1443291) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1443291) SEC_GATTS_DEMO: c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5[0m
+[0;32mI (1443291) SEC_GATTS_DEMO: d6 d7[0m
+[0;32mI (1443391) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1443391) SEC_GATTS_DEMO: d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7[0m
+[0;32mI (1443391) SEC_GATTS_DEMO: e8 e9[0m
+[0;32mI (1443541) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1443541) SEC_GATTS_DEMO: ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9[0m
+[0;32mI (1443541) SEC_GATTS_DEMO: fa fb[0m
+[0;32mI (1443631) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1443631) SEC_GATTS_DEMO: fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b[0m
+[0;32mI (1443641) SEC_GATTS_DEMO: 0c 0d[0m
+[0;32mI (1443731) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1443731) SEC_GATTS_DEMO: 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d[0m
+[0;32mI (1443731) SEC_GATTS_DEMO: 1e 1f[0m
+[0;32mI (1443831) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1443831) SEC_GATTS_DEMO: 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f[0m
+[0;32mI (1443831) SEC_GATTS_DEMO: 30 31[0m
+[0;32mI (1443931) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1443931) SEC_GATTS_DEMO: 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41[0m
+[0;32mI (1443931) SEC_GATTS_DEMO: 42 43[0m
+[0;32mI (1444021) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1444021) SEC_GATTS_DEMO: 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53[0m
+[0;32mI (1444031) SEC_GATTS_DEMO: 54 55[0m
+[0;32mI (1444121) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1444121) SEC_GATTS_DEMO: 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65[0m
+[0;32mI (1444121) SEC_GATTS_DEMO: 66 67[0m
+[0;32mI (1444221) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1444221) SEC_GATTS_DEMO: 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77[0m
+[0;32mI (1444221) SEC_GATTS_DEMO: 78 79[0m
+[0;32mI (1444321) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1444321) SEC_GATTS_DEMO: 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89[0m
+[0;32mI (1444321) SEC_GATTS_DEMO: 8a 8b[0m
+[0;32mI (1444411) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1444411) SEC_GATTS_DEMO: 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b[0m
+[0;32mI (1444421) SEC_GATTS_DEMO: 9c 9d[0m
+[0;32mI (1444511) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1444511) SEC_GATTS_DEMO: 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad[0m
+[0;32mI (1444511) SEC_GATTS_DEMO: ae af[0m
+[0;32mI (1444611) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1444611) SEC_GATTS_DEMO: b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf[0m
+[0;32mI (1444611) SEC_GATTS_DEMO: c0 c1[0m
+[0;32mI (1444711) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1444711) SEC_GATTS_DEMO: c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1[0m
+[0;32mI (1444711) SEC_GATTS_DEMO: d2 d3[0m
+[0;32mI (1444801) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1444801) SEC_GATTS_DEMO: d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3[0m
+[0;32mI (1444811) SEC_GATTS_DEMO: e4 e5[0m
+[0;32mI (1444901) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1444901) SEC_GATTS_DEMO: e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3[0m
+[0;33mW (1457281) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1457291) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1457291) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1458981) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1458981) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1459041) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1459381) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1459381) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1459391) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1459391) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1459431) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1459431) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1459431) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1459631) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1459631) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1459631) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1459721) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1459721) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1459721) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1459821) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1459821) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45[0m
+[0;32mI (1459821) SEC_GATTS_DEMO: 46 47[0m
+[0;32mI (1459921) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1459921) SEC_GATTS_DEMO: 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57[0m
+[0;32mI (1459921) SEC_GATTS_DEMO: 58 59[0m
+[0;32mI (1460021) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1460021) SEC_GATTS_DEMO: 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69[0m
+[0;32mI (1460021) SEC_GATTS_DEMO: 6a 6b[0m
+[0;32mI (1460111) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1460111) SEC_GATTS_DEMO: 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b[0m
+[0;32mI (1460111) SEC_GATTS_DEMO: 7c 7d[0m
+[0;32mI (1460211) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1460211) SEC_GATTS_DEMO: 7e 7f[0m
+[0;33mW (1470841) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1470841) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1470841) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1472941) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1472941) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1473031) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1473231) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1473231) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1473231) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1473241) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1473281) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1473281) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1473281) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1473471) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1473471) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1473471) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1473571) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1473571) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1473571) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1473671) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1473671) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45[0m
+[0;32mI (1473671) SEC_GATTS_DEMO: 46 47[0m
+[0;32mI (1473761) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1473761) SEC_GATTS_DEMO: 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57[0m
+[0;32mI (1473761) SEC_GATTS_DEMO: 58 59[0m
+[0;32mI (1473861) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1473861) SEC_GATTS_DEMO: 5a 5b 5c 5d 5e 5f 60 61 62 63[0m
+[0;33mW (1484051) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1484051) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1484051) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1485081) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1485091) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1485171) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1485371) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1485371) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1485371) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1485381) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1485421) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1485421) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1485421) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1485611) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1485611) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1485611) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1485711) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1485711) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1485711) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1485811) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1485811) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e[0m
+[0;33mW (1495701) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1495701) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1495701) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1498671) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1498671) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1498731) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1499121) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1499121) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1499121) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1499131) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1499161) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1499161) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1499161) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1499361) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1499361) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1499361) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1499461) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1499461) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1499461) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1499551) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1499551) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (1509601) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1509601) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1509601) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1512131) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1512131) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1512231) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1512431) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1512431) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1512431) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1512441) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1512471) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1512471) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1512471) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1512671) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1512671) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1512671) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1512771) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1512771) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1512771) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1512861) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1512861) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f 40[0m
+[0;33mW (1519691) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1519691) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1519691) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1520451) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1520451) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1520521) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1520711) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1520711) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1520721) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1520721) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1520761) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1520761) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1520761) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1520961) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1520961) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1520961) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1521051) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1521051) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1521051) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1521151) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1521151) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (1651421) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1651421) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1651421) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1652121) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1652121) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1652201) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1652401) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1652401) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1652401) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1652411) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1652441) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1652441) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1652441) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1652641) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1652641) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1652641) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1652741) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1652741) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1652741) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1652831) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1652831) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (1664141) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1664141) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1664151) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1665341) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1665341) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1665411) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1665661) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1665661) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1665661) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1665671) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1665701) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1665711) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1665711) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1665901) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1665901) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1665901) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1666001) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1666001) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1666001) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1666091) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1666091) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (1683501) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1683501) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1683501) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1686361) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1686361) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1686421) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1686621) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1686621) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1686631) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1686631) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1686671) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1686671) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1686671) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1686861) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1686861) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1686861) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1686961) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1686961) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1686961) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1687061) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1687061) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (1698421) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1698421) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1698421) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1699221) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1699221) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1699291) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1699491) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1699491) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1699501) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1699501) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1699541) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1699541) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1699541) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1699731) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1699731) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1699731) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1699831) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1699831) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1699831) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1699931) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1699931) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (1766041) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1766041) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1766041) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1767991) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1767991) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1768081) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1768281) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1768281) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1768291) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1768291) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1768331) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1768331) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1768331) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1768521) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1768521) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1768521) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1768621) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1768621) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1768621) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1768721) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1768721) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (1786661) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1786661) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1786661) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1788731) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1788731) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1788851) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1789051) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1789051) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1789061) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1789061) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;33mW (1804011) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1804011) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1804021) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1809621) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1809621) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1809721) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1809921) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1809921) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1809921) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1809921) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1809961) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1809961) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1809961) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1810161) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1810161) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1810161) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1810301) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1810301) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1810301) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1810401) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1810401) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (1818151) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1818151) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1818161) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1820361) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1820361) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1820491) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1820691) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1820691) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1820701) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1820701) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1820741) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1820741) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1820741) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1820931) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1820931) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1820931) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1821031) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1821031) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1821031) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1821131) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1821131) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (1831661) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1831661) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1831661) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1833711) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1833711) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1833801) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1834001) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1834001) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1834001) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1834011) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1834051) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1834051) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1834051) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1834241) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1834241) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1834241) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1834341) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1834341) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1834341) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1834441) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1834441) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45[0m
+[0;32mI (1834441) SEC_GATTS_DEMO: 46 47[0m
+[0;32mI (1834531) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1834531) SEC_GATTS_DEMO: 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57[0m
+[0;32mI (1834531) SEC_GATTS_DEMO: 58 59[0m
+[0;32mI (1834631) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1834631) SEC_GATTS_DEMO: 5a 5b 5c 5d 5e 5f 60 61 62 63[0m
+[0;33mW (1845841) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1845841) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1845851) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1848061) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1848061) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1848141) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1848331) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1848331) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1848341) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1848341) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1848381) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1848381) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1848381) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1848571) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1848571) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1848581) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1848671) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1848671) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1848671) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1848771) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1848771) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (1857741) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1857741) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1857741) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1859541) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1859541) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1859591) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1859791) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1859791) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1859791) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1859801) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1859841) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1859841) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1859841) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1860031) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1860031) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1860031) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1860131) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1860131) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1860131) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1860271) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1860281) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (1926631) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1926631) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1926631) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1929451) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1929451) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1929501) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1929851) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1929851) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1929851) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1929861) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1929891) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1929891) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1929901) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1930091) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1930091) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1930091) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1930191) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1930191) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1930191) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1930281) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1930281) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (1949591) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1949591) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1949591) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1951571) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1951581) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1951641) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1951831) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1951841) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1951841) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1951841) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1951881) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1951881) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1951881) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1952081) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1952081) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1952081) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1952171) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1952171) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1952171) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1952271) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1952271) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (1963041) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (1963051) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (1963051) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (1964991) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (1964991) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (1965091) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (1965291) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1965291) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (1965301) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (1965301) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (1965341) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1965341) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (1965341) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (1965531) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1965531) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (1965531) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (1965631) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1965631) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (1965631) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (1965731) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (1965731) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (2062111) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (2062111) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (2062111) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (2063541) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (2063541) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (2063621) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (2063971) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (2063971) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (2063971) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (2063981) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (2064011) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2064011) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (2064011) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (2064211) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2064211) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (2064211) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (2064311) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2064311) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (2064311) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (2064401) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2064401) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f[0m
+[0;33mW (2078881) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (2078881) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (2078891) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (2081401) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (2081401) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (2081471) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (2081661) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (2081661) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (2081671) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (2081671) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (2081711) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2081711) SEC_GATTS_DEMO: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f[0m
+[0;32mI (2081711) SEC_GATTS_DEMO: 10 11[0m
+[0;32mI (2081911) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2081911) SEC_GATTS_DEMO: 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21[0m
+[0;32mI (2081911) SEC_GATTS_DEMO: 22 23[0m
+[0;32mI (2082001) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2082001) SEC_GATTS_DEMO: 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33[0m
+[0;32mI (2082001) SEC_GATTS_DEMO: 34 35[0m
+[0;32mI (2082101) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2082101) SEC_GATTS_DEMO: 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45[0m
+[0;32mI (2082101) SEC_GATTS_DEMO: 46 47[0m
+[0;32mI (2082201) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2082201) SEC_GATTS_DEMO: 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57[0m
+[0;32mI (2082201) SEC_GATTS_DEMO: 58 59[0m
+[0;32mI (2082301) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2082301) SEC_GATTS_DEMO: 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69[0m
+[0;32mI (2082301) SEC_GATTS_DEMO: 6a 6b[0m
+[0;32mI (2082391) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2082391) SEC_GATTS_DEMO: 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b[0m
+[0;32mI (2082391) SEC_GATTS_DEMO: 7c 7d[0m
+[0;32mI (2082491) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2082491) SEC_GATTS_DEMO: 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d[0m
+[0;32mI (2082491) SEC_GATTS_DEMO: 8e 8f[0m
+[0;32mI (2082591) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2082591) SEC_GATTS_DEMO: 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f[0m
+[0;32mI (2082591) SEC_GATTS_DEMO: a0 a1[0m
+[0;32mI (2082691) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2082691) SEC_GATTS_DEMO: a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1[0m
+[0;32mI (2082691) SEC_GATTS_DEMO: b2 b3[0m
+[0;32mI (2082781) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2082781) SEC_GATTS_DEMO: b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3[0m
+[0;32mI (2082781) SEC_GATTS_DEMO: c4 c5[0m
+[0;32mI (2082881) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2082881) SEC_GATTS_DEMO: c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5[0m
+[0;32mI (2082881) SEC_GATTS_DEMO: d6 d7[0m
+[0;32mI (2082981) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2082981) SEC_GATTS_DEMO: d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7[0m
+[0;32mI (2082981) SEC_GATTS_DEMO: e8 e9[0m
+[0;32mI (2083081) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2083081) SEC_GATTS_DEMO: ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9[0m
+[0;32mI (2083081) SEC_GATTS_DEMO: fa fb[0m
+[0;32mI (2083171) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2083171) SEC_GATTS_DEMO: fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b[0m
+[0;32mI (2083171) SEC_GATTS_DEMO: 0c 0d[0m
+[0;32mI (2083271) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2083271) SEC_GATTS_DEMO: 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d[0m
+[0;32mI (2083271) SEC_GATTS_DEMO: 1e 1f[0m
+[0;32mI (2083371) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2083371) SEC_GATTS_DEMO: 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f[0m
+[0;32mI (2083371) SEC_GATTS_DEMO: 30 31[0m
+[0;32mI (2083471) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2083471) SEC_GATTS_DEMO: 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41[0m
+[0;32mI (2083471) SEC_GATTS_DEMO: 42 43[0m
+[0;32mI (2083561) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2083561) SEC_GATTS_DEMO: 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53[0m
+[0;32mI (2083561) SEC_GATTS_DEMO: 54 55[0m
+[0;32mI (2083661) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2083661) SEC_GATTS_DEMO: 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65[0m
+[0;32mI (2083661) SEC_GATTS_DEMO: 66 67[0m
+[0;32mI (2083761) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2083761) SEC_GATTS_DEMO: 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77[0m
+[0;32mI (2083761) SEC_GATTS_DEMO: 78 79[0m
+[0;32mI (2083861) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2083861) SEC_GATTS_DEMO: 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89[0m
+[0;32mI (2083861) SEC_GATTS_DEMO: 8a 8b[0m
+[0;32mI (2083951) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2083951) SEC_GATTS_DEMO: 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b[0m
+[0;32mI (2083951) SEC_GATTS_DEMO: 9c 9d[0m
+[0;32mI (2084051) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2084051) SEC_GATTS_DEMO: 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad[0m
+[0;32mI (2084051) SEC_GATTS_DEMO: ae af[0m
+[0;32mI (2084151) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2084151) SEC_GATTS_DEMO: b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf[0m
+[0;32mI (2084151) SEC_GATTS_DEMO: c0 c1[0m
+[0;32mI (2084251) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2084251) SEC_GATTS_DEMO: c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1[0m
+[0;32mI (2084251) SEC_GATTS_DEMO: d2 d3[0m
+[0;32mI (2084391) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2084391) SEC_GATTS_DEMO: d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3[0m
+[0;32mI (2084391) SEC_GATTS_DEMO: e4 e5[0m
+[0;32mI (2084491) SEC_GATTS_DEMO: Characteristic write, value [0m
+[0;32mI (2084491) SEC_GATTS_DEMO: e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3[0m
+[0;33mW (2092581) BT_HCI: hcif disc complete: hdl 0x1, rsn 0x13[0m
+[0;32mI (2092581) SEC_GATTS_DEMO: Disconnected, remote 77:77:2a:20:ee:1a, reason 0x13[0m
+[0;32mI (2092591) SEC_GATTS_DEMO: Extended advertising start, status 0[0m
+[0;32mI (2095261) SEC_GATTS_DEMO: Extended advertising terminated, status 0[0m
+[0;32mI (2095261) SEC_GATTS_DEMO: Advertising successfully ended with a connection being created[0m
+[0;32mI (2095311) SEC_GATTS_DEMO: Connected, conn_id 0, remote 77:77:2a:20:ee:1a[0m
+[0;32mI (2095661) SEC_GATTS_DEMO: Authentication complete, addr_type 1, addr 77:77:2a:20:ee:1a[0m
+[0;32mI (2095661) SEC_GATTS_DEMO: Pairing successfully, auth_mode ESP_LE_AUTH_REQ_SC_BOND[0m
+[0;32mI (2095661) SEC_GATTS_DEMO: Bonded devices number 1[0m
+[0;32mI (2095661) SEC_GATTS_DEMO: [0] addr_type 1, addr 77:77:2a:20:ee:1a[0m
