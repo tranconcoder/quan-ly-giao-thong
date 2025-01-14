@@ -8,6 +8,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCallback;
+import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattService;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothProfile;
@@ -16,6 +17,7 @@ import android.bluetooth.le.BluetoothLeScanner;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
@@ -39,8 +41,6 @@ public class BluetoothConnect extends Service {
     private BluetoothSocket bluetoothSocket;
     private BluetoothLeScanner bluetoothLeScanner;
     private Context context;
-
-    private boolean runInEsp32S3 = false;
     private String esp32mac = "c8:2e:18:25:e0:82".toUpperCase();
     private String esp32s3mac = "24:ec:4a:3a:2b:ee".toUpperCase();
 
@@ -61,8 +61,6 @@ public class BluetoothConnect extends Service {
 
     @SuppressLint("MissingPermission")
     public BluetoothGatt connectGatt() {
-        BluetoothManager bluetoothManager = (BluetoothManager) context.getSystemService(context.BLUETOOTH_SERVICE);
-        BluetoothAdapter bluetoothAdapter = bluetoothManager.getAdapter();
         BluetoothDevice esp32s3 = bluetoothAdapter
                 .getBondedDevices()
                 .stream()
@@ -76,7 +74,7 @@ public class BluetoothConnect extends Service {
 
             gatt = esp32s3.connectGatt(this, true, bluetoothGattCallback);
         } catch (RuntimeException e) {
-            Log.e("tag", e.getMessage(), e);
+            Log.e(Global.TAG.toString(), e.getMessage(), e);
             Toast.makeText(context, "Please connect to esp32s3 with bluetooth first!", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             Toast.makeText(context, "Connect GATT failed!", Toast.LENGTH_SHORT).show();
@@ -102,7 +100,7 @@ public class BluetoothConnect extends Service {
             bluetoothSocket = esp32.createRfcommSocketToServiceRecord(new UUID(0x0000110100001000L, 0x800000805f9b34fbL));
             bluetoothSocket.connect();
 
-            Toast.makeText(context, "Connect bluetooth success!", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(context, "Connect bluetooth success!", Toast.LENGTH_SHORT).show();
         } catch (RuntimeException e) {
             Toast.makeText(context, "Please connect to esp32 with bluetooth first!", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
@@ -117,31 +115,48 @@ public class BluetoothConnect extends Service {
         @SuppressLint("MissingPermission")
         @Override
         public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
+            Log.d(Global.TAG.toString(), "onConnectionStateChange: status = " + status + ", newState = " + newState);
+
             if (newState == BluetoothProfile.STATE_CONNECTED) {
                 // successfully connected to the GATT Server
-                Toast.makeText(context, "Connect GATT success!", Toast.LENGTH_SHORT).show();
+                Log.i(Global.TAG.toString(), "Connected gatt success!");
 
                 // discover services
-
-                // get services
-                List<BluetoothGattService> services = gatt.getServices();
-                for (BluetoothGattService service : services) {
-                    Log.i("tag", service.getUuid().toString());
-                }
+                gatt.discoverServices();
             } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
                 // disconnected from the GATT Server
                 Toast.makeText(context, "Disconnected gatt success!", Toast.LENGTH_SHORT).show();
             }
         }
 
+        @SuppressLint("MissingPermission")
         @Override
         public void onServicesDiscovered(BluetoothGatt gatt, int status) {
             if (status == BluetoothGatt.GATT_SUCCESS) {
                 // successfully discovered services
-                Toast.makeText(context, "Discovered services success!", Toast.LENGTH_SHORT).show();
+                Log.i(Global.TAG.toString(), "Discovered services success!");
+
+                // get services
+                BluetoothGattService service = gatt.getServices().get(2);
+                BluetoothGattCharacteristic characteristic = service.getCharacteristics().stream().findFirst().orElse(null);
+
+                Log.d(Global.TAG.toString(), "Service: " + service.getUuid().toString());
+                Log.d(Global.TAG.toString(), "Characteristic: " + characteristic.getUuid().toString());
+
+                // set characteristic
+                characteristic.setWriteType(BluetoothGattCharacteristic.WRITE_TYPE_DEFAULT);
+                boolean setCharactersticSuccess = characteristic.setValue("Hello, ESP32!".getBytes());
+
+                // write characteristic
+                boolean result = gatt.writeCharacteristic(characteristic);
+                if (result) {
+                    Log.i(Global.TAG.toString(), "Write characteristic success!");
+                } else {
+                    Log.e(Global.TAG.toString(), "Write characteristic failed!");
+                }
             } else {
                 // failed to discover services
-                Toast.makeText(context, "Discovered services failed!", Toast.LENGTH_SHORT).show();
+                Log.e(Global.TAG.toString(), "Discovered services failed!");
             }
         }
 
@@ -155,20 +170,5 @@ public class BluetoothConnect extends Service {
     @Override
     public IBinder onBind(Intent intent) {
         return null;
-    }
-
-    public static UUID bytesToUUID(byte[] bytes) {
-        long mostSigBits = 0;
-        long leastSigBits = 0;
-
-        for (int i = 0; i < 8; i++) {
-            mostSigBits = (mostSigBits << 8) | (bytes[i] & 0xFF);
-        }
-
-        for (int i = 8; i < 16; i++) {
-            leastSigBits = (leastSigBits << 8) | (bytes[i] & 0xFF);
-        }
-
-        return new UUID(mostSigBits, leastSigBits);
     }
 }

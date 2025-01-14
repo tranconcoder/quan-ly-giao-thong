@@ -48,6 +48,7 @@ public class BluetoothLeService extends Service {
             Log.e(TAG, "Unable to obtain a BluetoothAdapter.");
             return false;
         }
+
         return true;
     }
 

@@ -30,10 +30,10 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.carremote.BLE;
 import com.example.carremote.BluetoothCommand;
 import com.example.carremote.BluetoothConnect;
 import com.example.carremote.BluetoothLeService;
+import com.example.carremote.Global;
 import com.example.carremote.MainActivity;
 import com.example.carremote.R;
 import com.example.carremote.databinding.FragmentHomeBinding;
@@ -101,12 +101,9 @@ public class HomeFragment extends Fragment {
             BluetoothConnect bluetoothConnect = mainActivity.bluetoothConnect;
 
 
-            Intent gattServiceIntent = new Intent(mainActivity, BluetoothLeService.class);
-            mainActivity.bindService(gattServiceIntent, serviceConnection, Context.BIND_AUTO_CREATE);
-
-
             bluetoothSocket = bluetoothConnect.connect();
-//            bluetoothGatt   = bluetoothConnect.connectGatt();
+            Log.i(Global.TAG.toString(), "connected success to bluetooth socket");
+            bluetoothGatt   = bluetoothConnect.connectGatt();
             outputStream    = bluetoothSocket.getOutputStream();
             inputStream     = bluetoothSocket.getInputStream();
 
@@ -122,13 +119,16 @@ public class HomeFragment extends Fragment {
                 }
             }, ContextCompat.getMainExecutor(mainActivity));
 
+
             // Setup cabin camera preview
             Uri uri = Uri.parse(String.format("android.resource://%s/%d", mainActivity.getPackageName(), R.raw.esp32_cam));
             binding.previewView2.setVideoURI(uri);
             binding.previewView2.start();
 
+
             if (bluetoothSocket == null || outputStream == null)
                 throw new IOException("Bluetooth connection failed");
+
 
             // Handle touch up down event
             List<TouchUpDownEvent> touchEvent = new ArrayList<>() {{
@@ -155,6 +155,7 @@ public class HomeFragment extends Fragment {
                 });
             });
 
+
             // Handle toggle switch
             List<SwitchEvent> switchEvents = new ArrayList<>() {{
                 add(new SwitchEvent(binding.switchAdas, BluetoothCommand.ADAS_ON.toString(), BluetoothCommand.ADAS_OFF.toString()));
@@ -175,6 +176,7 @@ public class HomeFragment extends Fragment {
                     }
                 });
             });
+
 
             // Handle move camera preview
             binding.previewView.setOnTouchListener(new View.OnTouchListener() {
@@ -223,6 +225,7 @@ public class HomeFragment extends Fragment {
                 }
             });
 
+
             // Handle reconnect button
             binding.btnReconnect.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -238,59 +241,7 @@ public class HomeFragment extends Fragment {
             });
         } catch (Exception e) {
             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-            Log.e("tag", e.getMessage(), e);
+            Log.e(Global.TAG.toString(), e.getMessage(), e);
         }
-    }
-
-    private ServiceConnection serviceConnection = new ServiceConnection() {
-        @Override
-        public void onServiceConnected(ComponentName name, IBinder service) {
-            bluetoothService = ((BluetoothLeService.LocalBinder) service).getService();
-            if (bluetoothService != null) {
-                if (!bluetoothService.initialize()) {
-                    Log.e("tag", "Unable to initialize Bluetooth");
-                    getActivity().finish();
-                }
-                // perform device connection
-
-                bluetoothService.connect("24:ec:4a:3a:2b:ee");
-
-
-            }
-        }
-
-        @Override
-        public void onServiceDisconnected(ComponentName name) {
-            bluetoothService = null;
-        }
-    };
-
-    private final BroadcastReceiver gattUpdateReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            final String action = intent.getAction();
-            if (BluetoothLeService.ACTION_GATT_CONNECTED.equals(action)) {
-                Toast.makeText(context, "BLE connected", Toast.LENGTH_SHORT).show();
-            } else if (BluetoothLeService.ACTION_GATT_DISCONNECTED.equals(action)) {
-                Toast.makeText(context, "BLE disconnected", Toast.LENGTH_SHORT).show();
-            }
-        }
-    };
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        if (bluetoothService != null) {
-            final boolean result = bluetoothService.connect("24:ec:4a:3a:2b:ee");
-            Log.d("tag", "Connect request result=" + result);
-        }
-    }
-
-    private static IntentFilter makeGattUpdateIntentFilter() {
-        final IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(BluetoothLeService.ACTION_GATT_CONNECTED);
-        intentFilter.addAction(BluetoothLeService.ACTION_GATT_DISCONNECTED);
-        return intentFilter;
     }
 }
