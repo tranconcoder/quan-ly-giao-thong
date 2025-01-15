@@ -1,4 +1,4 @@
-# Install script for directory: /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/openthread
+# Install script for directory: /home/tvconss/esp/esp-idf/components/openthread
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

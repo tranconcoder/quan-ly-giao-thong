@@ -137,6 +137,16 @@ static char *bda2str(uint8_t *bda, char *str, size_t size)
      return str;
 }
 
+void task_send_image()
+{
+     while (true)
+     {
+          // Send image
+          vTaskDelay(1000 / portTICK_PERIOD_MS);
+          esp_spp_write(0, 1024, (uint8_t *)"Hello World");
+     }
+}
+
 extern "C" void app_main()
 {
      try

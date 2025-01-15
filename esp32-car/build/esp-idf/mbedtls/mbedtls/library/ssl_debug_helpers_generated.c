@@ -1,1 +1,1 @@
-/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/mbedtls/mbedtls/library/ssl_debug_helpers_generated.c
+/home/tvconss/esp/esp-idf/components/mbedtls/mbedtls/library/ssl_debug_helpers_generated.c

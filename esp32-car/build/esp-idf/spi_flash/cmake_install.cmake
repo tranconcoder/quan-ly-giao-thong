@@ -1,4 +1,4 @@
-# Install script for directory: /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/spi_flash
+# Install script for directory: /home/tvconss/esp/esp-idf/components/spi_flash
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/subproject"
+  "/home/tvconss/esp/esp-idf/components/bootloader/subproject"
   "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build/bootloader"
   "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build/bootloader-prefix"
   "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build/bootloader-prefix/tmp"

@@ -3,15 +3,8 @@ package com.example.carremote.ui.home;
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothSocket;
-import android.content.BroadcastReceiver;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.ServiceConnection;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.IBinder;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -30,6 +23,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.carremote.Address;
 import com.example.carremote.BluetoothCommand;
 import com.example.carremote.BluetoothConnect;
 import com.example.carremote.BluetoothLeService;
@@ -52,10 +46,10 @@ public class HomeFragment extends Fragment {
     private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
 
     private PreviewView previewView;
-    private BluetoothSocket bluetoothSocket;
+    private BluetoothSocket bluetoothSocketEsp32, bluetoothSocketEsp32Cam;
     private BluetoothGatt bluetoothGatt;
-    private OutputStream outputStream;
-    private InputStream inputStream;
+    private OutputStream outputStreamEsp32, outputStreamEsp32Cam;
+    private InputStream inputStreamEsp32, inputStreamEsp32Cam;
     private float dX, dY;
     private BluetoothLeService bluetoothService;
 
@@ -101,10 +95,13 @@ public class HomeFragment extends Fragment {
             BluetoothConnect bluetoothConnect = mainActivity.bluetoothConnect;
 
 
-            bluetoothSocket = bluetoothConnect.connect();
+            bluetoothSocketEsp32 = bluetoothConnect.connectSPP(Address.ESP32.toString());
+            bluetoothSocketEsp32Cam = bluetoothConnect.connectSPP(Address.ESP32_CAM.toString());
 //            bluetoothGatt   = bluetoothConnect.connectGatt();
-            outputStream    = bluetoothSocket.getOutputStream();
-            inputStream     = bluetoothSocket.getInputStream();
+            outputStreamEsp32 = bluetoothSocketEsp32.getOutputStream();
+            outputStreamEsp32Cam = bluetoothSocketEsp32Cam.getOutputStream();
+            inputStreamEsp32 = bluetoothSocketEsp32.getInputStream();
+            inputStreamEsp32Cam = bluetoothSocketEsp32Cam.getInputStream();
 
 
             // Setup camera preview
@@ -125,7 +122,7 @@ public class HomeFragment extends Fragment {
             binding.previewView2.start();
 
 
-            if (bluetoothSocket == null || outputStream == null)
+            if (bluetoothSocketEsp32 == null || outputStreamEsp32 == null)
                 throw new IOException("Bluetooth connection failed");
 
 
@@ -142,9 +139,9 @@ public class HomeFragment extends Fragment {
                     public boolean onTouch(View v, MotionEvent event) {
                         try {
                             if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                                outputStream.write(item.getStartCommand().getBytes());
+                                outputStreamEsp32.write(item.getStartCommand().getBytes());
                             } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                                outputStream.write(item.getEndCommand().getBytes());
+                                outputStreamEsp32.write(item.getEndCommand().getBytes());
                             }
                         } catch (IOException e) {
                             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
@@ -153,17 +150,17 @@ public class HomeFragment extends Fragment {
                     }
                 });
 
-                while(true) {
-                    try {
-                        byte [] data = new byte[1024000];
-                        for (int i = 0; i < 1024000; i++) {
-                            data[i] = (byte)(i % 256);
-                        }
-                        outputStream.write(data);
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
+//                while(true) {
+//                    try {
+////                        byte [] data = new byte[1024000];
+////                        for (int i = 0; i < 1024000; i++) {
+////                            data[i] = (byte)(i % 256);
+////                        }
+//                        outputStreamEsp32.write("Hello world!".getBytes());
+//                    } catch (IOException e) {
+//                        throw new RuntimeException(e);
+//                    }
+//                }
             });
 
 
@@ -178,9 +175,9 @@ public class HomeFragment extends Fragment {
                 item.getSwitchCompat().setOnCheckedChangeListener((buttonView, isChecked) -> {
                     try {
                         if (isChecked) {
-                            outputStream.write(item.getEnableCommand().getBytes());
+                            outputStreamEsp32.write(item.getEnableCommand().getBytes());
                         } else {
-                            outputStream.write(item.getDisableCommand().getBytes());
+                            outputStreamEsp32.write(item.getDisableCommand().getBytes());
                         }
                     } catch (IOException e) {
                         Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
@@ -256,14 +253,27 @@ public class HomeFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     try {
-                        bluetoothSocket = bluetoothConnect.connect();
-                        outputStream = bluetoothSocket.getOutputStream();
-                        inputStream = bluetoothSocket.getInputStream();
+                        bluetoothSocketEsp32 = bluetoothConnect.connectSPP(Address.ESP32.toString());
+                        outputStreamEsp32 = bluetoothSocketEsp32.getOutputStream();
+                        inputStreamEsp32 = bluetoothSocketEsp32.getInputStream();
                     } catch (IOException e) {
                         Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }
             });
+
+
+//            while(true) {
+//                try {
+//                    byte [] data = new byte[1024000];
+//                    for (int i = 0; i < 1024000; i++) {
+//                        data[i] = (byte)(i % 256);
+//                    }
+//                    outputStreamEsp32Cam.write(data);
+//                } catch (IOException e) {
+//                    throw new RuntimeException(e);
+//                }
+//            }
         } catch (Exception e) {
             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
             Log.e(Global.TAG.toString(), e.getMessage(), e);

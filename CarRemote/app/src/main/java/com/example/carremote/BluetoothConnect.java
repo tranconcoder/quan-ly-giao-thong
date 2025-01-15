@@ -43,9 +43,6 @@ public class BluetoothConnect extends Service {
     private BluetoothSocket bluetoothSocket;
     private BluetoothLeScanner bluetoothLeScanner;
     private Context context;
-    private String esp32mac = "c8:2e:18:25:e0:82".toUpperCase();
-    private String esp32s3mac = "24:ec:4a:3a:2b:ee".toUpperCase();
-
 
     @SuppressLint({"MissingPermission", "NewApi"})
     public BluetoothConnect(Activity context) {
@@ -62,11 +59,11 @@ public class BluetoothConnect extends Service {
     }
 
     @SuppressLint("MissingPermission")
-    public BluetoothGatt connectGatt() {
+    public BluetoothGatt connectGatt(String address) {
         BluetoothDevice esp32s3 = bluetoothAdapter
                 .getBondedDevices()
                 .stream()
-                .filter(device -> device.getAddress().equals(esp32s3mac))
+                .filter(device -> device.getAddress().equals(address))
                 .findFirst()
                 .orElse(null);
         BluetoothGatt gatt = null;
@@ -87,12 +84,12 @@ public class BluetoothConnect extends Service {
 
 
     @SuppressLint("MissingPermission")
-    public BluetoothSocket connect() {
+    public BluetoothSocket connectSPP(String address) {
         BluetoothSocket bluetoothSocket = null;
         BluetoothDevice esp32 = bluetoothAdapter
                 .getBondedDevices()
                 .stream()
-                .filter(device -> device.getAddress().equals(esp32mac))
+                .filter(device -> device.getAddress().equals(address))
                 .findFirst()
                 .orElse(null);
 

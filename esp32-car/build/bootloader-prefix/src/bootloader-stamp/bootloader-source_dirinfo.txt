@@ -4,6 +4,6 @@
 
 method=source_dir
 command=
-source_dir=/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/subproject
+source_dir=/home/tvconss/esp/esp-idf/components/bootloader/subproject
 work_dir=
 

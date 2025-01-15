@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "esp32cam-car",
-    "project_version":    "c3ec36d7-dirty",
+    "project_version":    "2e9b2e66-dirty",
     "project_path":       "/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car",
     "idf_path":           "/home/tvconss/esp/esp-idf",
     "build_dir":          "/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/build",
@@ -888,14 +888,14 @@
             "target": "___idf_esp_psram",
             "prefix": "idf",
             "dir": "/home/tvconss/esp/esp-idf/components/esp_psram",
-            "type": "CONFIG_ONLY",
+            "type": "LIBRARY",
             "lib": "__idf_esp_psram",
             "reqs": [],
             "priv_reqs": [ "heap", "spi_flash", "esp_mm", "bootloader_support", "driver" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "file": "",
-            "sources": [],
+            "file": "/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/build/esp-idf/esp_psram/libesp_psram.a",
+            "sources": [ "/home/tvconss/esp/esp-idf/components/esp_psram/esp_psram.c", "/home/tvconss/esp/esp-idf/components/esp_psram/esp32/esp_psram_extram_cache.c", "/home/tvconss/esp/esp-idf/components/esp_psram/esp32/esp_himem.c", "/home/tvconss/esp/esp-idf/components/esp_psram/esp32/esp_psram_impl_quad.c" ],
             "include_dirs": [ "include" ]
         },
         "esp_ringbuf": {
@@ -1240,7 +1240,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/build/esp-idf/newlib/libnewlib.a",
-            "sources": [ "/home/tvconss/esp/esp-idf/components/newlib/abort.c", "/home/tvconss/esp/esp-idf/components/newlib/assert.c", "/home/tvconss/esp/esp-idf/components/newlib/heap.c", "/home/tvconss/esp/esp-idf/components/newlib/flockfile.c", "/home/tvconss/esp/esp-idf/components/newlib/locks.c", "/home/tvconss/esp/esp-idf/components/newlib/poll.c", "/home/tvconss/esp/esp-idf/components/newlib/pthread.c", "/home/tvconss/esp/esp-idf/components/newlib/random.c", "/home/tvconss/esp/esp-idf/components/newlib/getentropy.c", "/home/tvconss/esp/esp-idf/components/newlib/reent_init.c", "/home/tvconss/esp/esp-idf/components/newlib/newlib_init.c", "/home/tvconss/esp/esp-idf/components/newlib/syscalls.c", "/home/tvconss/esp/esp-idf/components/newlib/termios.c", "/home/tvconss/esp/esp-idf/components/newlib/stdatomic.c", "/home/tvconss/esp/esp-idf/components/newlib/time.c", "/home/tvconss/esp/esp-idf/components/newlib/sysconf.c", "/home/tvconss/esp/esp-idf/components/newlib/realpath.c", "/home/tvconss/esp/esp-idf/components/newlib/scandir.c", "/home/tvconss/esp/esp-idf/components/newlib/port/esp_time_impl.c" ],
+            "sources": [ "/home/tvconss/esp/esp-idf/components/newlib/abort.c", "/home/tvconss/esp/esp-idf/components/newlib/assert.c", "/home/tvconss/esp/esp-idf/components/newlib/heap.c", "/home/tvconss/esp/esp-idf/components/newlib/flockfile.c", "/home/tvconss/esp/esp-idf/components/newlib/locks.c", "/home/tvconss/esp/esp-idf/components/newlib/poll.c", "/home/tvconss/esp/esp-idf/components/newlib/pthread.c", "/home/tvconss/esp/esp-idf/components/newlib/random.c", "/home/tvconss/esp/esp-idf/components/newlib/getentropy.c", "/home/tvconss/esp/esp-idf/components/newlib/reent_init.c", "/home/tvconss/esp/esp-idf/components/newlib/newlib_init.c", "/home/tvconss/esp/esp-idf/components/newlib/syscalls.c", "/home/tvconss/esp/esp-idf/components/newlib/termios.c", "/home/tvconss/esp/esp-idf/components/newlib/stdatomic.c", "/home/tvconss/esp/esp-idf/components/newlib/time.c", "/home/tvconss/esp/esp-idf/components/newlib/sysconf.c", "/home/tvconss/esp/esp-idf/components/newlib/realpath.c", "/home/tvconss/esp/esp-idf/components/newlib/scandir.c", "/home/tvconss/esp/esp-idf/components/newlib/port/xtensa/stdatomic_s32c1i.c", "/home/tvconss/esp/esp-idf/components/newlib/port/esp_time_impl.c" ],
             "include_dirs": [ "platform_include" ]
         },
         "nvs_flash": {

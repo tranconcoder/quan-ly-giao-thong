@@ -17244,7 +17244,10 @@
                                                 "help": "Select the amount of banks reserved for bank switching. Note that the amount of RAM allocatable with\nmalloc/esp_heap_alloc_caps will decrease by 32K for each page reserved here.\n\nNote that this reservation is only actually done if your program actually uses the himem API. Without\nany himem calls, the reservation is not done and the original amount of memory will be available\nto malloc/esp_heap_alloc_caps.",
                                                 "id": "SPIRAM_BANKSWITCH_RESERVE",
                                                 "name": "SPIRAM_BANKSWITCH_RESERVE",
-                                                "range": null,
+                                                "range": [
+                                                    1,
+                                                    62
+                                                ],
                                                 "title": "Amount of 32K pages to reserve for bank switching",
                                                 "type": "int"
                                             }
@@ -17305,7 +17308,10 @@
                                                 "help": "The PSRAM CLOCK IO can be any unused GPIO, user can config it based on hardware design. If user use\n1.8V flash and 1.8V psram, this value can only be one of 6, 7, 8, 9, 10, 11, 16, 17.\n\nIf configured to the same pin as Flash, PSRAM shouldn't be rev0. Contact Espressif for more\ninformation.",
                                                 "id": "D0WD_PSRAM_CLK_IO",
                                                 "name": "D0WD_PSRAM_CLK_IO",
-                                                "range": null,
+                                                "range": [
+                                                    0,
+                                                    33
+                                                ],
                                                 "title": "PSRAM CLK IO number",
                                                 "type": "int"
                                             },
@@ -17315,7 +17321,10 @@
                                                 "help": "The PSRAM CS IO can be any unused GPIO, user can config it based on hardware design. If user use\n1.8V flash and 1.8V psram, this value can only be one of 6, 7, 8, 9, 10, 11, 16, 17.",
                                                 "id": "D0WD_PSRAM_CS_IO",
                                                 "name": "D0WD_PSRAM_CS_IO",
-                                                "range": null,
+                                                "range": [
+                                                    0,
+                                                    33
+                                                ],
                                                 "title": "PSRAM CS IO number",
                                                 "type": "int"
                                             }
@@ -17333,7 +17342,10 @@
                                                 "help": "User can config it based on hardware design. For ESP32-D2WD chip, the psram can only be 1.8V psram,\nso this value can only be one of 6, 7, 8, 9, 10, 11, 16, 17.\n\nIf configured to the same pin (GPIO6) as Flash, PSRAM shouldn't be rev0. Contact Espressif for more\ninformation.",
                                                 "id": "D2WD_PSRAM_CLK_IO",
                                                 "name": "D2WD_PSRAM_CLK_IO",
-                                                "range": null,
+                                                "range": [
+                                                    0,
+                                                    33
+                                                ],
                                                 "title": "PSRAM CLK IO number",
                                                 "type": "int"
                                             },
@@ -17343,7 +17355,10 @@
                                                 "help": "User can config it based on hardware design. For ESP32-D2WD chip, the psram can only be 1.8V psram,\nso this value can only be one of 6, 7, 8, 9, 10, 11, 16, 17.",
                                                 "id": "D2WD_PSRAM_CS_IO",
                                                 "name": "D2WD_PSRAM_CS_IO",
-                                                "range": null,
+                                                "range": [
+                                                    0,
+                                                    33
+                                                ],
                                                 "title": "PSRAM CS IO number",
                                                 "type": "int"
                                             }
@@ -17361,7 +17376,10 @@
                                                 "help": "The PSRAM CS IO can be any unused GPIO, user can config it based on hardware design.\n\nFor ESP32-PICO chip, the psram share clock with flash, so user do not need to configure the clock\nIO.\nFor the reference hardware design, please refer to\nhttps://www.espressif.com/sites/default/files/documentation/esp32-pico-d4_datasheet_en.pdf",
                                                 "id": "PICO_PSRAM_CS_IO",
                                                 "name": "PICO_PSRAM_CS_IO",
-                                                "range": null,
+                                                "range": [
+                                                    0,
+                                                    33
+                                                ],
                                                 "title": "PSRAM CS IO number",
                                                 "type": "int"
                                             }
@@ -17387,7 +17405,10 @@
                                         "help": "The option \"Use custom SPI PSRAM WP(SD3) pin\" must be set or this value is ignored\n\nIf burning a customized set of SPI flash pins in eFuse and using DIO or DOUT mode for flash, set this\nvalue to the GPIO number of the SPIRAM WP pin.",
                                         "id": "SPIRAM_SPIWP_SD3_PIN",
                                         "name": "SPIRAM_SPIWP_SD3_PIN",
-                                        "range": null,
+                                        "range": [
+                                            0,
+                                            33
+                                        ],
                                         "title": "Custom SPI PSRAM WP(SD3) Pin",
                                         "type": "int"
                                     },

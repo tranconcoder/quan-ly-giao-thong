@@ -1,4 +1,4 @@
-# Install script for directory: /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/esp_driver_tsens
+# Install script for directory: /home/tvconss/esp/esp-idf/components/esp_driver_tsens
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

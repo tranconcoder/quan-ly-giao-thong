@@ -1,4 +1,4 @@
-# Install script for directory: /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader_support
+# Install script for directory: /home/tvconss/esp/esp-idf/components/bootloader_support
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

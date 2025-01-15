@@ -1,4 +1,4 @@
-# Install script for directory: /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/esp_driver_rmt
+# Install script for directory: /home/tvconss/esp/esp-idf/components/esp_driver_rmt
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

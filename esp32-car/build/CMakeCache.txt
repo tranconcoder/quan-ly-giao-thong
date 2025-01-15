@@ -347,7 +347,7 @@ Mbed TLS_BINARY_DIR:STATIC=/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/
 Mbed TLS_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-Mbed TLS_SOURCE_DIR:STATIC=/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/mbedtls/mbedtls
+Mbed TLS_SOURCE_DIR:STATIC=/home/tvconss/esp/esp-idf/components/mbedtls/mbedtls
 
 //No help, variable specified on the command line.
 PYTHON:UNINITIALIZED=/home/tvconss/.espressif/python_env/idf5.4_py3.12_env/bin/python

@@ -1,8 +1,8 @@
 {
     "version":            "1.1",
     "project_name":       "bootloader",
-    "project_version":    "c3ec36d7-dirty",
-    "project_path":       "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/subproject",
+    "project_version":    "v5.4",
+    "project_path":       "/home/tvconss/esp/esp-idf/components/bootloader/subproject",
     "idf_path":           "/home/tvconss/esp/esp-idf",
     "build_dir":          "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build/bootloader",
     "config_file":        "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/sdkconfig",
@@ -22,17 +22,17 @@
     "c_compiler":         "/home/tvconss/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc",
     "config_environment" : {
         "COMPONENT_KCONFIGS" : "/home/tvconss/esp/esp-idf/components/efuse/Kconfig;/home/tvconss/esp/esp-idf/components/esp_common/Kconfig;/home/tvconss/esp/esp-idf/components/esp_hw_support/Kconfig;/home/tvconss/esp/esp-idf/components/esp_security/Kconfig;/home/tvconss/esp/esp-idf/components/esp_system/Kconfig;/home/tvconss/esp/esp-idf/components/freertos/Kconfig;/home/tvconss/esp/esp-idf/components/hal/Kconfig;/home/tvconss/esp/esp-idf/components/log/Kconfig;/home/tvconss/esp/esp-idf/components/newlib/Kconfig;/home/tvconss/esp/esp-idf/components/soc/Kconfig;/home/tvconss/esp/esp-idf/components/spi_flash/Kconfig",
-        "COMPONENT_KCONFIGS_PROJBUILD" : "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/Kconfig.projbuild;/home/tvconss/esp/esp-idf/components/esp_app_format/Kconfig.projbuild;/home/tvconss/esp/esp-idf/components/esp_rom/Kconfig.projbuild;/home/tvconss/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/home/tvconss/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/home/tvconss/esp/esp-idf/components/bootloader/Kconfig.projbuild;/home/tvconss/esp/esp-idf/components/esp_app_format/Kconfig.projbuild;/home/tvconss/esp/esp-idf/components/esp_rom/Kconfig.projbuild;/home/tvconss/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/home/tvconss/esp/esp-idf/components/partition_table/Kconfig.projbuild"
     },
     "common_component_reqs": [ "log", "esp_rom", "esp_common", "esp_hw_support", "newlib", "xtensa" ],
     "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp_app_format", "esp_bootloader_format", "esp_common", "esp_hw_support", "esp_rom", "esp_security", "esp_system", "esptool_py", "freertos", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "soc", "spi_flash", "xtensa", "" ],
-    "build_component_paths" : [ "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader", "/home/tvconss/esp/esp-idf/components/bootloader_support", "/home/tvconss/esp/esp-idf/components/efuse", "/home/tvconss/esp/esp-idf/components/esp_app_format", "/home/tvconss/esp/esp-idf/components/esp_bootloader_format", "/home/tvconss/esp/esp-idf/components/esp_common", "/home/tvconss/esp/esp-idf/components/esp_hw_support", "/home/tvconss/esp/esp-idf/components/esp_rom", "/home/tvconss/esp/esp-idf/components/esp_security", "/home/tvconss/esp/esp-idf/components/esp_system", "/home/tvconss/esp/esp-idf/components/esptool_py", "/home/tvconss/esp/esp-idf/components/freertos", "/home/tvconss/esp/esp-idf/components/hal", "/home/tvconss/esp/esp-idf/components/log", "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/subproject/main", "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/subproject/components/micro-ecc", "/home/tvconss/esp/esp-idf/components/newlib", "/home/tvconss/esp/esp-idf/components/partition_table", "/home/tvconss/esp/esp-idf/components/soc", "/home/tvconss/esp/esp-idf/components/spi_flash", "/home/tvconss/esp/esp-idf/components/xtensa", "" ],
+    "build_component_paths" : [ "/home/tvconss/esp/esp-idf/components/bootloader", "/home/tvconss/esp/esp-idf/components/bootloader_support", "/home/tvconss/esp/esp-idf/components/efuse", "/home/tvconss/esp/esp-idf/components/esp_app_format", "/home/tvconss/esp/esp-idf/components/esp_bootloader_format", "/home/tvconss/esp/esp-idf/components/esp_common", "/home/tvconss/esp/esp-idf/components/esp_hw_support", "/home/tvconss/esp/esp-idf/components/esp_rom", "/home/tvconss/esp/esp-idf/components/esp_security", "/home/tvconss/esp/esp-idf/components/esp_system", "/home/tvconss/esp/esp-idf/components/esptool_py", "/home/tvconss/esp/esp-idf/components/freertos", "/home/tvconss/esp/esp-idf/components/hal", "/home/tvconss/esp/esp-idf/components/log", "/home/tvconss/esp/esp-idf/components/bootloader/subproject/main", "/home/tvconss/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "/home/tvconss/esp/esp-idf/components/newlib", "/home/tvconss/esp/esp-idf/components/partition_table", "/home/tvconss/esp/esp-idf/components/soc", "/home/tvconss/esp/esp-idf/components/spi_flash", "/home/tvconss/esp/esp-idf/components/xtensa", "" ],
     "build_component_info" : {
         "bootloader": {
             "alias": "idf::bootloader",
             "target": "___idf_bootloader",
             "prefix": "idf",
-            "dir": "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader",
+            "dir": "/home/tvconss/esp/esp-idf/components/bootloader",
             "type": "CONFIG_ONLY",
             "lib": "__idf_bootloader",
             "reqs": [],
@@ -242,7 +242,7 @@
             "alias": "idf::main",
             "target": "___idf_main",
             "prefix": "idf",
-            "dir": "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/subproject/main",
+            "dir": "/home/tvconss/esp/esp-idf/components/bootloader/subproject/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
             "reqs": [ "bootloader", "bootloader_support" ],
@@ -250,14 +250,14 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build/bootloader/esp-idf/main/libmain.a",
-            "sources": [ "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/subproject/main/bootloader_start.c" ],
+            "sources": [ "/home/tvconss/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c" ],
             "include_dirs": []
         },
         "micro-ecc": {
             "alias": "idf::micro-ecc",
             "target": "___idf_micro-ecc",
             "prefix": "idf",
-            "dir": "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/subproject/components/micro-ecc",
+            "dir": "/home/tvconss/esp/esp-idf/components/bootloader/subproject/components/micro-ecc",
             "type": "LIBRARY",
             "lib": "__idf_micro-ecc",
             "reqs": [],
@@ -265,7 +265,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build/bootloader/esp-idf/micro-ecc/libmicro-ecc.a",
-            "sources": [ "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/subproject/components/micro-ecc/uECC_verify_antifault.c" ],
+            "sources": [ "/home/tvconss/esp/esp-idf/components/bootloader/subproject/components/micro-ecc/uECC_verify_antifault.c" ],
             "include_dirs": [ ".", "micro-ecc" ]
         },
         "newlib": {
@@ -373,7 +373,7 @@
             "alias": "idf::bootloader",
             "target": "___idf_bootloader",
             "prefix": "idf",
-            "dir": "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader",
+            "dir": "/home/tvconss/esp/esp-idf/components/bootloader",
             "lib": "__idf_bootloader",
             "reqs": [],
             "priv_reqs": [ "partition_table", "esptool_py" ],
@@ -1609,7 +1609,7 @@
             "alias": "idf::main",
             "target": "___idf_main",
             "prefix": "idf",
-            "dir": "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/subproject/main",
+            "dir": "/home/tvconss/esp/esp-idf/components/bootloader/subproject/main",
             "lib": "__idf_main",
             "reqs": [ "bootloader", "bootloader_support" ],
             "priv_reqs": [],
@@ -1621,7 +1621,7 @@
             "alias": "idf::micro-ecc",
             "target": "___idf_micro-ecc",
             "prefix": "idf",
-            "dir": "/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/subproject/components/micro-ecc",
+            "dir": "/home/tvconss/esp/esp-idf/components/bootloader/subproject/components/micro-ecc",
             "lib": "__idf_micro-ecc",
             "reqs": [],
             "priv_reqs": [],

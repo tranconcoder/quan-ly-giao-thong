@@ -1,0 +1,164 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15716
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 15 2025 15:44:16[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=38150h (229712) map[0m
+[0;32mI (168) esp_image: segment 1: paddr=00048178 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (168) esp_image: segment 2: paddr=0004819c vaddr=3ffbdb60 size=04d70h ( 19824) load[0m
+[0;32mI (179) esp_image: segment 3: paddr=0004cf14 vaddr=40080000 size=03104h ( 12548) load[0m
+[0;32mI (185) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=d7588h (882056) map[0m
+[0;32mI (488) esp_image: segment 5: paddr=001275b0 vaddr=40083104 size=1c020h (114720) load[0m
+[0;32mI (548) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (548) boot: Disabling RNG early entropy source...[0m
+[0;32mI (559) quad_psram: This chip is ESP32-D0WD[0m
+[0;32mI (560) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (560) esp_psram: Speed: 40MHz[0m
+[0;32mI (560) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;33mW (566) esp_psram: Virtual address not enough for PSRAM, map as much as we can. 4MB is mapped[0m
+[0;32mI (574) cpu_start: Multicore app[0m
+[0;32mI (1482) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1490) cpu_start: Pro cpu start user code[0m
+[0;32mI (1490) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1490) app_init: Application information:[0m
+[0;32mI (1491) app_init: Project name:     esp32cam-car[0m
+[0;32mI (1495) app_init: App version:      2e9b2e66-dirty[0m
+[0;32mI (1500) app_init: Compile time:     Jan 15 2025 16:25:52[0m
+[0;32mI (1505) app_init: ELF file SHA256:  5d1fe3ac3...[0m
+[0;32mI (1509) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (1513) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (1517) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (1521) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (1525) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1531) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (1536) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (1542) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (1547) heap_init: At 3FFD0E10 len 0000F1F0 (60 KiB): DRAM[0m
+[0;32mI (1552) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1558) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (1563) heap_init: At 4009F124 len 00000EDC (3 KiB): IRAM[0m
+[0;32mI (1569) esp_psram: Adding pool of 4096K of PSRAM memory to heap allocator[0m
+[0;32mI (1576) spi_flash: detected chip: generic[0m
+[0;32mI (1579) spi_flash: flash io: dio[0m
+[0;32mI (1583) coexist: coex firmware version: 49a8cdc[0m
+[0;32mI (1587) main_task: Started on CPU0[0m
+[0;32mI (1597) main_task: Calling app_main()[0m
+[0;32mI (1607) BTDM_INIT: BT controller compile version [20b459d][0m
+[0;32mI (1617) BTDM_INIT: Bluetooth MAC: f8:b3:b7:32:6a:d6[0m
+[0;32mI (1617) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (1617) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1677) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+[0;32mI (2147) SPP_ACCEPTOR_DEMO: Own address:[f8:b3:b7:32:6a:d6][0m
+[0;32mI (2147) main_task: Returned from app_main()[0m
+[0;32mI (2167) SPP_ACCEPTOR_DEMO: event: 10[0m
+[0;32mI (2167) SPP_ACCEPTOR_DEMO: ESP_SPP_INIT_EVT[0m
+[0;32mI (2167) SPP_ACCEPTOR_DEMO: ESP_SPP_START_EVT handle:129 sec_id:55 scn:1[0m
+[0;32mI (2177) SPP_ACCEPTOR_DEMO: event: 10[0m
+[0;33mW (755127) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (755127) SPP_ACCEPTOR_DEMO: event: 16[0m
+[0;33mW (755177) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000[0m
+[0;32mI (755277) SPP_ACCEPTOR_DEMO: Input pin code: 0000[0m
+[0;32mI (760587) SPP_ACCEPTOR_DEMO: authentication success: Xiaomi 13T bda:[a4:cc:b3:9e:59:6d][0m
+[0;32mI (760657) SPP_ACCEPTOR_DEMO: event: 21[0m
+[0;33mW (760677) BT_APPL: new conn_srvc id:26, app_id:255[0m
+[0;32mI (760677) SPP_ACCEPTOR_DEMO: ESP_SPP_SRV_OPEN_EVT status:0 handle:129, rem_bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (765687) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 792, status 0x0[0m
+[0;32mI (765687) SPP_ACCEPTOR_DEMO: event: 13[0m
+[0;33mW (799427) BT_RFCOMM: port_rfc_closed RFCOMM connection in server:1 state 2 closed: Closed (res: 19)[0m
+[0;32mI (799427) SPP_ACCEPTOR_DEMO: ESP_SPP_CLOSE_EVT status:0 handle:129 close_by_remote:1[0m
+[0;33mW (801407) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0[0m
+[0;32mI (801407) SPP_ACCEPTOR_DEMO: event: 13[0m
+[0;33mW (801427) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x41 current:0x0[0m
+[0;33mW (801427) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x41[0m
+[0;33mW (805427) BT_HCI: hci cmd send: disconnect: hdl 0x80, rsn:0x13[0m
+[0;33mW (805557) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x16[0m
+[0;32mI (805557) SPP_ACCEPTOR_DEMO: event: 17[0m
+[0;33mW (817947) BT_HCI: hcif conn complete: hdl 0x81, st 0x0[0m
+[0;32mI (817957) SPP_ACCEPTOR_DEMO: event: 16[0m
+[0;33mW (817967) BT_HCI: hcif link supv_to changed: hdl 0x81, supv_to 8000[0m
+[0;33mW (818157) BT_APPL: new conn_srvc id:26, app_id:255[0m
+[0;32mI (818157) SPP_ACCEPTOR_DEMO: ESP_SPP_SRV_OPEN_EVT status:0 handle:385, rem_bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (823197) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 792, status 0x0[0m
+[0;32mI (823197) SPP_ACCEPTOR_DEMO: event: 13[0m
+[0;33mW (837047) BT_RFCOMM: port_rfc_closed RFCOMM connection in server:1 state 2 closed: Closed (res: 19)[0m
+[0;32mI (837047) SPP_ACCEPTOR_DEMO: ESP_SPP_CLOSE_EVT status:0 handle:385 close_by_remote:1[0m
+[0;33mW (838537) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0[0m
+[0;32mI (838537) SPP_ACCEPTOR_DEMO: event: 13[0m
+[0;33mW (838567) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x41 current:0x0[0m
+[0;33mW (838567) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x41[0m
+[0;33mW (842567) BT_HCI: hci cmd send: disconnect: hdl 0x81, rsn:0x13[0m
+[0;33mW (842647) BT_HCI: hcif disc complete: hdl 0x81, rsn 0x16[0m
+[0;32mI (842647) SPP_ACCEPTOR_DEMO: event: 17[0m
+[0;33mW (853587) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (853587) SPP_ACCEPTOR_DEMO: event: 16[0m
+[0;33mW (853617) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000[0m
+[0;33mW (853897) BT_APPL: new conn_srvc id:26, app_id:255[0m
+[0;32mI (853897) SPP_ACCEPTOR_DEMO: ESP_SPP_SRV_OPEN_EVT status:0 handle:129, rem_bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (858937) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 792, status 0x0[0m
+[0;32mI (858937) SPP_ACCEPTOR_DEMO: event: 13[0m
+[0;33mW (1059797) BT_RFCOMM: port_rfc_closed RFCOMM connection in server:1 state 2 closed: Closed (res: 19)[0m
+[0;32mI (1059797) SPP_ACCEPTOR_DEMO: ESP_SPP_CLOSE_EVT status:0 handle:129 close_by_remote:1[0m
+[0;33mW (1061777) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0[0m
+[0;32mI (1061777) SPP_ACCEPTOR_DEMO: event: 13[0m
+[0;33mW (1061797) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x41 current:0x0[0m
+[0;33mW (1061797) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x41[0m
+[0;33mW (1065797) BT_HCI: hci cmd send: disconnect: hdl 0x80, rsn:0x13[0m
+[0;33mW (1065877) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x16[0m
+[0;32mI (1065877) SPP_ACCEPTOR_DEMO: event: 17[0m
+[0;33mW (1072877) BT_HCI: hcif conn complete: hdl 0x81, st 0x0[0m
+[0;32mI (1072877) SPP_ACCEPTOR_DEMO: event: 16[0m
+[0;33mW (1072897) BT_HCI: hcif link supv_to changed: hdl 0x81, supv_to 8000[0m
+[0;33mW (1073177) BT_APPL: new conn_srvc id:26, app_id:255[0m
+[0;32mI (1073177) SPP_ACCEPTOR_DEMO: ESP_SPP_SRV_OPEN_EVT status:0 handle:385, rem_bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (1078197) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 792, status 0x0[0m
+[0;32mI (1078207) SPP_ACCEPTOR_DEMO: event: 13[0m
+[0;33mW (1094447) BT_RFCOMM: port_rfc_closed RFCOMM connection in server:1 state 2 closed: Closed (res: 19)[0m
+[0;32mI (1094447) SPP_ACCEPTOR_DEMO: ESP_SPP_CLOSE_EVT status:0 handle:385 close_by_remote:1[0m
+[0;33mW (1096427) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0[0m
+[0;32mI (1096427) SPP_ACCEPTOR_DEMO: event: 13[0m
+[0;33mW (1096447) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 792, status 0x0[0m
+[0;32mI (1096447) SPP_ACCEPTOR_DEMO: event: 13[0m
+[0;33mW (1096927) BT_HCI: hci cmd send: unsniff: hdl 0x81[0m
+[0;33mW (1096927) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x41 current:0x0[0m
+[0;33mW (1096927) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x41[0m
+[0;33mW (1097417) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0[0m
+[0;32mI (1097417) SPP_ACCEPTOR_DEMO: event: 13[0m
+[0;33mW (1097507) BT_APPL: new conn_srvc id:26, app_id:255[0m
+[0;32mI (1097507) SPP_ACCEPTOR_DEMO: ESP_SPP_SRV_OPEN_EVT status:0 handle:129, rem_bda:[a4:cc:b3:9e:59:6d][0m
+[0;33mW (1102857) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 792, status 0x0[0m
+[0;32mI (1102867) SPP_ACCEPTOR_DEMO: event: 13[0m
+[0;33mW (1141967) BT_RFCOMM: port_rfc_closed RFCOMM connection in server:1 state 2 closed: Closed (res: 19)[0m
+[0;32mI (1141967) SPP_ACCEPTOR_DEMO: ESP_SPP_CLOSE_EVT status:0 handle:129 close_by_remote:1[0m
+[0;33mW (1143447) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0[0m
+[0;32mI (1143447) SPP_ACCEPTOR_DEMO: event: 13[0m
+[0;33mW (1143477) BT_RFCOMM: rfc_find_lcid_mcb LCID reused LCID:0x41 current:0x0[0m
+[0;33mW (1143477) BT_RFCOMM: RFCOMM_DisconnectInd LCID:0x41[0m
+[0;33mW (1147477) BT_HCI: hci cmd send: disconnect: hdl 0x81, rsn:0x13[0m
+[0;33mW (1147557) BT_HCI: hcif disc complete: hdl 0x81, rsn 0x16[0m
+[0;32mI (1147557) SPP_ACCEPTOR_DEMO: event: 17[0m
+[0;32mI (1299) SPP_ACCEPTOR_DEMO: ESP_SPP_INIT_EVT[0m
+[0;32mI (1309) SPP_ACCEPTOR_DEMO: ESP_SPP_START_EVT handle:129 sec_id:55 scn:1[0m
+[0;32mI (1319) SPP_ACCEPTOR_DEMO: event: 10[0m
+[0;32mI (1319) SPP_ACCEPTOR_DEMO: Own address:[c8:2e:18:25:e0:82][0m
+[0;32mI (1329) main_task: Returned from app_main()[0m

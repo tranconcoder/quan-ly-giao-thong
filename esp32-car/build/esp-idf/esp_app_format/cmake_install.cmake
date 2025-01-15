@@ -1,4 +1,4 @@
-# Install script for directory: /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/esp_app_format
+# Install script for directory: /home/tvconss/esp/esp-idf/components/esp_app_format
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

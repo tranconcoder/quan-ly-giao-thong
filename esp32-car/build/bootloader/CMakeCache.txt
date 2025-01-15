@@ -233,7 +233,7 @@ CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/tvconss/esp/esp-idf/tools/cmake/toolchain-es
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //No help, variable specified on the command line.
-EXTRA_COMPONENT_DIRS:UNINITIALIZED=/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader
+EXTRA_COMPONENT_DIRS:UNINITIALIZED=/home/tvconss/esp/esp-idf/components/bootloader
 
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/usr/bin/git
@@ -269,7 +269,7 @@ bootloader_BINARY_DIR:STATIC=/home/tvconss/Workspace/quan-ly-giao-thong/esp32-ca
 bootloader_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-bootloader_SOURCE_DIR:STATIC=/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/subproject
+bootloader_SOURCE_DIR:STATIC=/home/tvconss/esp/esp-idf/components/bootloader/subproject
 
 //Value Computed by CMake
 esp-idf_BINARY_DIR:STATIC=/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/build/bootloader/esp-idf
@@ -374,7 +374,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/bootloader/subproject
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/tvconss/esp/esp-idf/components/bootloader/subproject
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MAKE_PROGRAM

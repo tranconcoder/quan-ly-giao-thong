@@ -1,4 +1,4 @@
-# Install script for directory: /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/esp_driver_i2s
+# Install script for directory: /home/tvconss/esp/esp-idf/components/esp_driver_i2s
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
