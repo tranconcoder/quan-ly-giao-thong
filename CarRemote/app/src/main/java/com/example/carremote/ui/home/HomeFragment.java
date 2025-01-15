@@ -102,8 +102,7 @@ public class HomeFragment extends Fragment {
 
 
             bluetoothSocket = bluetoothConnect.connect();
-            Log.i(Global.TAG.toString(), "connected success to bluetooth socket");
-            bluetoothGatt   = bluetoothConnect.connectGatt();
+//            bluetoothGatt   = bluetoothConnect.connectGatt();
             outputStream    = bluetoothSocket.getOutputStream();
             inputStream     = bluetoothSocket.getInputStream();
 
@@ -153,6 +152,18 @@ public class HomeFragment extends Fragment {
                         return false;
                     }
                 });
+
+                while(true) {
+                    try {
+                        byte [] data = new byte[1024000];
+                        for (int i = 0; i < 1024000; i++) {
+                            data[i] = (byte)(i % 256);
+                        }
+                        outputStream.write(data);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
             });
 
 
@@ -214,6 +225,20 @@ public class HomeFragment extends Fragment {
                                 binding.previewView
                                         .animate()
                                         .x(getView().getWidth() - binding.previewView.getWidth() - 20)
+                                        .setDuration(0)
+                                        .start();
+                            }
+
+                            if (previewCenterY < getView().getHeight() / 2) {
+                                binding.previewView
+                                        .animate()
+                                        .y(20)
+                                        .setDuration(0)
+                                        .start();
+                            } else {
+                                binding.previewView
+                                        .animate()
+                                        .y(getView().getHeight() - binding.previewView.getHeight() - 20)
                                         .setDuration(0)
                                         .start();
                             }

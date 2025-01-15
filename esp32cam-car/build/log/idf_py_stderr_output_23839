@@ -1,0 +1,173 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+[0m
+[0;33m--- 0x40081c51: panic_abort at /home/tvconss/esp/esp-idf/components/esp_system/panic.c:454
+0x40092aa5: esp_system_abort at /home/tvconss/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40099041: abort at /home/tvconss/esp/esp-idf/components/newlib/abort.c:38
+0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+0x40162310: std::terminate() at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:58 (discriminator 1)
+0x401623eb: __cxa_throw at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_throw.cc:98
+0x400d98f1: app_main at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:156 (discriminator 2)
+0x40199473: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x400934a1: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+[0m
+[0;33m--- 0x40081c51: panic_abort at /home/tvconss/esp/esp-idf/components/esp_system/panic.c:454
+0x40092aa5: esp_system_abort at /home/tvconss/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40099041: abort at /home/tvconss/esp/esp-idf/components/newlib/abort.c:38
+0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+0x40162310: std::terminate() at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:58 (discriminator 1)
+0x401623eb: __cxa_throw at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_throw.cc:98
+0x400d98f1: app_main at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:156 (discriminator 2)
+0x40199473: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x400934a1: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+[0m
+[0;33m--- 0x40081c51: panic_abort at /home/tvconss/esp/esp-idf/components/esp_system/panic.c:454
+0x40092aa5: esp_system_abort at /home/tvconss/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40099041: abort at /home/tvconss/esp/esp-idf/components/newlib/abort.c:38
+0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+0x40162310: std::terminate() at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:58 (discriminator 1)
+0x401623eb: __cxa_throw at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_throw.cc:98
+0x400d98f1: app_main at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:156 (discriminator 2)
+0x40199473: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x400934a1: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+[0m
+[0;33m--- 0x40081c51: panic_abort at /home/tvconss/esp/esp-idf/components/esp_system/panic.c:454
+0x40092aa5: esp_system_abort at /home/tvconss/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40099041: abort at /home/tvconss/esp/esp-idf/components/newlib/abort.c:38
+0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+0x40162310: std::terminate() at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:58 (discriminator 1)
+0x401623eb: __cxa_throw at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_throw.cc:98
+0x400d98f1: app_main at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:156 (discriminator 2)
+0x40199473: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x400934a1: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+[0m
+[0;33m--- 0x40081c51: panic_abort at /home/tvconss/esp/esp-idf/components/esp_system/panic.c:454
+0x40092aa5: esp_system_abort at /home/tvconss/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40099041: abort at /home/tvconss/esp/esp-idf/components/newlib/abort.c:38
+0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+0x40162310: std::terminate() at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:58 (discriminator 1)
+0x401623eb: __cxa_throw at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_throw.cc:98
+0x400d98f1: app_main at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:156 (discriminator 2)
+0x40199473: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x400934a1: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+[0m
+[0;33m--- 0x40081c51: panic_abort at /home/tvconss/esp/esp-idf/components/esp_system/panic.c:454
+0x40092aa5: esp_system_abort at /home/tvconss/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40099041: abort at /home/tvconss/esp/esp-idf/components/newlib/abort.c:38
+0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+0x40162310: std::terminate() at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:58 (discriminator 1)
+0x401623eb: __cxa_throw at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_throw.cc:98
+0x400d98f1: app_main at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:156 (discriminator 2)
+0x40199473: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x400934a1: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+[0m
+[0;33m--- 0x40081c51: panic_abort at /home/tvconss/esp/esp-idf/components/esp_system/panic.c:454
+0x40092aa5: esp_system_abort at /home/tvconss/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40099041: abort at /home/tvconss/esp/esp-idf/components/newlib/abort.c:38
+0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+0x40162310: std::terminate() at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:58 (discriminator 1)
+0x401623eb: __cxa_throw at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_throw.cc:98
+0x400d98f1: app_main at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:156 (discriminator 2)
+0x40199473: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x400934a1: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+[0m
+[0;33m--- 0x40081c51: panic_abort at /home/tvconss/esp/esp-idf/components/esp_system/panic.c:454
+0x40092aa5: esp_system_abort at /home/tvconss/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40099041: abort at /home/tvconss/esp/esp-idf/components/newlib/abort.c:38
+0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+0x40162310: std::terminate() at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:58 (discriminator 1)
+0x401623eb: __cxa_throw at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_throw.cc:98
+0x400d98f1: app_main at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:156 (discriminator 2)
+0x40199473: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x400934a1: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+[0m
+[0;33m--- 0x40081c51: panic_abort at /home/tvconss/esp/esp-idf/components/esp_system/panic.c:454
+0x40092aa5: esp_system_abort at /home/tvconss/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40099041: abort at /home/tvconss/esp/esp-idf/components/newlib/abort.c:38
+0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+0x40162310: std::terminate() at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:58 (discriminator 1)
+0x401623eb: __cxa_throw at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_throw.cc:98
+0x400d98f1: app_main at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:156 (discriminator 2)
+0x40199473: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x400934a1: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+[0m
+[0;33m--- 0x40081c51: panic_abort at /home/tvconss/esp/esp-idf/components/esp_system/panic.c:454
+0x40092aa5: esp_system_abort at /home/tvconss/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40099041: abort at /home/tvconss/esp/esp-idf/components/newlib/abort.c:38
+0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+0x40162310: std::terminate() at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:58 (discriminator 1)
+0x401623eb: __cxa_throw at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_throw.cc:98
+0x400d98f1: app_main at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:156 (discriminator 2)
+0x40199473: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x400934a1: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+[0m
+[0;33m--- 0x40081c51: panic_abort at /home/tvconss/esp/esp-idf/components/esp_system/panic.c:454
+0x40092aa5: esp_system_abort at /home/tvconss/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40099041: abort at /home/tvconss/esp/esp-idf/components/newlib/abort.c:38
+0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+0x40162310: std::terminate() at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:58 (discriminator 1)
+0x401623eb: __cxa_throw at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_throw.cc:98
+0x400d98f1: app_main at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:156 (discriminator 2)
+0x40199473: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x400934a1: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+[0m
+[0;33m--- 0x40081c51: panic_abort at /home/tvconss/esp/esp-idf/components/esp_system/panic.c:454
+0x40092aa5: esp_system_abort at /home/tvconss/esp/esp-idf/components/esp_system/port/esp_system_chip.c:92
+0x40099041: abort at /home/tvconss/esp/esp-idf/components/newlib/abort.c:38
+0x401622db: __cxxabiv1::__terminate(void (*)()) at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:48
+0x40162310: std::terminate() at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_terminate.cc:58 (discriminator 1)
+0x401623eb: __cxa_throw at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/gcc/libstdc++-v3/libsupc++/eh_throw.cc:98
+0x400d98f1: app_main at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:156 (discriminator 2)
+0x40199473: main_task at /home/tvconss/esp/esp-idf/components/freertos/app_startup.c:208
+0x400934a1: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

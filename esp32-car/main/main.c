@@ -28,7 +28,7 @@
 #define SPP_SERVER_NAME "SPP_SERVER"
 #define SPP_SHOW_DATA 0
 #define SPP_SHOW_SPEED 1
-#define SPP_SHOW_MODE SPP_SHOW_DATA /*Choose show mode: show data or speed*/
+#define SPP_SHOW_MODE SPP_SHOW_SPEED /*Choose show mode: show data or speed*/
 
 static const char local_device_name[] = "ESP32 SPP";
 static const esp_spp_mode_t esp_spp_mode = ESP_SPP_MODE_CB;

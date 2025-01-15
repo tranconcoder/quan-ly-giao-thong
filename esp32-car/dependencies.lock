@@ -13,5 +13,5 @@ direct_dependencies:
 - idf
 - l2cap-server
 manifest_hash: acca35afe210e73d1470818debcdb425a83868f76b0106c8071ff869570520cc
-target: esp32s3
+target: esp32
 version: 2.0.0

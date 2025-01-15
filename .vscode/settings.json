@@ -4,6 +4,7 @@
 		"*.js": "javascript",
 		"freertosconfig.h": "c",
 		"ringbuf.h": "c",
-		"stdbool.h": "c"
+		"stdbool.h": "c",
+		"stdexcept": "cpp"
 	}
 }

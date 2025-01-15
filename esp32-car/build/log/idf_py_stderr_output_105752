@@ -1,3 +1,0 @@
-/tmp/kconfgen_tmpyneo_k9i:5: warning: '1' is not a valid value for the bool symbol BT_CLASSIC_ENABLED (defined at /home/tvconss/esp/esp-idf/components/bt/host/bluedroid/Kconfig.in:50). Assignment ignored.
-/tmp/kconfgen_tmpyneo_k9i:6: warning: '1' is not a valid value for the bool symbol BT_SPP_ENABLED (defined at /home/tvconss/esp/esp-idf/components/bt/host/bluedroid/Kconfig.in:111). Assignment ignored.
-fatal: not a git repository: /home/tvconss/Workspace/quan-ly-giao-thong/esp32-car/components/openthread/openthread/../../../.git/modules/components/openthread/openthread
