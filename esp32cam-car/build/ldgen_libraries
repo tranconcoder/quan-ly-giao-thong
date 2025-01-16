@@ -83,4 +83,7 @@
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/build/esp-idf/rt/librt.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/build/esp-idf/spiffs/libspiffs.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
+/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/build/esp-idf/common_struct/libcommon_struct.a
+/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/build/esp-idf/espressif__esp32-camera/libespressif__esp32-camera.a
+/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/build/esp-idf/setup_esp32_cam/libsetup_esp32_cam.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/build/esp-idf/main/libmain.a

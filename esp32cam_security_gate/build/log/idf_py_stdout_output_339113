@@ -1,0 +1,35 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32s3
+NOTICE: Manifest files have changed, solving dependencies.
+NOTICE: Skipping optional dependency: usb_device
+NOTICE: Skipping optional dependency: usb_device
+NOTICE: Using component placed at /home/tvconss/Workspace/quan-ly-giao-thong/components/common_struct for dependency "common_struct", specified in /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/idf_component.yml
+NOTICE: Using component placed at /home/tvconss/Workspace/quan-ly-giao-thong/components/esp-websocket_client for dependency "esp-websocket_client", specified in /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/idf_component.yml
+NOTICE: Using component placed at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp32_cam for dependency "setup_esp32_cam", specified in /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/idf_component.yml
+NOTICE: Using component placed at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp_websocket_client for dependency "setup_esp_websocket_client", specified in /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/idf_component.yml
+...............NOTICE: Skipping optional dependency: espressif/esp_modem
+........NOTICE: Skipping optional dependency: espressif/esp_modem
+........NOTICE: Skipping optional dependency: usb_device
+NOTICE: Updating lock file at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/dependencies.lock
+NOTICE: Processing 16 dependencies:
+NOTICE: [1/16] abobija/rc522 (3.2.4)
+NOTICE: [2/16] common_struct (*) (/home/tvconss/Workspace/quan-ly-giao-thong/components/common_struct)
+NOTICE: [3/16] esp-websocket_client (1.2.3) (/home/tvconss/Workspace/quan-ly-giao-thong/components/esp-websocket_client)
+NOTICE: [4/16] espressif/cmake_utilities (0.5.3)
+NOTICE: [5/16] espressif/esp32-camera (2.0.15)
+NOTICE: [6/16] espressif/esp_modem (1.3.0)
+NOTICE: [7/16] espressif/esp_modem_usb_dte (1.2.1)
+NOTICE: [8/16] espressif/esp_tinyusb (1.6.0)
+NOTICE: [9/16] espressif/iot_bridge (0.11.9)
+NOTICE: [10/16] espressif/mesh_lite (1.0.1)
+NOTICE: [11/16] espressif/qrcode (0.1.0~2)
+NOTICE: [12/16] espressif/tinyusb (0.17.0~2)
+NOTICE: [13/16] espressif/usb_host_cdc_acm (2.0.6)
+NOTICE: [14/16] setup_esp32_cam (*) (/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp32_cam)
+NOTICE: [15/16] setup_esp_websocket_client (*) (/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp_websocket_client)
+NOTICE: [16/16] idf (5.4.0)
+NOTICE: Skipping optional dependency: usb_device
+NOTICE: Skipping optional dependency: espressif/esp_modem
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+/usr/bin/cmake --regenerate-during-build -S/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate -B/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build

@@ -549,6 +549,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/build/esp-idf/common_struct/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/build/esp-idf/espressif__esp32-camera/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/build/esp-idf/setup_esp32_cam/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/build/esp-idf/main/cmake_install.cmake")
 endif()
 

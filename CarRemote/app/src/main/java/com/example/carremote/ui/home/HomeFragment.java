@@ -1,10 +1,19 @@
 package com.example.carremote.ui.home;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothSocket;
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.net.wifi.SoftApConfiguration;
+import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiManager;
+import android.opengl.GLSurfaceView;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -18,6 +27,7 @@ import androidx.camera.core.CameraSelector;
 import androidx.camera.core.Preview;
 import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.camera.view.PreviewView;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleOwner;
@@ -26,19 +36,25 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.carremote.Address;
 import com.example.carremote.BluetoothCommand;
 import com.example.carremote.BluetoothConnect;
-import com.example.carremote.BluetoothLeService;
+import com.example.carremote.CustomRenderer;
 import com.example.carremote.Global;
 import com.example.carremote.MainActivity;
 import com.example.carremote.R;
+import com.example.carremote.WebsocketServer;
 import com.example.carremote.databinding.FragmentHomeBinding;
 import com.google.common.util.concurrent.ListenableFuture;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executor;
 
 public class HomeFragment extends Fragment {
 
@@ -46,13 +62,14 @@ public class HomeFragment extends Fragment {
     private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
 
     private PreviewView previewView;
-    private BluetoothSocket bluetoothSocketEsp32, bluetoothSocketEsp32Cam;
-    private BluetoothGatt bluetoothGatt;
-    private OutputStream outputStreamEsp32, outputStreamEsp32Cam;
-    private InputStream inputStreamEsp32, inputStreamEsp32Cam;
-    private float dX, dY;
-    private BluetoothLeService bluetoothService;
+    private BluetoothSocket bluetoothSocketEsp32;
+    private OutputStream outputStreamEsp32;
+    private InputStream inputStreamEsp32;
+    private CustomRenderer customRenderer;
+    private GLSurfaceView glSurfaceView;
+    private WebsocketServer websocketServer;
 
+    private float dX, dY;
 
     @SuppressLint("ClickableViewAccessibility")
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -85,7 +102,7 @@ public class HomeFragment extends Fragment {
         /* Camera camera = */ cameraProvider.bindToLifecycle((LifecycleOwner) this, cameraSelector, preview);
     }
 
-    @SuppressLint("ClickableViewAccessibility")
+    @SuppressLint({"ClickableViewAccessibility", "MissingPermission"})
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -94,14 +111,52 @@ public class HomeFragment extends Fragment {
             MainActivity mainActivity = (MainActivity) getActivity();
             BluetoothConnect bluetoothConnect = mainActivity.bluetoothConnect;
 
+            // Camera
+            this.customRenderer = new CustomRenderer(mainActivity);
+
+            this.glSurfaceView = binding.glSurfaceView;
+            this.glSurfaceView.setEGLContextClientVersion(2);
+            this.glSurfaceView.setRenderer(customRenderer);
+            this.glSurfaceView.setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
+
+
+            // Websocket server
+            this.websocketServer = new WebsocketServer(8887, customRenderer, glSurfaceView);
+            this.websocketServer.start();
+
 
             bluetoothSocketEsp32 = bluetoothConnect.connectSPP(Address.ESP32.toString());
-            bluetoothSocketEsp32Cam = bluetoothConnect.connectSPP(Address.ESP32_CAM.toString());
-//            bluetoothGatt   = bluetoothConnect.connectGatt();
             outputStreamEsp32 = bluetoothSocketEsp32.getOutputStream();
-            outputStreamEsp32Cam = bluetoothSocketEsp32Cam.getOutputStream();
             inputStreamEsp32 = bluetoothSocketEsp32.getInputStream();
-            inputStreamEsp32Cam = bluetoothSocketEsp32Cam.getInputStream();
+
+
+//            WifiManager wifiManager = (WifiManager) mainActivity.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+//            if (wifiManager != null) {
+//                wifiManager.startLocalOnlyHotspot(new WifiManager.LocalOnlyHotspotCallback() {
+//                    @Override
+//                    public void onStarted(WifiManager.LocalOnlyHotspotReservation reservation) {
+//                        super.onStarted(reservation);
+//                        Log.d(Global.TAG.toString(), "Wifi Hotspot is on now");
+//
+//                        String ssid = reservation.getWifiConfiguration().SSID;
+//                        String password = reservation.getWifiConfiguration().preSharedKey;
+//                        Log.d(Global.TAG.toString(), "SSID: " + ssid);
+//                        Log.d(Global.TAG.toString(), "Password: " + password);
+//                    }
+//
+//                    @Override
+//                    public void onStopped() {
+//                        super.onStopped();
+//                        Log.d(Global.TAG.toString(), "onStopped: ");
+//                    }
+//
+//                    @Override
+//                    public void onFailed(int reason) {
+//                        super.onFailed(reason);
+//                        Log.d(Global.TAG.toString(), "onFailed: ");
+//                    }
+//                }, new Handler());
+//            }
 
 
             // Setup camera preview
@@ -117,9 +172,11 @@ public class HomeFragment extends Fragment {
 
 
             // Setup cabin camera preview
-            Uri uri = Uri.parse(String.format("android.resource://%s/%d", mainActivity.getPackageName(), R.raw.esp32_cam));
-            binding.previewView2.setVideoURI(uri);
-            binding.previewView2.start();
+//            Uri uri = Uri.parse(String.format("android.resource://%s/%d", mainActivity.getPackageName(), R.raw.esp32_cam));
+//            binding.previewView2.setVideoURI(uri);
+//            binding.previewView2.start();
+
+
 
 
             if (bluetoothSocketEsp32 == null || outputStreamEsp32 == null)
@@ -149,18 +206,6 @@ public class HomeFragment extends Fragment {
                         return false;
                     }
                 });
-
-//                while(true) {
-//                    try {
-////                        byte [] data = new byte[1024000];
-////                        for (int i = 0; i < 1024000; i++) {
-////                            data[i] = (byte)(i % 256);
-////                        }
-//                        outputStreamEsp32.write("Hello world!".getBytes());
-//                    } catch (IOException e) {
-//                        throw new RuntimeException(e);
-//                    }
-//                }
             });
 
 
@@ -261,19 +306,6 @@ public class HomeFragment extends Fragment {
                     }
                 }
             });
-
-
-//            while(true) {
-//                try {
-//                    byte [] data = new byte[1024000];
-//                    for (int i = 0; i < 1024000; i++) {
-//                        data[i] = (byte)(i % 256);
-//                    }
-//                    outputStreamEsp32Cam.write(data);
-//                } catch (IOException e) {
-//                    throw new RuntimeException(e);
-//                }
-//            }
         } catch (Exception e) {
             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
             Log.e(Global.TAG.toString(), e.getMessage(), e);

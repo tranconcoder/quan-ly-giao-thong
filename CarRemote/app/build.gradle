@@ -42,6 +42,10 @@ dependencies {
     implementation "androidx.camera:camera-view:${camerax_version}"
     implementation "androidx.camera:camera-extensions:${camerax_version}"
 
+    implementation 'org.java-websocket:Java-WebSocket:1.6.0'
+
+    implementation 'com.arthenica:ffmpeg-kit-full:6.0-2'
+
     implementation libs.appcompat
     implementation libs.material
     implementation libs.constraintlayout

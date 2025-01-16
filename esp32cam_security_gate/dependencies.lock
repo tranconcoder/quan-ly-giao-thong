@@ -1,0 +1,201 @@
+dependencies:
+  abobija/rc522:
+    component_hash: affaa665618bda081401b2313c2e96662a58805ef0ed49dabd90796837e63853
+    dependencies:
+    - name: idf
+      require: private
+      version: ^5
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 3.2.4
+  common_struct:
+    dependencies: []
+    source:
+      path: /home/tvconss/Workspace/quan-ly-giao-thong/components/common_struct
+      type: local
+    version: '*'
+  esp-websocket_client:
+    dependencies:
+    - name: idf
+      version: '>=5.0'
+    source:
+      path: /home/tvconss/Workspace/quan-ly-giao-thong/components/esp-websocket_client
+      type: local
+    version: 1.2.3
+  espressif/cmake_utilities:
+    component_hash: 351350613ceafba240b761b4ea991e0f231ac7a9f59a9ee901f751bddc0bb18f
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.1'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.5.3
+  espressif/esp32-camera:
+    component_hash: c3eb05fbeeae884a23bed9b17d48d5f0da8872beadae0c0e747d2fbea6094f06
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 2.0.15
+  espressif/esp_modem:
+    component_hash: 681d7c8417ce0f2a11a562c6998b7b379a4847be41d84673c11c0c7a6b00e918
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.1'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 1.3.0
+  espressif/esp_modem_usb_dte:
+    component_hash: 49f66a3bd49202e36168cf092a1dc453548d488e8f4560ac7e7d21802583e8a7
+    dependencies:
+    - name: espressif/usb_host_cdc_acm
+      registry_url: https://components.espressif.com
+      require: private
+      version: 2.*
+    - name: idf
+      require: private
+      version: '>=4.4'
+    - name: espressif/esp_modem
+      registry_url: https://components.espressif.com
+      require: private
+      version: '>=0.1.28,<2.0.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.2.1
+  espressif/esp_tinyusb:
+    component_hash: 3f273ea23ce1a9573f6708729c02f46d75c8110bc88a61daa07c3a03789f718f
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    - name: espressif/tinyusb
+      registry_url: https://components.espressif.com
+      require: public
+      version: '>=0.14.2'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.6.0
+  espressif/iot_bridge:
+    component_hash: a2443074914abe08455474e63a4dbab298697625e00e6931a08b1ddaa57d1c23
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    - name: espressif/esp_tinyusb
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target in [esp32s2, esp32s3]
+      - if: idf_version >=5.1.4
+      version: 1.*
+    - name: espressif/esp_modem_usb_dte
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target in [esp32s2, esp32s3]
+      version: 1.*
+    - name: espressif/esp_modem
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target not in [esp32s2, esp32s3]
+      version: 1.*
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: 0.*
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.11.9
+  espressif/mesh_lite:
+    component_hash: ea7689d4ca19e6193c53b2e36e3ee040c3083beb02d5ac37e7f3dc08700dfbcf
+    dependencies:
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: 0.*
+    - name: espressif/iot_bridge
+      registry_url: https://components.espressif.com
+      require: private
+      version: 0.11.9
+    - name: espressif/qrcode
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^0.1.0
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.1
+  espressif/qrcode:
+    component_hash: 3b493771bc5d6ad30cbf87c25bf784aada8a08c941504355b55d6b75518ed7bc
+    dependencies: []
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.1.0~2
+  espressif/tinyusb:
+    component_hash: 7f73a4159dc95325ceaa4ade5e88734c4e1f5124746a3765cf61dc6157d78798
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32s2
+    - esp32s3
+    - esp32p4
+    version: 0.17.0~2
+  espressif/usb_host_cdc_acm:
+    component_hash: f76e1283e7ef0e7970e8a708c4ee443ff0aa112572e25319d30b7ec555cc0aee
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.4'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 2.0.6
+  idf:
+    source:
+      type: idf
+    version: 5.4.0
+  setup_esp32_cam:
+    dependencies: []
+    source:
+      path: /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp32_cam
+      type: local
+    version: '*'
+  setup_esp_websocket_client:
+    dependencies: []
+    source:
+      path: /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp_websocket_client
+      type: local
+    version: '*'
+direct_dependencies:
+- abobija/rc522
+- common_struct
+- esp-websocket_client
+- espressif/esp32-camera
+- espressif/esp_modem_usb_dte
+- espressif/esp_tinyusb
+- espressif/mesh_lite
+- espressif/tinyusb
+- idf
+- setup_esp32_cam
+- setup_esp_websocket_client
+manifest_hash: 3056edb57e8433c5e607a0ea9abf4a767b8c8fd113b1123932553dd1b5312d84
+target: esp32s3
+version: 2.0.0

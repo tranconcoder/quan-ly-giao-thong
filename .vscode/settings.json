@@ -5,6 +5,8 @@
 		"freertosconfig.h": "c",
 		"ringbuf.h": "c",
 		"stdbool.h": "c",
-		"stdexcept": "cpp"
+		"stdexcept": "cpp",
+		"esp32cam_security_gate.h": "c",
+		"setup_esp_websocket_client.h": "c"
 	}
 }

@@ -14,6 +14,7 @@
 #include "esp_bt_device.h"
 #include "esp_spp_api.h"
 #include "esp_heap_caps.h"
+#include "setup_esp32_cam.h"
 
 #define SPP_TAG "SPP_ACCEPTOR_DEMO"
 

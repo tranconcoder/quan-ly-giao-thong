@@ -1,0 +1,65 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40087e76: esp_crosscore_isr at /home/tvconss/esp/esp-idf/components/esp_system/crosscore_int.c:73
+0x40086355: _xt_lowint1 at /home/tvconss/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400dc3d4: task_send_image(void*) at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:25
+0x40097e69: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40087e76: esp_crosscore_isr at /home/tvconss/esp/esp-idf/components/esp_system/crosscore_int.c:73
+0x40086355: _xt_lowint1 at /home/tvconss/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400dc3d1: task_send_image(void*) at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:25
+0x40097e69: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40087e76: esp_crosscore_isr at /home/tvconss/esp/esp-idf/components/esp_system/crosscore_int.c:73
+0x40086355: _xt_lowint1 at /home/tvconss/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400dc3d1: task_send_image(void*) at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:25
+0x40097e69: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40087e76: esp_crosscore_isr at /home/tvconss/esp/esp-idf/components/esp_system/crosscore_int.c:73
+0x40086355: _xt_lowint1 at /home/tvconss/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400dc3d4: task_send_image(void*) at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:25
+0x40097e69: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40087e76: esp_crosscore_isr at /home/tvconss/esp/esp-idf/components/esp_system/crosscore_int.c:73
+0x40086355: _xt_lowint1 at /home/tvconss/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400dc3da: task_send_image(void*) at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:25 (discriminator 2)
+0x40097e69: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40087e76: esp_crosscore_isr at /home/tvconss/esp/esp-idf/components/esp_system/crosscore_int.c:73
+0x40086355: _xt_lowint1 at /home/tvconss/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400dc3cc: task_send_image(void*) at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:19
+0x40097e69: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40087e76: esp_crosscore_isr at /home/tvconss/esp/esp-idf/components/esp_system/crosscore_int.c:73
+0x40086355: _xt_lowint1 at /home/tvconss/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400dc3d1: task_send_image(void*) at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:25
+0x40097e69: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40087e76: esp_crosscore_isr at /home/tvconss/esp/esp-idf/components/esp_system/crosscore_int.c:73
+0x40086355: _xt_lowint1 at /home/tvconss/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400dc3cc: task_send_image(void*) at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:19
+0x40097e69: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40087e76: esp_crosscore_isr at /home/tvconss/esp/esp-idf/components/esp_system/crosscore_int.c:73
+0x40086355: _xt_lowint1 at /home/tvconss/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400dc3cf: task_send_image(void*) at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:25
+0x40097e69: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40087e76: esp_crosscore_isr at /home/tvconss/esp/esp-idf/components/esp_system/crosscore_int.c:73
+0x40086355: _xt_lowint1 at /home/tvconss/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400dc3cc: task_send_image(void*) at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:19
+0x40097e69: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40087e76: esp_crosscore_isr at /home/tvconss/esp/esp-idf/components/esp_system/crosscore_int.c:73
+0x40086355: _xt_lowint1 at /home/tvconss/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400dc3cc: task_send_image(void*) at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:19
+0x40097e69: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40087e76: esp_crosscore_isr at /home/tvconss/esp/esp-idf/components/esp_system/crosscore_int.c:73
+0x40086355: _xt_lowint1 at /home/tvconss/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400dc3cf: task_send_image(void*) at /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam-car/main/esp32cam-car.cpp:25
+0x40097e69: vPortTaskWrapper at /home/tvconss/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0m

@@ -5,8 +5,13 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothSocket;
 import android.bluetooth.le.BluetoothLeScanner;
+import android.content.Context;
 import android.content.pm.PackageManager;
+import android.net.wifi.WifiManager;
+import android.opengl.GLSurfaceView;
 import android.os.Bundle;
+import android.text.format.Formatter;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Toast;
@@ -19,6 +24,7 @@ import androidx.camera.core.Camera;
 import androidx.camera.core.CameraSelector;
 import androidx.camera.core.Preview;
 import androidx.camera.view.PreviewView;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.navigation.NavController;
@@ -32,15 +38,29 @@ import androidx.camera.lifecycle.ProcessCameraProvider;
 import com.example.carremote.databinding.ActivityMainBinding;
 import com.google.common.util.concurrent.ListenableFuture;
 
+import org.java_websocket.WebSocket;
+import org.java_websocket.handshake.ClientHandshake;
+import org.java_websocket.server.WebSocketServer;
+
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity {
     public BluetoothConnect bluetoothConnect;
-
+    public WebsocketServer websocketServer;
+    private CustomRenderer customRenderer;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    private GLSurfaceView glSurfaceView;
+
     private static ArrayList<String> permissionList = new ArrayList<>(){{
+        add(Manifest.permission.WRITE_SETTINGS);
+        add(android.Manifest.permission.NEARBY_WIFI_DEVICES);
+        add(android.Manifest.permission.ACCESS_FINE_LOCATION);
+        add(android.Manifest.permission.ACCESS_COARSE_LOCATION);
         add(android.Manifest.permission.BLUETOOTH);
         add(android.Manifest.permission.BLUETOOTH_SCAN);
         add(android.Manifest.permission.BLUETOOTH_CONNECT);
@@ -48,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
         add("android.hardware.camera.any");
         add(android.Manifest.permission.CAMERA);
         add(android.Manifest.permission.RECORD_AUDIO);
-        add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        add(android.Manifest.permission.CHANGE_WIFI_STATE);
+        add(android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
     }};
 
     @Override
@@ -59,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
         for (String permission : permissionList)
             if (checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED)
                 requestPermissions(new String[]{permission}, 0);
+
+
 
 
         //
@@ -81,11 +104,13 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
     }
 
     private void init() {
+        // Bluetooth
         this.bluetoothConnect = new BluetoothConnect(MainActivity.this);
+
+
     }
 
     @Override
@@ -101,5 +126,4 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-
 }

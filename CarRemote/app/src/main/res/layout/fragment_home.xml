@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+
     <androidx.camera.view.PreviewView
         android:id="@+id/previewView"
         app:scaleType="fillStart"
@@ -32,8 +33,8 @@
             android:layout_marginTop="10dp"
             />
 
-        <VideoView
-            android:id="@+id/previewView2"
+        <android.opengl.GLSurfaceView
+            android:id="@+id/glSurfaceView"
             android:layout_width="match_parent"
             android:layout_height="240dp"
             android:layout_marginTop="10dp"

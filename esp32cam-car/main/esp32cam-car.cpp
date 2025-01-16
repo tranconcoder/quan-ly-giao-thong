@@ -9,7 +9,41 @@ static const bool esp_spp_enable_l2cap_ertm = true;
 static const char local_device_name[] = "ESP32 CAM SPP";
 
 static const esp_spp_sec_t sec_mask = ESP_SPP_SEC_AUTHENTICATE;
-static const esp_spp_role_t role_slave = ESP_SPP_ROLE_SLAVE;
+static const esp_spp_role_t role_slave = ESP_SPP_ROLE_MASTER;
+
+static TaskHandle_t task_send_image_handle = NULL;
+static int connectionHandle = NULL;
+static bool isSending = false;
+
+void task_send_image(void *args)
+{
+     while (true)
+     {
+          try
+          {
+               if (connectionHandle == NULL)
+               {
+                    continue;
+               }
+
+               camera_fb_t *fb = esp_camera_fb_get();
+
+               ESP_LOGI(SPP_TAG, "Size: %zu", fb->len);
+
+               esp_err_t send_result = esp_spp_write(connectionHandle, fb->len, fb->buf);
+               if (send_result != ESP_OK)
+                    throw std::runtime_error("esp_spp_write failed");
+
+               esp_camera_fb_return(fb);
+
+               vTaskDelete(NULL);
+          }
+          catch (const std::runtime_error &e)
+          {
+               ESP_LOGE(SPP_TAG, "%s", e.what());
+          }
+     }
+}
 
 static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
 {
@@ -28,15 +62,10 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
                ESP_LOGE(SPP_TAG, "ESP_SPP_INIT_EVT status:%d", param->init.status);
           }
           break;
-     case ESP_SPP_DISCOVERY_COMP_EVT:
-          ESP_LOGI(SPP_TAG, "ESP_SPP_DISCOVERY_COMP_EVT");
-          break;
-     case ESP_SPP_OPEN_EVT:
-          ESP_LOGI(SPP_TAG, "ESP_SPP_OPEN_EVT");
-          break;
      case ESP_SPP_CLOSE_EVT:
           ESP_LOGI(SPP_TAG, "ESP_SPP_CLOSE_EVT status:%d handle:%" PRIu32 " close_by_remote:%d", param->close.status,
                    param->close.handle, param->close.async);
+
           break;
      case ESP_SPP_START_EVT:
           if (param->start.status == ESP_SPP_SUCCESS)
@@ -50,9 +79,6 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
           {
                ESP_LOGE(SPP_TAG, "ESP_SPP_START_EVT status:%d", param->start.status);
           }
-          break;
-     case ESP_SPP_CL_INIT_EVT:
-          ESP_LOGI(SPP_TAG, "ESP_SPP_CL_INIT_EVT");
           break;
      case ESP_SPP_DATA_IND_EVT:
           /*
@@ -72,22 +98,58 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
                free(data);
           }
           break;
-     case ESP_SPP_CONG_EVT:
-          ESP_LOGI(SPP_TAG, "ESP_SPP_CONG_EVT");
-          break;
      case ESP_SPP_WRITE_EVT:
-          ESP_LOGI(SPP_TAG, "ESP_SPP_WRITE_EVT");
+     {
+
+          if (param->write.status == ESP_SPP_SUCCESS)
+          {
+               ESP_LOGI(SPP_TAG, "ESP_SPP_WRITE_EVT len:%d cong:%d", param->write.len, param->write.cong);
+          }
+
+          if (param->write.cong == false)
+          {
+               camera_fb_t *fb = esp_camera_fb_get();
+
+               ESP_LOGI(SPP_TAG, "Size: %zu", fb->len);
+
+               esp_err_t send_result = esp_spp_write(connectionHandle, fb->len, fb->buf);
+               if (send_result != ESP_OK)
+                    throw std::runtime_error("esp_spp_write failed");
+
+               esp_camera_fb_return(fb);
+          }
+
           break;
+     }
      case ESP_SPP_SRV_OPEN_EVT:
+     {
           ESP_LOGI(SPP_TAG, "ESP_SPP_SRV_OPEN_EVT status:%d handle:%" PRIu32 ", rem_bda:[%s]", param->srv_open.status,
                    param->srv_open.handle, bda2str(param->srv_open.rem_bda, bda_str, sizeof(bda_str)));
+
+          camera_fb_t *fb = esp_camera_fb_get();
+
+          ESP_LOGI(SPP_TAG, "Size: %zu", fb->len);
+
+          esp_err_t send_result = esp_spp_write(param->srv_open.handle, fb->len, fb->buf);
+          if (send_result != ESP_OK)
+               throw std::runtime_error("esp_spp_write failed");
+
+          esp_camera_fb_return(fb);
+
           break;
+     }
+
      case ESP_SPP_SRV_STOP_EVT:
+     {
           ESP_LOGI(SPP_TAG, "ESP_SPP_SRV_STOP_EVT");
           break;
+     }
+
+     case ESP_SPP_CONG_EVT:
      case ESP_SPP_UNINIT_EVT:
-          ESP_LOGI(SPP_TAG, "ESP_SPP_UNINIT_EVT");
-          break;
+     case ESP_SPP_OPEN_EVT:
+     case ESP_SPP_CL_INIT_EVT:
+     case ESP_SPP_DISCOVERY_COMP_EVT:
      default:
           break;
      }
@@ -135,16 +197,6 @@ static char *bda2str(uint8_t *bda, char *str, size_t size)
              p[0], p[1], p[2], p[3], p[4], p[5]);
 
      return str;
-}
-
-void task_send_image()
-{
-     while (true)
-     {
-          // Send image
-          vTaskDelay(1000 / portTICK_PERIOD_MS);
-          esp_spp_write(0, 1024, (uint8_t *)"Hello World");
-     }
 }
 
 extern "C" void app_main()
@@ -196,7 +248,7 @@ extern "C" void app_main()
           esp_spp_cfg_t bt_spp_cfg = {
               .mode = esp_spp_mode,
               .enable_l2cap_ertm = esp_spp_enable_l2cap_ertm,
-              .tx_buffer_size = 0, /* Only used for ESP_SPP_MODE_VFS mode */
+              .tx_buffer_size = 16384, /* Only used for ESP_SPP_MODE_VFS mode */
           };
           if (esp_spp_enhanced_init(&bt_spp_cfg) != ESP_OK)
                throw std::runtime_error(__func__ + std::string(" spp init failed: ") + esp_err_to_name(ret));
@@ -211,6 +263,23 @@ extern "C" void app_main()
 
           char bda_str[18] = {0};
           ESP_LOGI(SPP_TAG, "Own address:[%s]", bda2str((uint8_t *)esp_bt_dev_get_address(), bda_str, sizeof(bda_str)));
+
+          // Init camera
+          esp_err_t init_camera = setup_esp32_cam();
+          ESP_LOGI(SPP_TAG, "Camera initing...");
+          while (init_camera != ESP_OK)
+          {
+               ESP_LOGI(SPP_TAG, "Camera deiniting...");
+               init_camera = esp_camera_deinit();
+               vTaskDelay(pdMS_TO_TICKS(3000));
+          }
+
+          sensor_t *s = esp_camera_sensor_get();
+          s->set_brightness(s, 2);
+          s->set_saturation(s, 200);
+          s->set_sharpness(s, 200);
+
+          // Start camera sending
      }
      catch (const std::runtime_error &e)
      {
