@@ -1,1 +1,7 @@
-ba5b5e989e403d314637613ea146224c3117d0bf
+0000000000000000000000000000000000000000 4ac33e65f05a69254547dfab4c20988347ade063 Tran Con <tvconss@Zenbook-UX3402VA.(none)> 1736779246 +0700	clone: from https://github.com/tranconcoder/quan-ly-giao-thong
+4ac33e65f05a69254547dfab4c20988347ade063 3b2b34a7f1cef24c24c66b9c0f78ba2f78bb31b6 tvconss <tranconcoder@gmail.com> 1736866873 +0700	commit: complete: send data from android to esp32s3 BLE 5.0
+3b2b34a7f1cef24c24c66b9c0f78ba2f78bb31b6 f71224e834d551a8fd6cd235199a54d5161764b6 tvconss <tranconcoder@gmail.com> 1736866885 +0700	commit: complete: send data from android to esp32s3 BLE 5.0
+f71224e834d551a8fd6cd235199a54d5161764b6 c3ec36d7e81fa29aa4e62f08610a8505433a757f tvconss <tranconcoder@gmail.com> 1736869675 +0700	commit: optimize: send data from android to esp32s3 ble
+c3ec36d7e81fa29aa4e62f08610a8505433a757f 2e9b2e66ccbabe5894db3b0fa7c7ca4a24e04419 tvconss <tranconcoder@gmail.com> 1736932830 +0700	commit: init: bluetooth for esp32cam-car
+2e9b2e66ccbabe5894db3b0fa7c7ca4a24e04419 ba5b5e989e403d314637613ea146224c3117d0bf tvconss <tranconcoder@gmail.com> 1736934945 +0700	commit: complete: connect adroid to esp32cam with bluetooth spp
+ba5b5e989e403d314637613ea146224c3117d0bf 37b67c68e594a22dd8cf35bc642efbc2a95c0833 tvconss <tranconcoder@gmail.com> 1737042964 +0700	commit: complete: streaming esp32cam_security_gate (esp32s3) to android smooth

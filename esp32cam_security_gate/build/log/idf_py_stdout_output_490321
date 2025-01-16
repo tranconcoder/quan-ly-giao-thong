@@ -1,0 +1,236 @@
+J*�ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x9 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x159c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcc4
+load:0x403cb700,len:0x2e94
+entry 0x403c890c
+[0;32mI (27) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 16 2025 21:53:25[0m
+[0;33mW (27) boot: Unicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (71) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (85) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (91) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (98) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (104) boot: End of partition table[0m
+[0;32mI (107) boot: No factory image, trying OTA 0[0m
+[0;32mI (111) esp_image: segment 0: paddr=00010020 vaddr=3c0b0020 size=2245ch (140380) map[0m
+[0;32mI (144) esp_image: segment 1: paddr=00032484 vaddr=3fc9ac00 size=05dbch ( 23996) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=00038248 vaddr=40374000 size=07dd0h ( 32208) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=aad40h (699712) map[0m
+[0;32mI (280) esp_image: segment 4: paddr=000ead68 vaddr=4037bdd0 size=0edc0h ( 60864) load[0m
+[0;32mI (293) esp_image: segment 5: paddr=000f9b30 vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (302) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (303) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (304) boot: Disabling RNG early entropy source...[0m
+[0;32mI (317) octal_psram: ECC is enabled[0m
+[0;32mI (317) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (317) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (318) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (323) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (327) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (331) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (335) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (340) octal_psram: BurstType    : 0x00 ( Wrap)[0m
+[0;32mI (345) octal_psram: BurstLen     : 0x03 (1024 Byte)[0m
+[0;32mI (349) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (354) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (359) MSPI Timing: PSRAM timing tuning index: 4[0m
+[0;32mI (363) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (367) esp_psram: Speed: 80MHz[0m
+[0;32mI (370) cpu_start: Unicore app[0m
+[0;32mI (372) cpu_start: Single core mode[0m
+[0;32mI (388) cpu_start: Pro cpu start user code[0m
+[0;32mI (388) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (388) app_init: Application information:[0m
+[0;32mI (388) app_init: Project name:     mesh_local_control[0m
+[0;32mI (393) app_init: App version:      37b67c68-dirty[0m
+[0;32mI (397) app_init: Compile time:     Jan 16 2025 23:04:13[0m
+[0;32mI (402) app_init: ELF file SHA256:  e8a74d378...[0m
+[0;32mI (406) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (411) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (414) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (418) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (422) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (429) heap_init: At 3FCA5518 len 000441F8 (272 KiB): RAM[0m
+[0;32mI (434) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (439) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (444) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (449) esp_psram: Adding pool of 7680K of PSRAM memory to heap allocator[0m
+[0;32mI (457) spi_flash: detected chip: boya[0m
+[0;32mI (459) spi_flash: flash io: dio[0m
+[0;32mI (463) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (469) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (475) coexist: coex firmware version: 49a8cdc[0m
+[0;32mI (499) coexist: coexist rom version e7ae62f[0m
+[0;32mI (500) main_task: Started on CPU0[0m
+[0;32mI (500) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (503) main_task: Calling app_main()[0m
+[0;32mI (509) main: ESP_WIFI_MODE_STA[0m
+[0;32mI (511) pp: pp rom version: e7ae62f[0m
+[0;32mI (513) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (519) wifi:wifi driver task: 3fcb70c8, prio:23, stack:6656, core=0[0m
+[0;32mI (525) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (531) wifi:config NVS flash: enabled[0m
+[0;32mI (534) wifi:config nano formatting: disabled[0m
+[0;32mI (539) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (543) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (552) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (556) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (560) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (564) wifi:Init static rx buffer num: 10[0m
+[0;32mI (568) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (572) wifi_init: accept mbox: 6[0m
+[0;32mI (575) wifi_init: tcpip mbox: 32[0m
+[0;32mI (578) wifi_init: udp mbox: 6[0m
+[0;32mI (580) wifi_init: tcp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp tx win: 5760[0m
+[0;32mI (586) wifi_init: tcp rx win: 5760[0m
+[0;32mI (590) wifi_init: tcp mss: 1440[0m
+[0;32mI (593) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (596) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (614) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;33mW (615) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (646) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+[0;32mI (659) wifi:mode : sta (24:ec:4a:3a:2b:ec)[0m
+[0;32mI (659) wifi:enable tsf[0m
+[0;32mI (662) main: wifi_init_sta finished.[0m
+[0;32mI (2123) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2124) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2129) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2135) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2159) wifi:connected with Tran Con Wifi 6, aid = 10, channel 11, 40D, bssid = 68:9e:29:0e:b1:a8[0m
+[0;32mI (2159) wifi:security: WPA2-PSK, phy: bgn, rssi: -48[0m
+[0;32mI (2167) wifi:pm start, type: 1[0m
+
+[0;32mI (2168) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2173) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (2182) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (5437) esp_netif_handlers: sta ip: 192.168.1.9, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (5437) main: got ip:192.168.1.9[0m
+[0;32mI (5438) main: connected to ap SSID:Tran Con Wifi 6 password:password[0m
+[0;32mI (5443) s3 ll_cam: DMA Channel=1[0m
+[0;32mI (5446) cam_hal: cam init ok[0m
+[0;32mI (5449) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (5452) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (5456) gpio: GPIO[38]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5494) camera: Detected camera at address=0x30[0m
+[0;32mI (5497) camera: Detected OV2640 camera[0m
+[0;32mI (5497) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (5568) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 60[0m
+[0;32mI (5568) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (5572) cam_hal: Allocating 61440 Byte frame buffer in PSRAM[0m
+[0;32mI (5578) cam_hal: cam config ok[0m
+[0;32mI (5581) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;32mI (5657) main: Camera initing...[0m
+[0;32mI (5663) main_task: Returned from app_main()[0m
+[0;32mI (6097) websocket_client: WebSocket client connected[0m
+[0;32mI (6126) websocket_client: Image sent to WebSocket: 19494 bytes (2.1fps)[0m
+[0;32mI (6155) websocket_client: Image sent to WebSocket: 18916 bytes (34.5fps)[0m
+[0;32mI (6206) websocket_client: Image sent to WebSocket: 20641 bytes (20.0fps)[0m
+[0;32mI (6248) websocket_client: Image sent to WebSocket: 20664 bytes (23.8fps)[0m
+[0;32mI (6288) websocket_client: Image sent to WebSocket: 20626 bytes (25.6fps)[0m
+[0;32mI (6329) websocket_client: Image sent to WebSocket: 20674 bytes (25.0fps)[0m
+[0;32mI (6356) websocket_client: Image sent to WebSocket: 20572 bytes (38.5fps)[0m
+[0;32mI (6392) websocket_client: Image sent to WebSocket: 20652 bytes (27.8fps)[0m
+[0;32mI (6451) websocket_client: Image sent to WebSocket: 20548 bytes (16.9fps)[0m
+[0;32mI (6479) websocket_client: Image sent to WebSocket: 20494 bytes (37.0fps)[0m
+[0;32mI (6573) websocket_client: Image sent to WebSocket: 20348 bytes (10.8fps)[0m
+[0;32mI (6624) websocket_client: Image sent to WebSocket: 20453 bytes (20.0fps)[0m
+[0;32mI (6678) websocket_client: Image sent to WebSocket: 20327 bytes (18.5fps)[0m
+[0;32mI (6733) websocket_client: Image sent to WebSocket: 20254 bytes (18.2fps)[0m
+[0;32mI (6773) websocket_client: Image sent to WebSocket: 20018 bytes (25.6fps)[0m
+[0;32mI (6841) websocket_client: Image sent to WebSocket: 19658 bytes (14.9fps)[0m
+[0;32mI (6880) websocket_client: Image sent to WebSocket: 19717 bytes (25.6fps)[0m
+[0;32mI (6919) websocket_client: Image sent to WebSocket: 19697 bytes (25.6fps)[0m
+[0;32mI (6953) websocket_client: Image sent to WebSocket: 19512 bytes (29.4fps)[0m
+[0;32mI (7008) websocket_client: Image sent to WebSocket: 19456 bytes (18.5fps)[0m
+[0;32mI (7047) websocket_client: Image sent to WebSocket: 19147 bytes (26.3fps)[0m
+[0;32mI (7076) websocket_client: Image sent to WebSocket: 18924 bytes (34.5fps)[0m
+[0;32mI (7130) websocket_client: Image sent to WebSocket: 18778 bytes (18.9fps)[0m
+[0;32mI (7168) websocket_client: Image sent to WebSocket: 18683 bytes (26.3fps)[0m
+[0;32mI (7245) websocket_client: Image sent to WebSocket: 18101 bytes (13.0fps)[0m
+[0;32mI (7288) websocket_client: Image sent to WebSocket: 18134 bytes (23.8fps)[0m
+[0;32mI (7316) websocket_client: Image sent to WebSocket: 17952 bytes (35.7fps)[0m
+[0;32mI (7352) websocket_client: Image sent to WebSocket: 17912 bytes (28.6fps)[0m
+[0;32mI (7394) websocket_client: Image sent to WebSocket: 17734 bytes (24.4fps)[0m
+[0;32mI (7443) websocket_client: Image sent to WebSocket: 17450 bytes (20.8fps)[0m
+[0;32mI (7473) websocket_client: Image sent to WebSocket: 17274 bytes (33.3fps)[0m
+[0;32mI (7518) websocket_client: Image sent to WebSocket: 17090 bytes (22.7fps)[0m
+[0;32mI (7553) websocket_client: Image sent to WebSocket: 16785 bytes (28.6fps)[0m
+[0;32mI (7591) websocket_client: Image sent to WebSocket: 16656 bytes (27.0fps)[0m
+[0;32mI (7634) websocket_client: Image sent to WebSocket: 16463 bytes (23.3fps)[0m
+[0;32mI (7665) websocket_client: Image sent to WebSocket: 16381 bytes (33.3fps)[0m
+[0;32mI (7719) websocket_client: Image sent to WebSocket: 16381 bytes (18.5fps)[0m
+[0;32mI (7753) websocket_client: Image sent to WebSocket: 16381 bytes (30.3fps)[0m
+[0;32mI (7788) websocket_client: Image sent to WebSocket: 16381 bytes (28.6fps)[0m
+[0;32mI (7830) websocket_client: Image sent to WebSocket: 16381 bytes (24.4fps)[0m
+[0;32mI (7864) websocket_client: Image sent to WebSocket: 16381 bytes (29.4fps)[0m
+[0;32mI (7913) websocket_client: Image sent to WebSocket: 16381 bytes (20.8fps)[0m
+[0;32mI (7955) websocket_client: Image sent to WebSocket: 15356 bytes (24.4fps)[0m
+[0;32mI (7993) websocket_client: Image sent to WebSocket: 15356 bytes (26.3fps)[0m
+[0;32mI (8026) websocket_client: Image sent to WebSocket: 15356 bytes (31.2fps)[0m
+[0;32mI (8064) websocket_client: Image sent to WebSocket: 15356 bytes (27.0fps)[0m
+[0;32mI (8117) websocket_client: Image sent to WebSocket: 15356 bytes (19.2fps)[0m
+[0;32mI (8150) websocket_client: Image sent to WebSocket: 15356 bytes (31.2fps)[0m
+[0;32mI (8194) websocket_client: Image sent to WebSocket: 15356 bytes (23.3fps)[0m
+[0;32mI (8241) websocket_client: Image sent to WebSocket: 15356 bytes (21.3fps)[0m
+[0;32mI (8271) websocket_client: Image sent to WebSocket: 14206 bytes (34.5fps)[0m
+[0;32mI (8312) websocket_client: Image sent to WebSocket: 14206 bytes (24.4fps)[0m
+[0;32mI (8351) websocket_client: Image sent to WebSocket: 14206 bytes (26.3fps)[0m
+[0;32mI (8393) websocket_client: Image sent to WebSocket: 14206 bytes (23.8fps)[0m
+[0;32mI (8440) websocket_client: Image sent to WebSocket: 14206 bytes (21.3fps)[0m
+[0;32mI (8471) websocket_client: Image sent to WebSocket: 14206 bytes (33.3fps)[0m
+[0;32mI (8533) websocket_client: Image sent to WebSocket: 14206 bytes (16.1fps)[0m
+[0;32mI (8563) websocket_client: Image sent to WebSocket: 14206 bytes (33.3fps)[0m
+[0;32mI (8639) websocket_client: Image sent to WebSocket: 13228 bytes (13.2fps)[0m
+[0;32mI (8662) websocket_client: Image sent to WebSocket: 13294 bytes (45.5fps)[0m
+[0;32mI (8717) websocket_client: Image sent to WebSocket: 13294 bytes (18.2fps)[0m
+[0;32mI (8768) websocket_client: Image sent to WebSocket: 13294 bytes (20.0fps)[0m
+[0;32mI (8784) websocket_client: Image sent to WebSocket: 13294 bytes (62.5fps)[0m
+[0;32mI (8823) websocket_client: Image sent to WebSocket: 13294 bytes (26.3fps)[0m
+[0;32mI (8869) websocket_client: Image sent to WebSocket: 13294 bytes (21.7fps)[0m
+[0;32mI (8906) websocket_client: Image sent to WebSocket: 13294 bytes (27.8fps)[0m
+[0;32mI (8965) websocket_client: Image sent to WebSocket: 13294 bytes (17.2fps)[0m
+[0;32mI (8985) websocket_client: Image sent to WebSocket: 13294 bytes (50.0fps)[0m
+[0;32mI (9023) websocket_client: Image sent to WebSocket: 13294 bytes (27.0fps)[0m
+[0;32mI (9064) websocket_client: Image sent to WebSocket: 13294 bytes (24.4fps)[0m
+[0;32mI (9101) websocket_client: Image sent to WebSocket: 13294 bytes (27.8fps)[0m
+[0;32mI (9149) websocket_client: Image sent to WebSocket: 13294 bytes (21.3fps)[0m
+[0;32mI (9185) websocket_client: Image sent to WebSocket: 13294 bytes (28.6fps)[0m
+[0;32mI (9221) websocket_client: Image sent to WebSocket: 13294 bytes (27.8fps)[0m
+[0;32mI (9270) websocket_client: Image sent to WebSocket: 13424 bytes (20.8fps)[0m
+[0;32mI (9311) websocket_client: Image sent to WebSocket: 13621 bytes (25.0fps)[0m
+[0;32mI (9348) websocket_client: Image sent to WebSocket: 13909 bytes (27.0fps)[0m
+[0;32mI (9382) websocket_client: Image sent to WebSocket: 13959 bytes (29.4fps)[0m
+[0;32mI (9423) websocket_client: Image sent to WebSocket: 14002 bytes (25.0fps)[0m
+[0;32mI (9479) websocket_client: Image sent to WebSocket: 14002 bytes (17.9fps)[0m
+[0;32mI (9501) websocket_client: Image sent to WebSocket: 14002 bytes (47.6fps)[0m
+[0;32mI (9581) websocket_client: Image sent to WebSocket: 14002 bytes (12.7fps)[0m
+[0;32mI (9602) websocket_client: Image sent to WebSocket: 13168 bytes (50.0fps)[0m
+[0;32mI (9678) websocket_client: Image sent to WebSocket: 13168 bytes (13.2fps)[0m
+[0;32mI (9704) websocket_client: Image sent to WebSocket: 13168 bytes (38.5fps)[0m
+[0;32mI (9749) websocket_client: Image sent to WebSocket: 13168 bytes (22.7fps)[0m
+[0;32mI (9802) websocket_client: Image sent to WebSocket: 13168 bytes (18.9fps)[0m
+[0;32mI (9841) websocket_client: Image sent to WebSocket: 13168 bytes (26.3fps)[0m
+[0;32mI (9865) websocket_client: Image sent to WebSocket: 13168 bytes (41.7fps)[0m
+[0;32mI (9908) websocket_client: Image sent to WebSocket: 13168 bytes (23.3fps)[0m
+[0;32mI (9949) websocket_client: Image sent to WebSocket: 13168 bytes (24.4fps)[0m
+[0;32mI (9987) websocket_client: Image sent to WebSocket: 13168 bytes (27.0fps)[0m
+[0;32mI (10023) websocket_client: Image sent to WebSocket: 13168 bytes (27.8fps)[0m

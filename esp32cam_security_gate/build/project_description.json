@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "mesh_local_control",
-    "project_version":    "ba5b5e98-dirty",
+    "project_version":    "37b67c68-dirty",
     "project_path":       "/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate",
     "idf_path":           "/home/tvconss/esp/esp-idf",
     "build_dir":          "/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build",

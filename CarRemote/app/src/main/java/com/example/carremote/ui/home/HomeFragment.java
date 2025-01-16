@@ -1,19 +1,9 @@
 package com.example.carremote.ui.home;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
-import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothSocket;
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.net.Uri;
-import android.net.wifi.SoftApConfiguration;
-import android.net.wifi.WifiConfiguration;
-import android.net.wifi.WifiManager;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -27,7 +17,6 @@ import androidx.camera.core.CameraSelector;
 import androidx.camera.core.Preview;
 import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.camera.view.PreviewView;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleOwner;
@@ -36,25 +25,18 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.carremote.Address;
 import com.example.carremote.BluetoothCommand;
 import com.example.carremote.BluetoothConnect;
-import com.example.carremote.CustomRenderer;
 import com.example.carremote.Global;
 import com.example.carremote.MainActivity;
-import com.example.carremote.R;
 import com.example.carremote.WebsocketServer;
 import com.example.carremote.databinding.FragmentHomeBinding;
 import com.google.common.util.concurrent.ListenableFuture;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Executor;
 
 public class HomeFragment extends Fragment {
 
