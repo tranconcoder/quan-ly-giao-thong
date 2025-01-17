@@ -16,7 +16,7 @@ import android.view.View;
 
 class GameView extends View {
 
-    private int mXPos = 0, mYPos = 0;
+    private int mXPos, mYPos;
     protected int cCordX = 720, cCordY = 1400, cSize = 50, cDefSize = 50;
     //    protected int cCenterX = 700, cCenterY = 2500;
     protected int cCenterX , cCenterY ;
@@ -28,13 +28,13 @@ class GameView extends View {
     public GameView(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.ocDiameter = 200; // Giá trị mặc định
-        this.icDiameter = 100; // Giá trị mặc định
+        this.icDiameter = 80; // Giá trị mặc định
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
         ((Activity) getContext()).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
 
-        this.cCenterX = displayMetrics.widthPixels / 2;
-        this.cCenterY = 300;
+        this.mXPos = this.cCenterX = displayMetrics.widthPixels / 2;
+        this.mYPos = this.cCenterY = this.ocDiameter + this.icDiameter;
 
         init();
     }
@@ -44,6 +44,12 @@ class GameView extends View {
         super(context);
         this.ocDiameter = ocDiameter;
         this.icDiameter = icDiameter;
+
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        ((Activity) getContext()).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
+        this.cCenterX = displayMetrics.widthPixels / 2;
+        this.cCenterY = this.ocDiameter + this.icDiameter;
 
         init();
     }
@@ -113,8 +119,8 @@ class GameView extends View {
 
         // Hiển thị hướng điều khiển
         paint.setColor(Color.BLACK);
-        paint.setTextSize(100);
-        canvas.drawText("Hướng: " + direction, 50, 100, paint);
+        paint.setTextSize(50);
+        canvas.drawText("Hướng: " + direction, 0, 50, paint);
     }
 
     // Phương thức để xác định hướng điều khiển
