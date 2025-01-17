@@ -167,10 +167,10 @@ public class HomeFragment extends Fragment {
 
             // Handle touch up down event
             List<TouchUpDownEvent> touchEvent = new ArrayList<>() {{
-                add(new TouchUpDownEvent(binding.btnUp, BluetoothCommand.UP_START.toString(), BluetoothCommand.UP_STOP.toString()));
-                add(new TouchUpDownEvent(binding.btnDown, BluetoothCommand.DOWN_START.toString(), BluetoothCommand.DOWN_STOP.toString()));
-                add(new TouchUpDownEvent(binding.btnLeft, BluetoothCommand.LEFT_START.toString(), BluetoothCommand.LEFT_STOP.toString()));
-                add(new TouchUpDownEvent(binding.btnRight, BluetoothCommand.RIGHT_START.toString(), BluetoothCommand.RIGHT_STOP.toString()));
+//                add(new TouchUpDownEvent(binding.btnUp, BluetoothCommand.UP_START.toString(), BluetoothCommand.UP_STOP.toString()));
+//                add(new TouchUpDownEvent(binding.btnDown, BluetoothCommand.DOWN_START.toString(), BluetoothCommand.DOWN_STOP.toString()));
+//                add(new TouchUpDownEvent(binding.btnLeft, BluetoothCommand.LEFT_START.toString(), BluetoothCommand.LEFT_STOP.toString()));
+//                add(new TouchUpDownEvent(binding.btnRight, BluetoothCommand.RIGHT_START.toString(), BluetoothCommand.RIGHT_STOP.toString()));
             }};
             touchEvent.forEach(item -> {
                 item.getElement().setOnTouchListener(new View.OnTouchListener() {
