@@ -33,11 +33,12 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
 
     // Texture coordinates
     private final float[] textureData = {
-            0f, 1f,  // Top-left -> Bottom-left
-            1f, 1f,  // Top-right -> Bottom-right
-            0f, 0f,  // Bottom-left -> Top-left
-            1f, 0f   // Bottom-right -> Top-right
+            0f, 0f,  // Top-left -> Bottom-left
+            1f, 0f,  // Top-right -> Bottom-right
+            0f, 1f,  // Bottom-left -> Top-left
+            1f, 1f   // Bottom-right -> Top-right
     };
+
 
     public CustomRenderer(Context context) {
         this.context = context;

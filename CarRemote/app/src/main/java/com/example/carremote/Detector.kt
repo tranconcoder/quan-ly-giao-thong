@@ -44,6 +44,7 @@ class Detector(
         val compatList = CompatibilityList()
 
         val options = Interpreter.Options().apply{
+            Log.d(Global.TAG.toString(), "GPU Delegate Supported: ${compatList.isDelegateSupportedOnThisDevice}")
             if(compatList.isDelegateSupportedOnThisDevice){
                 val delegateOptions = compatList.bestOptionsForThisDevice
                 this.addDelegate(GpuDelegate(delegateOptions))
@@ -71,6 +72,7 @@ class Detector(
         }
 
         if (outputShape != null) {
+            Log.d(Global.TAG.toString(), "Output Shape: ${outputShape.contentToString()}")
             numChannel = outputShape[1]
             numElements = outputShape[2]
         }

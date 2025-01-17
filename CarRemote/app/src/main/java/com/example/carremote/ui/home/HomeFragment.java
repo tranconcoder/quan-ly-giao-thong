@@ -308,6 +308,7 @@ public class HomeFragment extends Fragment implements Detector.DetectorListener 
 
     @Override
     public void onDetect(@NonNull List<BoundingBox> boundingBoxes, long inferenceTime) {
-        Log.i(Global.TAG.toString(), "onDetect: " + boundingBoxes.size());
+        Log.i(Global.TAG.toString(), "onDetect: " + boundingBoxes.size() + " time: " + inferenceTime + "ms");
+        binding.overlayView.setResults(boundingBoxes);
     }
 }

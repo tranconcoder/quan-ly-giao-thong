@@ -41,6 +41,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <uses-library android:name="libOpenCL.so"
+            android:required="false"/>
+
+        <uses-library android:name="libOpenCL-pixel.so"
+            android:required="false"/>
+    </application>
 </manifest>

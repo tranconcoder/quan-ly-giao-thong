@@ -33,12 +33,26 @@
             android:layout_marginTop="10dp"
             />
 
-        <android.opengl.GLSurfaceView
-            android:id="@+id/glSurfaceView"
-            android:layout_width="match_parent"
-            android:layout_height="240dp"
+        <RelativeLayout
             android:layout_marginTop="10dp"
-            />
+            android:layout_width="match_parent"
+            android:layout_height="240dp">
+
+            <android.opengl.GLSurfaceView
+                android:id="@+id/glSurfaceView"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <com.example.carremote.OverlayView
+                android:id="@+id/overlayView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"

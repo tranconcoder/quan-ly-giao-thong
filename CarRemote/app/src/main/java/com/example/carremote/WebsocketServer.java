@@ -79,6 +79,8 @@ public class WebsocketServer extends  WebSocketServer {
         new Thread(() -> {
             if (!isDetecting) {
                 isDetecting = true;
+                // Rotate bitmap 90 degree
+
                 detector.detect(bitmap);
                 isDetecting = false;
             }
