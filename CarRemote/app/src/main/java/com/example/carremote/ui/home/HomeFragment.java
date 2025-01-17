@@ -30,6 +30,8 @@ import com.example.carremote.MainActivity;
 import com.example.carremote.WebsocketServer;
 import com.example.carremote.databinding.FragmentHomeBinding;
 import com.google.common.util.concurrent.ListenableFuture;
+import com.example.carremote.BoundingBox;
+import com.example.carremote.Detector;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -38,7 +40,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements Detector.DetectorListener {
 
     private FragmentHomeBinding binding;
     private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
@@ -103,7 +105,12 @@ public class HomeFragment extends Fragment {
 
 
             // Websocket server
-            this.websocketServer = new WebsocketServer(8887, customRenderer, glSurfaceView);
+            this.websocketServer = new WebsocketServer(
+                    mainActivity.getBaseContext(),
+                    (Detector.DetectorListener) this,
+                    8887,
+                    customRenderer,
+                    glSurfaceView);
             this.websocketServer.start();
 
 
@@ -292,5 +299,15 @@ public class HomeFragment extends Fragment {
             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
             Log.e(Global.TAG.toString(), e.getMessage(), e);
         }
+    }
+
+    @Override
+    public void onEmptyDetect() {
+        Log.i(Global.TAG.toString(), "Empty detect");
+    }
+
+    @Override
+    public void onDetect(@NonNull List<BoundingBox> boundingBoxes, long inferenceTime) {
+        Log.i(Global.TAG.toString(), "onDetect: " + boundingBoxes.size());
     }
 }

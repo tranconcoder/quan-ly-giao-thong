@@ -2,11 +2,11 @@ package com.example.carremote;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.opengl.GLSurfaceView;
 import android.os.Bundle;
+import android.os.FileUtils;
+import android.telephony.data.TrafficDescriptor;
 import android.view.Menu;
 
-import com.example.carremote.ui.home.CustomRenderer;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -18,15 +18,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.carremote.databinding.ActivityMainBinding;
 
+import org.tensorflow.lite.support.common.FileUtil;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     public BluetoothConnect bluetoothConnect;
-    public WebsocketServer websocketServer;
-    private CustomRenderer customRenderer;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
-    private GLSurfaceView glSurfaceView;
 
     private static ArrayList<String> permissionList = new ArrayList<>(){{
         add(Manifest.permission.WRITE_SETTINGS);
@@ -48,12 +47,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         // Grant permissions
         for (String permission : permissionList)
             if (checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED)
                 requestPermissions(new String[]{permission}, 0);
-
-
 
 
         //
@@ -78,11 +76,10 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
+
     private void init() {
         // Bluetooth
         this.bluetoothConnect = new BluetoothConnect(MainActivity.this);
-
-
     }
 
     @Override

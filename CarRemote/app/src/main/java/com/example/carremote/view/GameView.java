@@ -118,7 +118,7 @@ class GameView extends View {
         String direction = getDirection(jXPos, jYPos);
 
         // Hiển thị hướng điều khiển
-        paint.setColor(Color.BLACK);
+        paint.setColor(Color.WHITE);
         paint.setTextSize(50);
         canvas.drawText("Hướng: " + direction, 0, 50, paint);
     }

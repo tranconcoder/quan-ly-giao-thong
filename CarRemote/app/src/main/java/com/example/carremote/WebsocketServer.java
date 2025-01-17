@@ -1,11 +1,14 @@
 package com.example.carremote;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.opengl.GLSurfaceView;
 import android.util.Log;
 
 import com.example.carremote.ui.home.CustomRenderer;
+import com.example.carremote.Constants;
+import com.example.carremote.Detector;
 
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
@@ -21,12 +24,23 @@ public class WebsocketServer extends  WebSocketServer {
     private Map<String, WebSocket> clients = new ConcurrentHashMap<>();
     private CustomRenderer customRenderer;
     private GLSurfaceView glSurfaceView;
+    private Detector detector;
+    private Context ctx;
+    private boolean isDetecting = false;
 
-    public WebsocketServer(int port, CustomRenderer customRenderer, GLSurfaceView glSurfaceView) {
+    public WebsocketServer(
+            Context ctx,
+            Detector.DetectorListener detectorListener,
+            int port,
+            CustomRenderer customRenderer,
+            GLSurfaceView glSurfaceView
+    ) {
         super(new InetSocketAddress(port));
 
         this.customRenderer = customRenderer;
         this.glSurfaceView = glSurfaceView;
+        this.ctx = ctx;
+        this.detector = new Detector(ctx,Constants.MODEL_PATH, Constants.LABELS_PATH, detectorListener);
     }
     public WebsocketServer(InetSocketAddress address) {
         super(address);
@@ -57,12 +71,20 @@ public class WebsocketServer extends  WebSocketServer {
     public void onMessage(WebSocket conn, ByteBuffer message) {
         super.onMessage(conn, message);
 
-
         Bitmap bitmap = decodeCompressedImage(message);
         customRenderer.updateFrame(bitmap);
         glSurfaceView.requestRender();
 
-        Log.i(Global.TAG.toString(), "onMessage byteBuffer: " + message);
+
+        new Thread(() -> {
+            if (!isDetecting) {
+                isDetecting = true;
+                detector.detect(bitmap);
+                isDetecting = false;
+            }
+        }).start();
+
+//        Log.i(Global.TAG.toString(), "onMessage byteBuffer: " + message);
     }
 
     @Override

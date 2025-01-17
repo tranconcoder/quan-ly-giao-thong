@@ -1,10 +1,15 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
     namespace 'com.example.carremote'
-    compileSdk 34
+    compileSdk 35
+
+    aaptOptions {
+        noCompress "tflite"
+    }
 
     defaultConfig {
         applicationId "com.example.carremote"
@@ -28,12 +33,17 @@ android {
     }
     buildFeatures {
         viewBinding true
+        mlModelBinding true
+    }
+    kotlinOptions {
+        jvmTarget = '11'
     }
 }
 
 
 dependencies {
-    def camerax_version = "1.2.2"
+    implementation libs.core.ktx
+    def camerax_version = '1.4.1'
     implementation "androidx.camera:camera-core:${camerax_version}"
     implementation "androidx.camera:camera-camera2:${camerax_version}"
     implementation "androidx.camera:camera-lifecycle:${camerax_version}"
@@ -43,8 +53,6 @@ dependencies {
     implementation "androidx.camera:camera-extensions:${camerax_version}"
 
     implementation 'org.java-websocket:Java-WebSocket:1.6.0'
-
-    implementation 'com.arthenica:ffmpeg-kit-full:6.0-2'
 
     implementation libs.appcompat
     implementation libs.material
@@ -58,4 +66,7 @@ dependencies {
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
 
+    implementation libs.tensorflow.lite.support
+    implementation libs.tensorflow.lite.metadata
+    implementation libs.tensorflow.lite.gpu
 }

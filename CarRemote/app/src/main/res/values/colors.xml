@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bsm_active">#FFEB3B</color>
     <color name="bsm_inactive">#BDBDBD</color>
+    <color name="bounding_box_color">#234567</color>
 </resources>
