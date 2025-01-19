@@ -142,7 +142,7 @@ void app_main()
     sensor_t *s = esp_camera_sensor_get();
     s->set_hmirror(s, 1);
     s->set_vflip(s, 1);
-    s->set_framesize(s, FRAMESIZE_SVGA);
+    s->set_framesize(s, FRAMESIZE_XGA);
 
     setup_esp_websocket_client_init();
 }

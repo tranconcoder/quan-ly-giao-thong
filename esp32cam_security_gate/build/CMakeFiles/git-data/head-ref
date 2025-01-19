@@ -1,1 +1,14 @@
-6898f959face181fc997cacf2d21f0d9ba26eed8
+0000000000000000000000000000000000000000 4ac33e65f05a69254547dfab4c20988347ade063 Tran Con <tvconss@Zenbook-UX3402VA.(none)> 1736779246 +0700	clone: from https://github.com/tranconcoder/quan-ly-giao-thong
+4ac33e65f05a69254547dfab4c20988347ade063 3b2b34a7f1cef24c24c66b9c0f78ba2f78bb31b6 tvconss <tranconcoder@gmail.com> 1736866873 +0700	commit: complete: send data from android to esp32s3 BLE 5.0
+3b2b34a7f1cef24c24c66b9c0f78ba2f78bb31b6 f71224e834d551a8fd6cd235199a54d5161764b6 tvconss <tranconcoder@gmail.com> 1736866885 +0700	commit: complete: send data from android to esp32s3 BLE 5.0
+f71224e834d551a8fd6cd235199a54d5161764b6 c3ec36d7e81fa29aa4e62f08610a8505433a757f tvconss <tranconcoder@gmail.com> 1736869675 +0700	commit: optimize: send data from android to esp32s3 ble
+c3ec36d7e81fa29aa4e62f08610a8505433a757f 2e9b2e66ccbabe5894db3b0fa7c7ca4a24e04419 tvconss <tranconcoder@gmail.com> 1736932830 +0700	commit: init: bluetooth for esp32cam-car
+2e9b2e66ccbabe5894db3b0fa7c7ca4a24e04419 ba5b5e989e403d314637613ea146224c3117d0bf tvconss <tranconcoder@gmail.com> 1736934945 +0700	commit: complete: connect adroid to esp32cam with bluetooth spp
+ba5b5e989e403d314637613ea146224c3117d0bf 37b67c68e594a22dd8cf35bc642efbc2a95c0833 tvconss <tranconcoder@gmail.com> 1737042964 +0700	commit: complete: streaming esp32cam_security_gate (esp32s3) to android smooth
+37b67c68e594a22dd8cf35bc642efbc2a95c0833 97df05a00369ae34c8feb2be112dd4122d90945a tvconss <tranconcoder@gmail.com> 1737044110 +0700	commit: fix: dashcam direction vertical error
+97df05a00369ae34c8feb2be112dd4122d90945a 668122fd3e5d56a5c74fb2dc3384fbd13ade6af3 tvconss <tranconcoder@gmail.com> 1737082815 +0700	commit: add: joystick instead of direction button android
+668122fd3e5d56a5c74fb2dc3384fbd13ade6af3 6c9a8176a2a32f70a2a5a174be3d5a04ac4d2706 tvconss <tranconcoder@gmail.com> 1737083252 +0700	commit: optimize: joystick size and fix init position to center
+6c9a8176a2a32f70a2a5a174be3d5a04ac4d2706 bb64630e9f442eba6faeebf6513b5c087fca29bd tvconss <tranconcoder@gmail.com> 1737123076 +0700	commit: complete: deploy traffic sign detection model to android
+bb64630e9f442eba6faeebf6513b5c087fca29bd 3a1841be033d3c6571cb061dd5c744b46afc8cb2 tvconss <tranconcoder@gmail.com> 1737128606 +0700	commit: optimize: run model traffic detection in gpu
+3a1841be033d3c6571cb061dd5c744b46afc8cb2 6898f959face181fc997cacf2d21f0d9ba26eed8 tvconss <tranconcoder@gmail.com> 1737128665 +0700	commit: remove: large model
+6898f959face181fc997cacf2d21f0d9ba26eed8 aa08f4aed638511a9c043261a6cd976884a9629c tvconss <tranconcoder@gmail.com> 1737295376 +0700	commit: add: traffic_sign_dataset v1

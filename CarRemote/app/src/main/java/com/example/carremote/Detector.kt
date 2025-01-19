@@ -168,6 +168,7 @@ class Detector(
                 arrayIdx += numElements
             }
 
+//            maxIdx = 0;
             if (maxConf > CONFIDENCE_THRESHOLD) {
                 val clsName = labels[maxIdx]
                 val cx = array[c] // 0

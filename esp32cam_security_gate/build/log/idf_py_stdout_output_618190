@@ -1,0 +1,829 @@
+[0;32mI (143) esp_image: segment 1: paddr=00032484 vaddr=3fc9ac00 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40056f5c
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2810,len:0x159c
+load:0x403c8700,len:0x4
+load:0x403c8704,len:0xcc4
+load:0x403cb700,len:0x2e94
+entry 0x403c890c
+[0;32mI (26) boot: ESP-IDF v5.4-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 16 2025 21:53:25[0m
+[0;33mW (27) boot: Unicore bootloader[0m
+[0;32mI (27) boot: chip revision: v0.2[0m
+[0;32mI (30) boot: efuse block revision: v1.3[0m
+[0;32mI (33) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (37) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (71) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  3 ota_0            OTA app          00 10 00010000 001e0000[0m
+[0;32mI (84) boot:  4 ota_1            OTA app          00 11 001f0000 001e0000[0m
+[0;32mI (91) boot:  5 coredump         Unknown data     01 03 003d0000 00010000[0m
+[0;32mI (97) boot:  6 reserved         Unknown data     01 fe 003e0000 00020000[0m
+[0;32mI (104) boot: End of partition table[0m
+[0;32mI (107) boot: No factory image, trying OTA 0[0m
+[0;32mI (111) esp_image: segment 0: paddr=00010020 vaddr=3c0b0020 size=2245ch (140380) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00032484 vaddr=3fc9ac00 size=05dbch ( 23996) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=00038248 vaddr=40374000 size=07dd0h ( 32208) load[0m
+[0;32mI (156) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=aad3ch (699708) map[0m
+[0;32mI (280) esp_image: segment 4: paddr=000ead64 vaddr=4037bdd0 size=0edc0h ( 60864) load[0m
+[0;32mI (293) esp_image: segment 5: paddr=000f9b2c vaddr=600fe100 size=0001ch (    28) load[0m
+[0;32mI (303) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (304) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (304) boot: Disabling RNG early entropy source...[0m
+[0;32mI (317) octal_psram: ECC is enabled[0m
+[0;32mI (318) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (318) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (318) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (323) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (327) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (332) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (336) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (341) octal_psram: BurstType    : 0x00 ( Wrap)[0m
+[0;32mI (345) octal_psram: BurstLen     : 0x03 (1024 Byte)[0m
+[0;32mI (350) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (355) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (360) MSPI Timing: PSRAM timing tuning index: 4[0m
+[0;32mI (363) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (367) esp_psram: Speed: 80MHz[0m
+[0;32mI (370) cpu_start: Unicore app[0m
+[0;32mI (373) cpu_start: Single core mode[0m
+[0;32mI (388) cpu_start: Pro cpu start user code[0m
+[0;32mI (388) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (388) app_init: Application information:[0m
+[0;32mI (388) app_init: Project name:     mesh_local_control[0m
+[0;32mI (393) app_init: App version:      aa08f4aed-dirty[0m
+[0;32mI (398) app_init: Compile time:     Jan 19 2025 21:34:11[0m
+[0;32mI (403) app_init: ELF file SHA256:  79c029cfc...[0m
+[0;32mI (407) app_init: ESP-IDF:          v5.4-dirty[0m
+[0;32mI (411) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (415) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (419) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (423) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (429) heap_init: At 3FCA5518 len 000441F8 (272 KiB): RAM[0m
+[0;32mI (434) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (439) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (445) heap_init: At 600FE11C len 00001ECC (7 KiB): RTCRAM[0m
+[0;32mI (450) esp_psram: Adding pool of 7680K of PSRAM memory to heap allocator[0m
+[0;32mI (457) spi_flash: detected chip: boya[0m
+[0;32mI (460) spi_flash: flash io: dio[0m
+[0;32mI (463) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (469) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (476) coexist: coex firmware version: 49a8cdc[0m
+[0;32mI (480) coexist: coexist rom version e7ae62f[0m
+[0;32mI (484) main_task: Started on CPU0[0m
+[0;32mI (486) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (494) main_task: Calling app_main()[0m
+[0;32mI (501) main: ESP_WIFI_MODE_STA[0m
+[0;32mI (502) pp: pp rom version: e7ae62f[0m
+[0;32mI (504) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (510) wifi:wifi driver task: 3fcb70c8, prio:23, stack:6656, core=0[0m
+[0;32mI (516) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (518) wifi:wifi certification version: v7.0[0m
+[0;32mI (522) wifi:config NVS flash: enabled[0m
+[0;32mI (526) wifi:config nano formatting: disabled[0m
+[0;32mI (530) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (535) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (539) wifi:Init management short buffer num: 32[0m
+[0;32mI (543) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (547) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (551) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (555) wifi:Init static rx buffer num: 10[0m
+[0;32mI (559) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (563) wifi_init: accept mbox: 6[0m
+[0;32mI (566) wifi_init: tcpip mbox: 32[0m
+[0;32mI (569) wifi_init: udp mbox: 6[0m
+[0;32mI (572) wifi_init: tcp mbox: 6[0m
+[0;32mI (574) wifi_init: tcp tx win: 5760[0m
+[0;32mI (578) wifi_init: tcp rx win: 5760[0m
+[0;32mI (581) wifi_init: tcp mss: 1440[0m
+[0;32mI (584) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (587) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (605) phy_init: phy_version 680,a6008b2,Jun  4 2024,16:41:10[0m
+[0;33mW (606) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (635) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+[0;32mI (649) wifi:mode : sta (24:ec:4a:3a:2b:ec)[0m
+[0;32mI (649) wifi:enable tsf[0m
+[0;32mI (652) main: wifi_init_sta finished.[0m
+[0;32mI (1993) wifi:new:<10,2>, old:<1,0>, ap:<255,255>, sta:<10,2>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1994) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2002) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2008) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2033) wifi:connected with Tran Con Wifi 6, aid = 8, channel 10, 40D, bssid = 68:9e:29:0e:b1:a8[0m
+[0;32mI (2034) wifi:security: WPA2-PSK, phy: bgn, rssi: -49[0m
+[0;32mI (2042) wifi:pm start, type: 1[0m
+
+[0;32mI (2043) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2047) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000[0m
+[0;32mI (2065) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (5322) esp_netif_handlers: sta ip: 192.168.1.20, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (5322) main: got ip:192.168.1.20[0m
+[0;32mI (5323) main: connected to ap SSID:Tran Con Wifi 6 password:password[0m
+[0;32mI (5329) s3 ll_cam: DMA Channel=1[0m
+[0;32mI (5331) cam_hal: cam init ok[0m
+[0;32mI (5334) sccb-ng: pin_sda 4 pin_scl 5[0m
+[0;32mI (5337) sccb-ng: sccb_i2c_port=1[0m
+[0;32mI (5341) gpio: GPIO[38]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5379) camera: Detected camera at address=0x30[0m
+[0;32mI (5382) camera: Detected OV2640 camera[0m
+[0;32mI (5382) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2[0m
+[0;32mI (5453) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 93[0m
+[0;32mI (5454) cam_hal: Allocating 96000 Byte frame buffer in PSRAM[0m
+[0;32mI (5458) cam_hal: Allocating 96000 Byte frame buffer in PSRAM[0m
+[0;32mI (5463) cam_hal: cam config ok[0m
+[0;32mI (5466) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 8[0m
+[0;32mI (5543) main: Camera initing...[0m
+[0;32mI (5546) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 12[0m
+[0;33mW (5548) cam_hal: NO-SOI[0m
+[0;32mI (5591) main_task: Returned from app_main()[0m
+[0;32mI (5662) websocket_client: WebSocket client connected[0m
+[0;32mI (5892) websocket_client: Image sent to WebSocket: 23869 bytes (3.3fps)[0m
+[0;32mI (6023) websocket_client: Image sent to WebSocket: 53421 bytes (7.6fps)[0m
+[0;32mI (6136) websocket_client: Image sent to WebSocket: 59335 bytes (8.9fps)[0m
+[0;32mI (6259) websocket_client: Image sent to WebSocket: 59799 bytes (8.1fps)[0m
+[0;32mI (6401) websocket_client: Image sent to WebSocket: 64378 bytes (7.0fps)[0m
+[0;32mI (6515) websocket_client: Image sent to WebSocket: 67080 bytes (8.8fps)[0m
+[0;32mI (6690) websocket_client: Image sent to WebSocket: 65785 bytes (5.7fps)[0m
+[0;32mI (6902) websocket_client: Image sent to WebSocket: 68086 bytes (4.7fps)[0m
+[0;32mI (7002) websocket_client: Image sent to WebSocket: 65460 bytes (10.0fps)[0m
+[0;32mI (7442) websocket_client: Image sent to WebSocket: 70076 bytes (2.3fps)[0m
+[0;32mI (7582) websocket_client: Image sent to WebSocket: 68449 bytes (7.2fps)[0m
+[0;32mI (7740) websocket_client: Image sent to WebSocket: 68278 bytes (6.3fps)[0m
+[0;32mI (7910) websocket_client: Image sent to WebSocket: 65928 bytes (5.9fps)[0m
+[0;32mI (8035) websocket_client: Image sent to WebSocket: 64659 bytes (8.1fps)[0m
+[0;32mI (8182) websocket_client: Image sent to WebSocket: 63930 bytes (6.8fps)[0m
+[0;32mI (8294) websocket_client: Image sent to WebSocket: 64194 bytes (8.9fps)[0m
+[0;32mI (8408) websocket_client: Image sent to WebSocket: 64734 bytes (8.8fps)[0m
+[0;32mI (8581) websocket_client: Image sent to WebSocket: 64124 bytes (5.8fps)[0m
+[0;32mI (8682) websocket_client: Image sent to WebSocket: 64288 bytes (9.9fps)[0m
+[0;32mI (8818) websocket_client: Image sent to WebSocket: 67555 bytes (7.4fps)[0m
+[0;32mI (8944) websocket_client: Image sent to WebSocket: 68588 bytes (8.0fps)[0m
+[0;32mI (9074) websocket_client: Image sent to WebSocket: 67353 bytes (7.7fps)[0m
+[0;32mI (9227) websocket_client: Image sent to WebSocket: 66785 bytes (6.6fps)[0m
+[0;32mI (9360) websocket_client: Image sent to WebSocket: 66785 bytes (7.5fps)[0m
+[0;32mI (9493) websocket_client: Image sent to WebSocket: 69021 bytes (7.6fps)[0m
+[0;32mI (9626) websocket_client: Image sent to WebSocket: 65430 bytes (7.6fps)[0m
+[0;32mI (9789) websocket_client: Image sent to WebSocket: 66847 bytes (6.1fps)[0m
+[0;32mI (9915) websocket_client: Image sent to WebSocket: 66909 bytes (8.0fps)[0m
+[0;32mI (10050) websocket_client: Image sent to WebSocket: 66635 bytes (7.4fps)[0m
+[0;32mI (10169) websocket_client: Image sent to WebSocket: 66154 bytes (8.4fps)[0m
+[0;32mI (10379) websocket_client: Image sent to WebSocket: 65305 bytes (4.8fps)[0m
+[0;32mI (10561) websocket_client: Image sent to WebSocket: 68652 bytes (5.5fps)[0m
+[0;32mI (10694) websocket_client: Image sent to WebSocket: 68152 bytes (7.5fps)[0m
+[0;32mI (10823) websocket_client: Image sent to WebSocket: 69040 bytes (7.8fps)[0m
+[0;32mI (10988) websocket_client: Image sent to WebSocket: 67468 bytes (6.1fps)[0m
+[0;32mI (11114) websocket_client: Image sent to WebSocket: 68676 bytes (7.9fps)[0m
+[0;32mI (11297) websocket_client: Image sent to WebSocket: 67538 bytes (5.5fps)[0m
+[0;32mI (11449) websocket_client: Image sent to WebSocket: 68621 bytes (6.6fps)[0m
+[0;32mI (11609) websocket_client: Image sent to WebSocket: 65999 bytes (6.2fps)[0m
+[0;32mI (11762) websocket_client: Image sent to WebSocket: 68700 bytes (6.6fps)[0m
+[0;32mI (11913) websocket_client: Image sent to WebSocket: 64867 bytes (6.6fps)[0m
+[0;32mI (12020) websocket_client: Image sent to WebSocket: 61092 bytes (9.4fps)[0m
+[0;32mI (12174) websocket_client: Image sent to WebSocket: 62115 bytes (6.5fps)[0m
+[0;32mI (12298) websocket_client: Image sent to WebSocket: 63508 bytes (8.1fps)[0m
+[0;32mI (12444) websocket_client: Image sent to WebSocket: 65319 bytes (6.8fps)[0m
+[0;32mI (12602) websocket_client: Image sent to WebSocket: 56393 bytes (6.3fps)[0m
+[0;32mI (12712) websocket_client: Image sent to WebSocket: 59107 bytes (9.2fps)[0m
+[0;32mI (12827) websocket_client: Image sent to WebSocket: 62225 bytes (8.8fps)[0m
+[0;32mI (12944) websocket_client: Image sent to WebSocket: 62984 bytes (8.5fps)[0m
+[0;32mI (13054) websocket_client: Image sent to WebSocket: 63545 bytes (9.2fps)[0m
+[0;32mI (13206) websocket_client: Image sent to WebSocket: 62539 bytes (6.6fps)[0m
+[0;32mI (13341) websocket_client: Image sent to WebSocket: 63571 bytes (7.5fps)[0m
+[0;32mI (13474) websocket_client: Image sent to WebSocket: 65087 bytes (7.6fps)[0m
+[0;32mI (13591) websocket_client: Image sent to WebSocket: 64670 bytes (8.6fps)[0m
+[0;32mI (13784) websocket_client: Image sent to WebSocket: 66093 bytes (5.2fps)[0m
+[0;32mI (13961) websocket_client: Image sent to WebSocket: 65023 bytes (5.6fps)[0m
+[0;32mI (14104) websocket_client: Image sent to WebSocket: 65943 bytes (7.0fps)[0m
+[0;32mI (14228) websocket_client: Image sent to WebSocket: 67211 bytes (8.1fps)[0m
+[0;32mI (14380) websocket_client: Image sent to WebSocket: 67411 bytes (6.6fps)[0m
+[0;32mI (14520) websocket_client: Image sent to WebSocket: 66420 bytes (7.1fps)[0m
+[0;32mI (14686) websocket_client: Image sent to WebSocket: 68524 bytes (6.1fps)[0m
+[0;32mI (14828) websocket_client: Image sent to WebSocket: 67028 bytes (7.1fps)[0m
+[0;32mI (14954) websocket_client: Image sent to WebSocket: 68793 bytes (7.9fps)[0m
+[0;32mI (15059) websocket_client: Image sent to WebSocket: 56734 bytes (9.6fps)[0m
+[0;32mI (15185) websocket_client: Image sent to WebSocket: 58438 bytes (8.0fps)[0m
+[0;32mI (15294) websocket_client: Image sent to WebSocket: 58560 bytes (9.3fps)[0m
+[0;32mI (15566) websocket_client: Image sent to WebSocket: 56421 bytes (3.7fps)[0m
+[0;32mI (15662) websocket_client: Image sent to WebSocket: 54455 bytes (10.4fps)[0m
+[0;32mI (15819) websocket_client: Image sent to WebSocket: 54168 bytes (6.4fps)[0m
+[0;32mI (15924) websocket_client: Image sent to WebSocket: 58420 bytes (9.5fps)[0m
+[1;31mE (16202) transport_base: poll_read select error 104, errno = Connection reset by peer, fd = 54[0m
+[1;31mE (16203) websocket_client: esp_transport_poll_read() returned -1, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=119[0m
+[1;31mE (16212) websocket_client: WebSocket client error[0m
+[0;32mI (16216) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (16221) websocket_client: WebSocket client connected[0m
+[1;31mE (16226) transport_base: tcp_write error, errno=Connection reset by peer[0m
+[1;31mE (16234) websocket_client: esp_transport_write() returned -1, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=104[0m
+[1;31mE (16243) websocket_client: WebSocket client error[0m
+[0;32mI (16248) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (16252) websocket_client: WebSocket client connected[0m
+[1;31mE (16257) websocket_client: Failed to send the buffer[0m
+[0;32mI (16262) websocket_client: Image sent to WebSocket: 53803 bytes (3.0fps)[0m
+[1;31mE (16269) websocket_client: Websocket client is not connected[0m
+[0;32mI (16274) websocket_client: Image sent to WebSocket: 56714 bytes (90.9fps)[0m
+[1;31mE (16362) websocket_client: Websocket client is not connected[0m
+[0;32mI (16362) websocket_client: Image sent to WebSocket: 56839 bytes (11.4fps)[0m
+[1;31mE (16442) websocket_client: Websocket client is not connected[0m
+[0;32mI (16442) websocket_client: Image sent to WebSocket: 52256 bytes (12.5fps)[0m
+[1;31mE (16522) websocket_client: Websocket client is not connected[0m
+[0;32mI (16522) websocket_client: Image sent to WebSocket: 54256 bytes (12.7fps)[0m
+[1;31mE (16602) websocket_client: Websocket client is not connected[0m
+[0;32mI (16602) websocket_client: Image sent to WebSocket: 57256 bytes (12.7fps)[0m
+[1;31mE (16682) websocket_client: Websocket client is not connected[0m
+[0;32mI (16682) websocket_client: Image sent to WebSocket: 58631 bytes (12.5fps)[0m
+[1;31mE (16767) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (16768) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (16769) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (16775) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (16792) websocket_client: WebSocket client error[0m
+[0;32mI (16796) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (16801) websocket_client: WebSocket client connected[0m
+[1;31mE (16806) websocket_client: Websocket client is not connected[0m
+[0;32mI (16811) websocket_client: Image sent to WebSocket: 59431 bytes (7.8fps)[0m
+[1;31mE (16842) websocket_client: Websocket client is not connected[0m
+[0;32mI (16842) websocket_client: Image sent to WebSocket: 60078 bytes (33.3fps)[0m
+[1;31mE (16921) websocket_client: Websocket client is not connected[0m
+[0;32mI (16922) websocket_client: Image sent to WebSocket: 59207 bytes (12.7fps)[0m
+[1;31mE (17001) websocket_client: Websocket client is not connected[0m
+[0;32mI (17002) websocket_client: Image sent to WebSocket: 55839 bytes (12.7fps)[0m
+[1;31mE (17081) websocket_client: Websocket client is not connected[0m
+[0;32mI (17082) websocket_client: Image sent to WebSocket: 60850 bytes (12.5fps)[0m
+[1;31mE (17161) websocket_client: Websocket client is not connected[0m
+[0;32mI (17162) websocket_client: Image sent to WebSocket: 66241 bytes (12.7fps)[0m
+[1;31mE (17241) websocket_client: Websocket client is not connected[0m
+[0;32mI (17242) websocket_client: Image sent to WebSocket: 78365 bytes (12.7fps)[0m
+[1;31mE (17521) websocket_client: Could not lock ws-client within 200 timeout[0m
+[0;32mI (17521) websocket_client: Image sent to WebSocket: 78354 bytes (3.6fps)[0m
+[1;31mE (17531) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (17532) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (17535) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (17541) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (17559) websocket_client: WebSocket client error[0m
+[0;32mI (17563) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (17567) websocket_client: WebSocket client connected[0m
+[1;31mE (17572) websocket_client: Websocket client is not connected[0m
+[0;32mI (17578) websocket_client: Image sent to WebSocket: 77865 bytes (17.9fps)[0m
+[1;31mE (17641) websocket_client: Websocket client is not connected[0m
+[0;32mI (17642) websocket_client: Image sent to WebSocket: 57463 bytes (15.9fps)[0m
+[1;31mE (17721) websocket_client: Websocket client is not connected[0m
+[0;32mI (17721) websocket_client: Image sent to WebSocket: 59631 bytes (12.7fps)[0m
+[1;31mE (17801) websocket_client: Websocket client is not connected[0m
+[0;32mI (17801) websocket_client: Image sent to WebSocket: 59549 bytes (12.5fps)[0m
+[1;31mE (17881) websocket_client: Websocket client is not connected[0m
+[0;32mI (17881) websocket_client: Image sent to WebSocket: 59800 bytes (12.7fps)[0m
+[1;31mE (17961) websocket_client: Websocket client is not connected[0m
+[0;32mI (17961) websocket_client: Image sent to WebSocket: 55856 bytes (12.7fps)[0m
+[1;31mE (18041) websocket_client: Websocket client is not connected[0m
+[0;32mI (18041) websocket_client: Image sent to WebSocket: 60722 bytes (12.5fps)[0m
+[1;31mE (18079) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (18080) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18081) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (18087) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (18104) websocket_client: WebSocket client error[0m
+[0;32mI (18109) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (18113) websocket_client: WebSocket client connected[0m
+[1;31mE (18121) websocket_client: Websocket client is not connected[0m
+[0;32mI (18123) websocket_client: Image sent to WebSocket: 65816 bytes (12.3fps)[0m
+[1;31mE (18201) websocket_client: Websocket client is not connected[0m
+[0;32mI (18201) websocket_client: Image sent to WebSocket: 78626 bytes (13.0fps)[0m
+[1;31mE (18281) websocket_client: Websocket client is not connected[0m
+[0;32mI (18281) websocket_client: Image sent to WebSocket: 77434 bytes (12.7fps)[0m
+[1;31mE (18361) websocket_client: Websocket client is not connected[0m
+[0;32mI (18361) websocket_client: Image sent to WebSocket: 61179 bytes (12.7fps)[0m
+[1;31mE (18441) websocket_client: Websocket client is not connected[0m
+[0;32mI (18441) websocket_client: Image sent to WebSocket: 56969 bytes (12.7fps)[0m
+[1;31mE (18521) websocket_client: Websocket client is not connected[0m
+[0;32mI (18521) websocket_client: Image sent to WebSocket: 56474 bytes (12.5fps)[0m
+[1;31mE (18600) websocket_client: Websocket client is not connected[0m
+[0;32mI (18601) websocket_client: Image sent to WebSocket: 59131 bytes (12.7fps)[0m
+[1;31mE (18760) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (18761) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (18762) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (18768) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (18785) websocket_client: WebSocket client error[0m
+[0;32mI (18789) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (18794) websocket_client: WebSocket client connected[0m
+[1;31mE (18799) websocket_client: Websocket client is not connected[0m
+[0;32mI (18804) websocket_client: Image sent to WebSocket: 57059 bytes (4.9fps)[0m
+[1;31mE (18811) websocket_client: Websocket client is not connected[0m
+[0;32mI (18816) websocket_client: Image sent to WebSocket: 60629 bytes (90.9fps)[0m
+[1;31mE (18920) websocket_client: Websocket client is not connected[0m
+[0;32mI (18921) websocket_client: Image sent to WebSocket: 77796 bytes (9.6fps)[0m
+[1;31mE (19000) websocket_client: Websocket client is not connected[0m
+[0;32mI (19001) websocket_client: Image sent to WebSocket: 79091 bytes (12.5fps)[0m
+[1;31mE (19080) websocket_client: Websocket client is not connected[0m
+[0;32mI (19081) websocket_client: Image sent to WebSocket: 69289 bytes (12.7fps)[0m
+[1;31mE (19161) websocket_client: Websocket client is not connected[0m
+[0;32mI (19161) websocket_client: Image sent to WebSocket: 58576 bytes (12.5fps)[0m
+[1;31mE (19240) websocket_client: Websocket client is not connected[0m
+[0;32mI (19240) websocket_client: Image sent to WebSocket: 57122 bytes (12.7fps)[0m
+[1;31mE (19476) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (19477) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (19479) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (19485) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (19502) websocket_client: WebSocket client error[0m
+[0;32mI (19506) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (19511) websocket_client: WebSocket client connected[0m
+[1;31mE (19515) websocket_client: Websocket client is not connected[0m
+[0;32mI (19521) websocket_client: Image sent to WebSocket: 58154 bytes (3.6fps)[0m
+[1;31mE (19528) websocket_client: Websocket client is not connected[0m
+[0;32mI (19533) websocket_client: Image sent to WebSocket: 60202 bytes (83.3fps)[0m
+[1;31mE (19640) websocket_client: Websocket client is not connected[0m
+[0;32mI (19640) websocket_client: Image sent to WebSocket: 56804 bytes (9.3fps)[0m
+[1;31mE (19720) websocket_client: Websocket client is not connected[0m
+[0;32mI (19720) websocket_client: Image sent to WebSocket: 62072 bytes (12.7fps)[0m
+[1;31mE (19800) websocket_client: Websocket client is not connected[0m
+[0;32mI (19800) websocket_client: Image sent to WebSocket: 67003 bytes (12.5fps)[0m
+[1;31mE (19880) websocket_client: Websocket client is not connected[0m
+[0;32mI (19880) websocket_client: Image sent to WebSocket: 78341 bytes (12.7fps)[0m
+[1;31mE (19960) websocket_client: Websocket client is not connected[0m
+[0;32mI (19960) websocket_client: Image sent to WebSocket: 79326 bytes (12.7fps)[0m
+[1;31mE (20196) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (20197) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20198) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (20204) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (20221) websocket_client: WebSocket client error[0m
+[0;32mI (20225) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (20230) websocket_client: WebSocket client connected[0m
+[1;31mE (20235) websocket_client: Websocket client is not connected[0m
+[0;32mI (20240) websocket_client: Image sent to WebSocket: 78852 bytes (3.6fps)[0m
+[1;31mE (20247) websocket_client: Websocket client is not connected[0m
+[0;32mI (20252) websocket_client: Image sent to WebSocket: 78715 bytes (90.9fps)[0m
+[1;31mE (20360) websocket_client: Websocket client is not connected[0m
+[0;32mI (20360) websocket_client: Image sent to WebSocket: 78841 bytes (9.3fps)[0m
+[1;31mE (20440) websocket_client: Websocket client is not connected[0m
+[0;32mI (20440) websocket_client: Image sent to WebSocket: 78906 bytes (12.7fps)[0m
+[1;31mE (20520) websocket_client: Websocket client is not connected[0m
+[0;32mI (20520) websocket_client: Image sent to WebSocket: 79170 bytes (12.7fps)[0m
+[1;31mE (20599) websocket_client: Websocket client is not connected[0m
+[0;32mI (20600) websocket_client: Image sent to WebSocket: 79131 bytes (12.7fps)[0m
+[1;31mE (20679) websocket_client: Websocket client is not connected[0m
+[0;32mI (20680) websocket_client: Image sent to WebSocket: 70152 bytes (12.7fps)[0m
+[1;31mE (20910) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (20911) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (20912) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (20918) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (20935) websocket_client: WebSocket client error[0m
+[0;32mI (20940) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (20944) websocket_client: WebSocket client connected[0m
+[1;31mE (20949) websocket_client: Websocket client is not connected[0m
+[0;32mI (20955) websocket_client: Image sent to WebSocket: 57787 bytes (3.6fps)[0m
+[1;31mE (20961) websocket_client: Websocket client is not connected[0m
+[0;32mI (20967) websocket_client: Image sent to WebSocket: 56639 bytes (83.3fps)[0m
+[1;31mE (21079) websocket_client: Websocket client is not connected[0m
+[0;32mI (21080) websocket_client: Image sent to WebSocket: 60865 bytes (8.9fps)[0m
+[1;31mE (21159) websocket_client: Websocket client is not connected[0m
+[0;32mI (21160) websocket_client: Image sent to WebSocket: 60512 bytes (12.5fps)[0m
+[1;31mE (21239) websocket_client: Websocket client is not connected[0m
+[0;32mI (21239) websocket_client: Image sent to WebSocket: 60138 bytes (12.7fps)[0m
+[1;31mE (21319) websocket_client: Websocket client is not connected[0m
+[0;32mI (21319) websocket_client: Image sent to WebSocket: 55910 bytes (12.7fps)[0m
+[1;31mE (21399) websocket_client: Websocket client is not connected[0m
+[0;32mI (21399) websocket_client: Image sent to WebSocket: 46524 bytes (12.7fps)[0m
+[1;31mE (21627) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (21628) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (21629) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (21635) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (21652) websocket_client: WebSocket client error[0m
+[0;32mI (21657) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (21661) websocket_client: WebSocket client connected[0m
+[1;31mE (21666) websocket_client: Websocket client is not connected[0m
+[0;32mI (21671) websocket_client: Image sent to WebSocket: 40345 bytes (3.7fps)[0m
+[1;31mE (21678) websocket_client: Websocket client is not connected[0m
+[0;32mI (21683) websocket_client: Image sent to WebSocket: 39699 bytes (90.9fps)[0m
+[1;31mE (21799) websocket_client: Websocket client is not connected[0m
+[0;32mI (21799) websocket_client: Image sent to WebSocket: 34407 bytes (8.7fps)[0m
+[1;31mE (21879) websocket_client: Websocket client is not connected[0m
+[0;32mI (21879) websocket_client: Image sent to WebSocket: 35048 bytes (12.7fps)[0m
+[1;31mE (21959) websocket_client: Websocket client is not connected[0m
+[0;32mI (21959) websocket_client: Image sent to WebSocket: 35118 bytes (12.7fps)[0m
+[1;31mE (22039) websocket_client: Websocket client is not connected[0m
+[0;32mI (22039) websocket_client: Image sent to WebSocket: 34663 bytes (12.7fps)[0m
+[1;31mE (22119) websocket_client: Websocket client is not connected[0m
+[0;32mI (22119) websocket_client: Image sent to WebSocket: 35034 bytes (12.7fps)[0m
+[1;31mE (22344) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (22345) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (22346) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (22352) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (22369) websocket_client: WebSocket client error[0m
+[0;32mI (22373) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (22378) websocket_client: WebSocket client connected[0m
+[1;31mE (22383) websocket_client: Websocket client is not connected[0m
+[0;32mI (22388) websocket_client: Image sent to WebSocket: 34718 bytes (3.7fps)[0m
+[1;31mE (22395) websocket_client: Websocket client is not connected[0m
+[0;32mI (22400) websocket_client: Image sent to WebSocket: 34845 bytes (90.9fps)[0m
+[1;31mE (22518) websocket_client: Websocket client is not connected[0m
+[0;32mI (22519) websocket_client: Image sent to WebSocket: 34415 bytes (8.5fps)[0m
+[1;31mE (22598) websocket_client: Websocket client is not connected[0m
+[0;32mI (22599) websocket_client: Image sent to WebSocket: 40001 bytes (12.5fps)[0m
+[1;31mE (22678) websocket_client: Websocket client is not connected[0m
+[0;32mI (22679) websocket_client: Image sent to WebSocket: 41725 bytes (12.7fps)[0m
+[1;31mE (22758) websocket_client: Websocket client is not connected[0m
+[0;32mI (22759) websocket_client: Image sent to WebSocket: 44500 bytes (12.7fps)[0m
+[1;31mE (22838) websocket_client: Websocket client is not connected[0m
+[0;32mI (22838) websocket_client: Image sent to WebSocket: 62803 bytes (12.7fps)[0m
+[1;31mE (23061) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (23062) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23063) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (23069) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (23086) websocket_client: WebSocket client error[0m
+[0;32mI (23090) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (23095) websocket_client: WebSocket client connected[0m
+[1;31mE (23100) websocket_client: Websocket client is not connected[0m
+[0;32mI (23105) websocket_client: Image sent to WebSocket: 62964 bytes (3.8fps)[0m
+[1;31mE (23112) websocket_client: Websocket client is not connected[0m
+[0;32mI (23117) websocket_client: Image sent to WebSocket: 62951 bytes (83.3fps)[0m
+[1;31mE (23238) websocket_client: Websocket client is not connected[0m
+[0;32mI (23238) websocket_client: Image sent to WebSocket: 61931 bytes (8.3fps)[0m
+[1;31mE (23318) websocket_client: Websocket client is not connected[0m
+[0;32mI (23318) websocket_client: Image sent to WebSocket: 61345 bytes (12.7fps)[0m
+[1;31mE (23398) websocket_client: Websocket client is not connected[0m
+[0;32mI (23398) websocket_client: Image sent to WebSocket: 60966 bytes (12.5fps)[0m
+[1;31mE (23478) websocket_client: Websocket client is not connected[0m
+[0;32mI (23478) websocket_client: Image sent to WebSocket: 60478 bytes (12.5fps)[0m
+[1;31mE (23558) websocket_client: Websocket client is not connected[0m
+[0;32mI (23558) websocket_client: Image sent to WebSocket: 59932 bytes (12.7fps)[0m
+[1;31mE (23777) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (23778) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (23779) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (23785) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (23802) websocket_client: WebSocket client error[0m
+[0;32mI (23807) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (23811) websocket_client: WebSocket client connected[0m
+[1;31mE (23816) websocket_client: Websocket client is not connected[0m
+[0;32mI (23822) websocket_client: Image sent to WebSocket: 60691 bytes (3.8fps)[0m
+[1;31mE (23828) websocket_client: Websocket client is not connected[0m
+[0;32mI (23834) websocket_client: Image sent to WebSocket: 60297 bytes (90.9fps)[0m
+[1;31mE (23958) websocket_client: Websocket client is not connected[0m
+[0;32mI (23958) websocket_client: Image sent to WebSocket: 59698 bytes (8.1fps)[0m
+[1;31mE (24038) websocket_client: Websocket client is not connected[0m
+[0;32mI (24038) websocket_client: Image sent to WebSocket: 59456 bytes (12.7fps)[0m
+[1;31mE (24118) websocket_client: Websocket client is not connected[0m
+[0;32mI (24118) websocket_client: Image sent to WebSocket: 58431 bytes (12.7fps)[0m
+[1;31mE (24198) websocket_client: Websocket client is not connected[0m
+[0;32mI (24198) websocket_client: Image sent to WebSocket: 59492 bytes (12.5fps)[0m
+[1;31mE (24277) websocket_client: Websocket client is not connected[0m
+[0;32mI (24278) websocket_client: Image sent to WebSocket: 59500 bytes (12.7fps)[0m
+[1;31mE (24356) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (24358) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (24358) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (24365) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (24382) websocket_client: WebSocket client error[0m
+[0;32mI (24386) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (24390) websocket_client: WebSocket client connected[0m
+[1;31mE (24396) websocket_client: Websocket client is not connected[0m
+[0;32mI (24401) websocket_client: Image sent to WebSocket: 59822 bytes (8.2fps)[0m
+[1;31mE (24437) websocket_client: Websocket client is not connected[0m
+[0;32mI (24438) websocket_client: Image sent to WebSocket: 59468 bytes (27.0fps)[0m
+[1;31mE (24517) websocket_client: Websocket client is not connected[0m
+[0;32mI (24518) websocket_client: Image sent to WebSocket: 59588 bytes (12.7fps)[0m
+[1;31mE (24597) websocket_client: Websocket client is not connected[0m
+[0;32mI (24598) websocket_client: Image sent to WebSocket: 59525 bytes (12.7fps)[0m
+[1;31mE (24677) websocket_client: Websocket client is not connected[0m
+[0;32mI (24677) websocket_client: Image sent to WebSocket: 59206 bytes (12.7fps)[0m
+[1;31mE (24757) websocket_client: Websocket client is not connected[0m
+[0;32mI (24758) websocket_client: Image sent to WebSocket: 59480 bytes (12.5fps)[0m
+[1;31mE (24837) websocket_client: Websocket client is not connected[0m
+[0;32mI (24838) websocket_client: Image sent to WebSocket: 59430 bytes (12.7fps)[0m
+[1;31mE (25109) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (25110) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25111) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (25117) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (25134) websocket_client: WebSocket client error[0m
+[0;32mI (25138) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (25143) websocket_client: WebSocket client connected[0m
+[1;31mE (25148) websocket_client: Websocket client is not connected[0m
+[0;32mI (25153) websocket_client: Image sent to WebSocket: 59486 bytes (3.2fps)[0m
+[1;31mE (25160) websocket_client: Websocket client is not connected[0m
+[0;32mI (25165) websocket_client: Image sent to WebSocket: 59541 bytes (90.9fps)[0m
+[1;31mE (25237) websocket_client: Websocket client is not connected[0m
+[0;32mI (25237) websocket_client: Image sent to WebSocket: 59752 bytes (13.9fps)[0m
+[1;31mE (25317) websocket_client: Websocket client is not connected[0m
+[0;32mI (25317) websocket_client: Image sent to WebSocket: 59596 bytes (12.7fps)[0m
+[1;31mE (25397) websocket_client: Websocket client is not connected[0m
+[0;32mI (25397) websocket_client: Image sent to WebSocket: 59494 bytes (12.7fps)[0m
+[1;31mE (25477) websocket_client: Websocket client is not connected[0m
+[0;32mI (25477) websocket_client: Image sent to WebSocket: 59400 bytes (12.5fps)[0m
+[1;31mE (25557) websocket_client: Websocket client is not connected[0m
+[0;32mI (25557) websocket_client: Image sent to WebSocket: 59497 bytes (12.7fps)[0m
+[1;31mE (25637) websocket_client: Websocket client is not connected[0m
+[0;32mI (25637) websocket_client: Image sent to WebSocket: 59514 bytes (12.7fps)[0m
+[1;31mE (25656) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (25658) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (25659) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (25665) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (25682) websocket_client: WebSocket client error[0m
+[0;32mI (25686) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (25691) websocket_client: WebSocket client connected[0m
+[1;31mE (25716) websocket_client: Websocket client is not connected[0m
+[0;32mI (25717) websocket_client: Image sent to WebSocket: 60392 bytes (12.7fps)[0m
+[1;31mE (25797) websocket_client: Websocket client is not connected[0m
+[0;32mI (25797) websocket_client: Image sent to WebSocket: 59744 bytes (12.5fps)[0m
+[1;31mE (25877) websocket_client: Websocket client is not connected[0m
+[0;32mI (25877) websocket_client: Image sent to WebSocket: 59403 bytes (12.5fps)[0m
+[1;31mE (25956) websocket_client: Websocket client is not connected[0m
+[0;32mI (25957) websocket_client: Image sent to WebSocket: 59333 bytes (12.7fps)[0m
+[1;31mE (26036) websocket_client: Websocket client is not connected[0m
+[0;32mI (26037) websocket_client: Image sent to WebSocket: 59183 bytes (12.7fps)[0m
+[1;31mE (26116) websocket_client: Websocket client is not connected[0m
+[0;32mI (26117) websocket_client: Image sent to WebSocket: 59469 bytes (12.7fps)[0m
+[1;31mE (26337) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (26338) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (26339) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (26346) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (26363) websocket_client: WebSocket client error[0m
+[0;32mI (26367) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (26372) websocket_client: WebSocket client connected[0m
+[1;31mE (26376) websocket_client: Websocket client is not connected[0m
+[0;32mI (26382) websocket_client: Image sent to WebSocket: 60562 bytes (3.8fps)[0m
+[1;31mE (26389) websocket_client: Websocket client is not connected[0m
+[0;32mI (26394) websocket_client: Image sent to WebSocket: 59890 bytes (90.9fps)[0m
+[1;31mE (26516) websocket_client: Websocket client is not connected[0m
+[0;32mI (26517) websocket_client: Image sent to WebSocket: 59615 bytes (8.2fps)[0m
+[1;31mE (26596) websocket_client: Websocket client is not connected[0m
+[0;32mI (26597) websocket_client: Image sent to WebSocket: 59561 bytes (12.7fps)[0m
+[1;31mE (26676) websocket_client: Websocket client is not connected[0m
+[0;32mI (26676) websocket_client: Image sent to WebSocket: 60104 bytes (12.7fps)[0m
+[1;31mE (26756) websocket_client: Websocket client is not connected[0m
+[0;32mI (26756) websocket_client: Image sent to WebSocket: 60273 bytes (12.7fps)[0m
+[1;31mE (26836) websocket_client: Websocket client is not connected[0m
+[0;32mI (26836) websocket_client: Image sent to WebSocket: 59095 bytes (12.7fps)[0m
+[1;31mE (27055) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (27056) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27056) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (27063) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (27080) websocket_client: WebSocket client error[0m
+[0;32mI (27084) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (27089) websocket_client: WebSocket client connected[0m
+[1;31mE (27093) websocket_client: Websocket client is not connected[0m
+[0;32mI (27099) websocket_client: Image sent to WebSocket: 59546 bytes (3.8fps)[0m
+[1;31mE (27106) websocket_client: Websocket client is not connected[0m
+[0;32mI (27111) websocket_client: Image sent to WebSocket: 59119 bytes (83.3fps)[0m
+[1;31mE (27236) websocket_client: Websocket client is not connected[0m
+[0;32mI (27236) websocket_client: Image sent to WebSocket: 59508 bytes (8.0fps)[0m
+[1;31mE (27316) websocket_client: Websocket client is not connected[0m
+[0;32mI (27316) websocket_client: Image sent to WebSocket: 59539 bytes (12.7fps)[0m
+[1;31mE (27396) websocket_client: Websocket client is not connected[0m
+[0;32mI (27396) websocket_client: Image sent to WebSocket: 59660 bytes (12.7fps)[0m
+[1;31mE (27476) websocket_client: Websocket client is not connected[0m
+[0;32mI (27476) websocket_client: Image sent to WebSocket: 59591 bytes (12.7fps)[0m
+[1;31mE (27556) websocket_client: Websocket client is not connected[0m
+[0;32mI (27556) websocket_client: Image sent to WebSocket: 59540 bytes (12.7fps)[0m
+[1;31mE (27771) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (27772) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (27773) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (27779) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (27796) websocket_client: WebSocket client error[0m
+[0;32mI (27800) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (27805) websocket_client: WebSocket client connected[0m
+[1;31mE (27810) websocket_client: Websocket client is not connected[0m
+[0;32mI (27815) websocket_client: Image sent to WebSocket: 59643 bytes (3.9fps)[0m
+[1;31mE (27822) websocket_client: Websocket client is not connected[0m
+[0;32mI (27827) websocket_client: Image sent to WebSocket: 59496 bytes (83.3fps)[0m
+[1;31mE (27955) websocket_client: Websocket client is not connected[0m
+[0;32mI (27956) websocket_client: Image sent to WebSocket: 59483 bytes (7.8fps)[0m
+[1;31mE (28035) websocket_client: Websocket client is not connected[0m
+[0;32mI (28036) websocket_client: Image sent to WebSocket: 59487 bytes (12.7fps)[0m
+[1;31mE (28115) websocket_client: Websocket client is not connected[0m
+[0;32mI (28116) websocket_client: Image sent to WebSocket: 59119 bytes (12.7fps)[0m
+[1;31mE (28195) websocket_client: Websocket client is not connected[0m
+[0;32mI (28196) websocket_client: Image sent to WebSocket: 59985 bytes (12.5fps)[0m
+[1;31mE (28275) websocket_client: Websocket client is not connected[0m
+[0;32mI (28276) websocket_client: Image sent to WebSocket: 59440 bytes (12.5fps)[0m
+[1;31mE (28488) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (28489) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (28490) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (28496) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (28513) websocket_client: WebSocket client error[0m
+[0;32mI (28518) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (28522) websocket_client: WebSocket client connected[0m
+[1;31mE (28527) websocket_client: Websocket client is not connected[0m
+[0;32mI (28532) websocket_client: Image sent to WebSocket: 59176 bytes (3.9fps)[0m
+[1;31mE (28539) websocket_client: Websocket client is not connected[0m
+[0;32mI (28544) websocket_client: Image sent to WebSocket: 59576 bytes (90.9fps)[0m
+[1;31mE (28675) websocket_client: Websocket client is not connected[0m
+[0;32mI (28675) websocket_client: Image sent to WebSocket: 59076 bytes (7.7fps)[0m
+[1;31mE (28755) websocket_client: Websocket client is not connected[0m
+[0;32mI (28755) websocket_client: Image sent to WebSocket: 58744 bytes (12.5fps)[0m
+[1;31mE (28835) websocket_client: Websocket client is not connected[0m
+[0;32mI (28835) websocket_client: Image sent to WebSocket: 58496 bytes (12.5fps)[0m
+[1;31mE (28915) websocket_client: Websocket client is not connected[0m
+[0;32mI (28915) websocket_client: Image sent to WebSocket: 59087 bytes (12.7fps)[0m
+[1;31mE (28995) websocket_client: Websocket client is not connected[0m
+[0;32mI (28995) websocket_client: Image sent to WebSocket: 58821 bytes (12.7fps)[0m
+[1;31mE (29205) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (29206) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (29207) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (29214) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (29231) websocket_client: WebSocket client error[0m
+[0;32mI (29235) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (29239) websocket_client: WebSocket client connected[0m
+[1;31mE (29244) websocket_client: Websocket client is not connected[0m
+[0;32mI (29250) websocket_client: Image sent to WebSocket: 58946 bytes (3.9fps)[0m
+[1;31mE (29256) websocket_client: Websocket client is not connected[0m
+[0;32mI (29262) websocket_client: Image sent to WebSocket: 59311 bytes (83.3fps)[0m
+[1;31mE (29394) websocket_client: Websocket client is not connected[0m
+[0;32mI (29395) websocket_client: Image sent to WebSocket: 59068 bytes (7.6fps)[0m
+[1;31mE (29474) websocket_client: Websocket client is not connected[0m
+[0;32mI (29475) websocket_client: Image sent to WebSocket: 58907 bytes (12.7fps)[0m
+[1;31mE (29554) websocket_client: Websocket client is not connected[0m
+[0;32mI (29555) websocket_client: Image sent to WebSocket: 59242 bytes (12.7fps)[0m
+[1;31mE (29634) websocket_client: Websocket client is not connected[0m
+[0;32mI (29635) websocket_client: Image sent to WebSocket: 58995 bytes (12.7fps)[0m
+[1;31mE (29714) websocket_client: Websocket client is not connected[0m
+[0;32mI (29715) websocket_client: Image sent to WebSocket: 59178 bytes (12.5fps)[0m
+[0;32mI (29945) websocket_client: WebSocket client connected[0m
+[0;32mI (30112) websocket_client: Image sent to WebSocket: 59373 bytes (2.5fps)[0m
+[0;32mI (30220) websocket_client: Image sent to WebSocket: 59383 bytes (9.3fps)[0m
+[0;32mI (30363) websocket_client: Image sent to WebSocket: 68950 bytes (7.0fps)[0m
+[0;32mI (30516) websocket_client: Image sent to WebSocket: 68063 bytes (6.6fps)[0m
+[0;32mI (30693) websocket_client: Image sent to WebSocket: 68278 bytes (5.7fps)[0m
+[0;32mI (30845) websocket_client: Image sent to WebSocket: 64895 bytes (6.6fps)[0m
+[0;32mI (30982) websocket_client: Image sent to WebSocket: 65963 bytes (7.3fps)[0m
+[0;32mI (31192) websocket_client: Image sent to WebSocket: 82761 bytes (4.8fps)[0m
+[0;32mI (31376) websocket_client: Image sent to WebSocket: 83210 bytes (5.5fps)[0m
+[0;32mI (31530) websocket_client: Image sent to WebSocket: 82919 bytes (6.5fps)[0m
+[0;32mI (31712) websocket_client: Image sent to WebSocket: 82854 bytes (5.5fps)[0m
+[0;32mI (31928) websocket_client: Image sent to WebSocket: 82035 bytes (4.7fps)[0m
+[1;31mE (32080) transport_base: poll_read select error 104, errno = Connection reset by peer, fd = 54[0m
+[1;31mE (32081) websocket_client: esp_transport_poll_read() returned -1, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=119[0m
+[1;31mE (32089) websocket_client: WebSocket client error[0m
+[0;32mI (32094) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (32098) websocket_client: WebSocket client connected[0m
+[1;31mE (32103) transport_base: tcp_write error, errno=Connection reset by peer[0m
+[1;31mE (32112) websocket_client: esp_transport_write() returned -1, transport_error=ESP_OK, tls_error_code=0, tls_flags=0, errno=104[0m
+[1;31mE (32121) websocket_client: WebSocket client error[0m
+[0;32mI (32125) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (32130) websocket_client: WebSocket client connected[0m
+[1;31mE (32134) websocket_client: Failed to send the buffer[0m
+[0;32mI (32139) websocket_client: Image sent to WebSocket: 79780 bytes (4.7fps)[0m
+[1;31mE (32146) websocket_client: Websocket client is not connected[0m
+[0;32mI (32151) websocket_client: Image sent to WebSocket: 83055 bytes (90.9fps)[0m
+[1;31mE (32273) websocket_client: Websocket client is not connected[0m
+[0;32mI (32273) websocket_client: Image sent to WebSocket: 80193 bytes (8.2fps)[0m
+[1;31mE (32353) websocket_client: Websocket client is not connected[0m
+[0;32mI (32353) websocket_client: Image sent to WebSocket: 80255 bytes (12.7fps)[0m
+[1;31mE (32433) websocket_client: Websocket client is not connected[0m
+[0;32mI (32433) websocket_client: Image sent to WebSocket: 80166 bytes (12.5fps)[0m
+[1;31mE (32513) websocket_client: Websocket client is not connected[0m
+[0;32mI (32513) websocket_client: Image sent to WebSocket: 79897 bytes (12.5fps)[0m
+[1;31mE (32593) websocket_client: Websocket client is not connected[0m
+[0;32mI (32593) websocket_client: Image sent to WebSocket: 79968 bytes (12.7fps)[0m
+[1;31mE (32789) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (32790) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (32791) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (32797) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (32814) websocket_client: WebSocket client error[0m
+[0;32mI (32819) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (32823) websocket_client: WebSocket client connected[0m
+[1;31mE (32828) websocket_client: Websocket client is not connected[0m
+[0;32mI (32833) websocket_client: Image sent to WebSocket: 79459 bytes (4.2fps)[0m
+[1;31mE (32840) websocket_client: Websocket client is not connected[0m
+[0;32mI (32845) websocket_client: Image sent to WebSocket: 79701 bytes (90.9fps)[0m
+[1;31mE (32992) websocket_client: Websocket client is not connected[0m
+[0;32mI (32993) websocket_client: Image sent to WebSocket: 79652 bytes (6.8fps)[0m
+[1;31mE (33072) websocket_client: Websocket client is not connected[0m
+[0;32mI (33073) websocket_client: Image sent to WebSocket: 79295 bytes (12.7fps)[0m
+[1;31mE (33152) websocket_client: Websocket client is not connected[0m
+[0;32mI (33153) websocket_client: Image sent to WebSocket: 79658 bytes (12.5fps)[0m
+[1;31mE (33232) websocket_client: Websocket client is not connected[0m
+[0;32mI (33233) websocket_client: Image sent to WebSocket: 79745 bytes (12.7fps)[0m
+[1;31mE (33312) websocket_client: Websocket client is not connected[0m
+[0;32mI (33313) websocket_client: Image sent to WebSocket: 79781 bytes (12.7fps)[0m
+[1;31mE (33506) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (33507) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (33508) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (33514) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (33531) websocket_client: WebSocket client error[0m
+[0;32mI (33536) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (33540) websocket_client: WebSocket client connected[0m
+[1;31mE (33545) websocket_client: Websocket client is not connected[0m
+[0;32mI (33551) websocket_client: Image sent to WebSocket: 80110 bytes (4.2fps)[0m
+[1;31mE (33557) websocket_client: Websocket client is not connected[0m
+[0;32mI (33563) websocket_client: Image sent to WebSocket: 80003 bytes (83.3fps)[0m
+[1;31mE (33632) websocket_client: Websocket client is not connected[0m
+[0;32mI (33633) websocket_client: Image sent to WebSocket: 80124 bytes (14.3fps)[0m
+[1;31mE (33712) websocket_client: Websocket client is not connected[0m
+[0;32mI (33713) websocket_client: Image sent to WebSocket: 79879 bytes (12.7fps)[0m
+[1;31mE (33792) websocket_client: Websocket client is not connected[0m
+[0;32mI (33792) websocket_client: Image sent to WebSocket: 79918 bytes (12.7fps)[0m
+[1;31mE (33872) websocket_client: Websocket client is not connected[0m
+[0;32mI (33872) websocket_client: Image sent to WebSocket: 79928 bytes (12.5fps)[0m
+[1;31mE (33952) websocket_client: Websocket client is not connected[0m
+[0;32mI (33952) websocket_client: Image sent to WebSocket: 79844 bytes (12.7fps)[0m
+[1;31mE (34032) websocket_client: Websocket client is not connected[0m
+[0;32mI (34032) websocket_client: Image sent to WebSocket: 79856 bytes (12.5fps)[0m
+[1;31mE (34224) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (34224) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (34225) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (34232) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (34249) websocket_client: WebSocket client error[0m
+[0;32mI (34253) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (34258) websocket_client: WebSocket client connected[0m
+[1;31mE (34262) websocket_client: Websocket client is not connected[0m
+[0;32mI (34268) websocket_client: Image sent to WebSocket: 79952 bytes (4.3fps)[0m
+[1;31mE (34275) websocket_client: Websocket client is not connected[0m
+[0;32mI (34280) websocket_client: Image sent to WebSocket: 79776 bytes (90.9fps)[0m
+[1;31mE (34352) websocket_client: Websocket client is not connected[0m
+[0;32mI (34352) websocket_client: Image sent to WebSocket: 79842 bytes (13.9fps)[0m
+[1;31mE (34432) websocket_client: Websocket client is not connected[0m
+[0;32mI (34432) websocket_client: Image sent to WebSocket: 79775 bytes (12.7fps)[0m
+[1;31mE (34511) websocket_client: Websocket client is not connected[0m
+[0;32mI (34512) websocket_client: Image sent to WebSocket: 79789 bytes (12.7fps)[0m
+[1;31mE (34592) websocket_client: Websocket client is not connected[0m
+[0;32mI (34592) websocket_client: Image sent to WebSocket: 79679 bytes (12.5fps)[0m
+[1;31mE (34671) websocket_client: Websocket client is not connected[0m
+[0;32mI (34672) websocket_client: Image sent to WebSocket: 79800 bytes (12.7fps)[0m
+[1;31mE (34752) websocket_client: Websocket client is not connected[0m
+[0;32mI (34752) websocket_client: Image sent to WebSocket: 79903 bytes (12.5fps)[0m
+[1;31mE (34939) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (34940) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (34941) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (34947) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (34964) websocket_client: WebSocket client error[0m
+[0;32mI (34969) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (34973) websocket_client: WebSocket client connected[0m
+[1;31mE (34978) websocket_client: Websocket client is not connected[0m
+[0;32mI (34984) websocket_client: Image sent to WebSocket: 80283 bytes (4.3fps)[0m
+[1;31mE (34990) websocket_client: Websocket client is not connected[0m
+[0;32mI (34996) websocket_client: Image sent to WebSocket: 79748 bytes (90.9fps)[0m
+[1;31mE (35071) websocket_client: Websocket client is not connected[0m
+[0;32mI (35072) websocket_client: Image sent to WebSocket: 79552 bytes (13.3fps)[0m
+[1;31mE (35151) websocket_client: Websocket client is not connected[0m
+[0;32mI (35152) websocket_client: Image sent to WebSocket: 77231 bytes (12.7fps)[0m
+[1;31mE (35231) websocket_client: Websocket client is not connected[0m
+[0;32mI (35231) websocket_client: Image sent to WebSocket: 74719 bytes (12.7fps)[0m
+[1;31mE (35311) websocket_client: Websocket client is not connected[0m
+[0;32mI (35312) websocket_client: Image sent to WebSocket: 77498 bytes (12.5fps)[0m
+[1;31mE (35391) websocket_client: Websocket client is not connected[0m
+[0;32mI (35392) websocket_client: Image sent to WebSocket: 79375 bytes (12.5fps)[0m
+[1;31mE (35471) websocket_client: Websocket client is not connected[0m
+[0;32mI (35471) websocket_client: Image sent to WebSocket: 80154 bytes (12.7fps)[0m
+[1;31mE (35751) websocket_client: Could not lock ws-client within 200 timeout[0m
+[0;32mI (35751) websocket_client: Image sent to WebSocket: 80190 bytes (3.6fps)[0m
+[1;31mE (35759) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (35760) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (35765) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (35771) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (35788) websocket_client: WebSocket client error[0m
+[0;32mI (35793) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (35797) websocket_client: WebSocket client connected[0m
+[1;31mE (35802) websocket_client: Websocket client is not connected[0m
+[0;32mI (35808) websocket_client: Image sent to WebSocket: 80221 bytes (17.5fps)[0m
+[1;31mE (35871) websocket_client: Websocket client is not connected[0m
+[0;32mI (35871) websocket_client: Image sent to WebSocket: 80743 bytes (16.1fps)[0m
+[1;31mE (35951) websocket_client: Websocket client is not connected[0m
+[0;32mI (35951) websocket_client: Image sent to WebSocket: 80344 bytes (12.7fps)[0m
+[1;31mE (36031) websocket_client: Websocket client is not connected[0m
+[0;32mI (36031) websocket_client: Image sent to WebSocket: 80495 bytes (12.5fps)[0m
+[1;31mE (36111) websocket_client: Websocket client is not connected[0m
+[0;32mI (36111) websocket_client: Image sent to WebSocket: 80530 bytes (12.7fps)[0m
+[1;31mE (36191) websocket_client: Websocket client is not connected[0m
+[0;32mI (36191) websocket_client: Image sent to WebSocket: 80608 bytes (12.5fps)[0m
+[1;31mE (36271) websocket_client: Websocket client is not connected[0m
+[0;32mI (36271) websocket_client: Image sent to WebSocket: 81051 bytes (12.5fps)[0m
+[1;31mE (36476) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (36477) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (36478) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (36484) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (36501) websocket_client: WebSocket client error[0m
+[0;32mI (36505) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (36510) websocket_client: WebSocket client connected[0m
+[1;31mE (36515) websocket_client: Websocket client is not connected[0m
+[0;32mI (36520) websocket_client: Image sent to WebSocket: 80655 bytes (4.0fps)[0m
+[1;31mE (36527) websocket_client: Websocket client is not connected[0m
+[0;32mI (36532) websocket_client: Image sent to WebSocket: 80807 bytes (83.3fps)[0m
+[1;31mE (36670) websocket_client: Websocket client is not connected[0m
+[0;32mI (36671) websocket_client: Image sent to WebSocket: 80813 bytes (7.2fps)[0m
+[1;31mE (36750) websocket_client: Websocket client is not connected[0m
+[0;32mI (36751) websocket_client: Image sent to WebSocket: 80597 bytes (12.7fps)[0m
+[1;31mE (36830) websocket_client: Websocket client is not connected[0m
+[0;32mI (36831) websocket_client: Image sent to WebSocket: 80538 bytes (12.5fps)[0m
+[1;31mE (36910) websocket_client: Websocket client is not connected[0m
+[0;32mI (36911) websocket_client: Image sent to WebSocket: 80531 bytes (12.7fps)[0m
+[1;31mE (36990) websocket_client: Websocket client is not connected[0m
+[0;32mI (36991) websocket_client: Image sent to WebSocket: 80300 bytes (12.5fps)[0m
+[1;31mE (37192) esp-tls: [sock=54] delayed connect error: Connection reset by peer[0m
+[1;31mE (37193) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (37194) transport_ws: Error connecting to host 192.168.1.3:8887[0m
+[1;31mE (37201) websocket_client: esp_transport_connect() failed with -1, transport_error=ESP_ERR_ESP_TLS_FAILED_CONNECT_TO_HOST, tls_error_code=0, tls_flags=0, esp_ws_handshake_status_code=101, errno=119[0m
+[1;31mE (37218) websocket_client: WebSocket client error[0m
+[0;32mI (37222) websocket_client: Reconnect after 500 ms[0m
+[0;32mI (37226) websocket_client: WebSocket client connected[0m
+[1;31mE (37231) websocket_client: Websocket client is not connected[0m
+[0;32mI (37237) websocket_client: Image sent to WebSocket: 80338 bytes (4.1fps)[0m
+[1;31mE (37243) websocket_client: Websocket client is not connected[0m
+[0;32mI (37249) websocket_client: Image sent to WebSocket: 80351 bytes (90.9fps)[0m
+[1;31mE (37390) websocket_client: Websocket client is not connected[0m
+[0;32mI (37391) websocket_client: Image sent to WebSocket: 79945 bytes (7.1fps)[0m
+[1;31mE (37470) websocket_client: Websocket client is not connected[0m
+[0;32mI (37470) websocket_client: Image sent to WebSocket: 79412 bytes (12.7fps)[0m
+[1;31mE (37550) websocket_client: Websocket client is not connected[0m
+[0;32mI (37550) websocket_client: Image sent to WebSocket: 81760 bytes (12.5fps)[0m
