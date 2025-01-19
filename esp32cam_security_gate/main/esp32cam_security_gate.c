@@ -140,11 +140,9 @@ void app_main()
     }
 
     sensor_t *s = esp_camera_sensor_get();
-    s->set_brightness(s, 2);
-    s->set_saturation(s, 200);
-    s->set_sharpness(s, 200);
     s->set_hmirror(s, 1);
     s->set_vflip(s, 1);
+    s->set_framesize(s, FRAMESIZE_SVGA);
 
     setup_esp_websocket_client_init();
 }

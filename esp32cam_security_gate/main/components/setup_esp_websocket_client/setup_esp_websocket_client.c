@@ -38,7 +38,6 @@ void task_send_image_to_websocket(void *ws_client)
 
      while (true)
      {
-
           camera_fb_t *fb = esp_camera_fb_get();
           if (!fb)
           {
@@ -52,7 +51,7 @@ void task_send_image_to_websocket(void *ws_client)
               (esp_websocket_client_handle_t)ws_client,
               (char *)fb->buf,
               fb->len,
-              pdMS_TO_TICKS(5000));
+              pdMS_TO_TICKS(200));
 
           esp_camera_fb_return(fb);
 
@@ -86,7 +85,7 @@ void setup_esp_websocket_client_init()
 
      esp_websocket_client_config_t ws_cfg = {
          .uri = uri,
-         .buffer_size = 16 * 1024,
+         .buffer_size = 32 * 1024,
          .reconnect_timeout_ms = 500,
          .network_timeout_ms = 5000,
      };

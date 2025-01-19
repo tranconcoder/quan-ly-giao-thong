@@ -1,0 +1,6 @@
+{
+  "message": "ci: PLT-583: Add custom check for sdk version in release",
+  "commit": "df34d5511c3d52f6fe4d07acddc0a26e3a949916",
+  "date": "2024-12-04T17:18:34.000Z",
+  "branch": "develop"
+}

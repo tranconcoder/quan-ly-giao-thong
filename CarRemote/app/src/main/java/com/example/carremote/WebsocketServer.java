@@ -17,6 +17,7 @@ import org.java_websocket.server.WebSocketServer;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.util.Map;
+import java.util.Timer;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -28,6 +29,10 @@ public class WebsocketServer extends  WebSocketServer {
     private Context ctx;
     private boolean isDetecting = false;
 
+    // Fps monitor
+    private Timer timer;
+    private byte frameCountPerSecond = 0;
+
     public WebsocketServer(
             Context ctx,
             Detector.DetectorListener detectorListener,
@@ -37,10 +42,20 @@ public class WebsocketServer extends  WebSocketServer {
     ) {
         super(new InetSocketAddress(port));
 
+        this.timer = new Timer();
         this.customRenderer = customRenderer;
         this.glSurfaceView = glSurfaceView;
         this.ctx = ctx;
         this.detector = new Detector(ctx,Constants.MODEL_PATH, Constants.LABELS_PATH, detectorListener);
+
+
+        timer.schedule(new java.util.TimerTask() {
+            @Override
+            public void run() {
+                Log.d(Global.TAG.toString(), "FPS: " + frameCountPerSecond);
+                frameCountPerSecond = 0;
+            }
+        }, 0, 1000);
     }
     public WebsocketServer(InetSocketAddress address) {
         super(address);
@@ -74,13 +89,11 @@ public class WebsocketServer extends  WebSocketServer {
         Bitmap bitmap = decodeCompressedImage(message);
         customRenderer.updateFrame(bitmap);
         glSurfaceView.requestRender();
-
+        frameCountPerSecond++;
 
         new Thread(() -> {
             if (!isDetecting) {
                 isDetecting = true;
-                // Rotate bitmap 90 degree
-
                 detector.detect(bitmap);
                 isDetecting = false;
             }

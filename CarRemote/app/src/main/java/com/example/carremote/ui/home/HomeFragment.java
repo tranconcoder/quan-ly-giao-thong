@@ -304,6 +304,7 @@ public class HomeFragment extends Fragment implements Detector.DetectorListener 
     @Override
     public void onEmptyDetect() {
         Log.i(Global.TAG.toString(), "Empty detect");
+        binding.overlayView.clear();
     }
 
     @Override

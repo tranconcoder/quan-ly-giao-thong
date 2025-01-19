@@ -3,7 +3,7 @@
 #include "esp_err.h"
 
 // CAMERA SETTINGS
-#define CAM_FRAMESIZE FRAMESIZE_VGA
+#define CAM_FRAMESIZE FRAMESIZE_SVGA
 
 // WROVER-KIT PIN Map
 // #define CAM_PIN_PWDN -1  // power down is not used
