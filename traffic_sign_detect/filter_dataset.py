@@ -1,5 +1,6 @@
 import os
 import sys
+from collections import defaultdict
 
 def process_labels(path, keep_labels, new_labels):
     """
@@ -7,6 +8,7 @@ def process_labels(path, keep_labels, new_labels):
     - Xóa các dòng không thuộc nhãn cần giữ lại (keep_labels).
     - Thay thế nhãn giữ lại bằng nhãn mới (new_labels).
     - Xóa file nhãn và file ảnh tương ứng nếu không tìm thấy nhãn nào ở keep_labels trong file nhãn.
+    - Thống kê số lượng ảnh theo từng nhãn.
 
     Args:
         path (str): Đường dẫn thư mục chứa `images` và `labels`.
@@ -25,6 +27,7 @@ def process_labels(path, keep_labels, new_labels):
         return
 
     label_mapping = dict(zip(keep_labels, new_labels))
+    label_counts = defaultdict(int)
 
     for file_name in os.listdir(labels_path):
         file_path = os.path.join(labels_path, file_name)
@@ -42,8 +45,10 @@ def process_labels(path, keep_labels, new_labels):
             if len(parts) > 0:
                 label = int(parts[0])
                 if label in label_mapping:
-                    parts[0] = str(label_mapping[label])
+                    new_label = label_mapping[label]
+                    parts[0] = str(new_label)
                     new_lines.append(" ".join(parts))
+                    label_counts[new_label] += 1
                     has_valid_label = True
 
         if has_valid_label:
@@ -57,6 +62,11 @@ def process_labels(path, keep_labels, new_labels):
             if os.path.exists(image_file):
                 os.remove(image_file)
             print(f"Đã xóa file nhãn và ảnh: {file_name}, {os.path.splitext(file_name)[0] + '.jpg'}")
+
+    # Thống kê số lượng ảnh theo nhãn
+    print("\nThống kê số lượng ảnh theo từng nhãn:")
+    for label, count in label_counts.items():
+        print(f"Nhãn {label}: {count} ảnh")
 
 if __name__ == "__main__":
     if len(sys.argv) < 4:
@@ -75,4 +85,3 @@ if __name__ == "__main__":
         sys.exit(1)
 
     process_labels(input_path, keep_labels, new_labels)
-
