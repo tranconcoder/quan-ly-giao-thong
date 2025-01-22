@@ -2,8 +2,8 @@ train: ../train/images
 val: ../valid/images
 test: ../test/images
 
-nc: 12
-names: ['Speed Limit -10-','Speed Limit -100-','Speed Limit -110-','Speed Limit -120-','Speed Limit -20-','Speed Limit -30-','Speed Limit -40-','Speed Limit -50-','Speed Limit -60-','Speed Limit -70-','Speed Limit -80-','Speed Limit -90-']
+nc: 15
+names: ['Speed Limit -10-','Speed Limit -100-','Speed Limit -110-','Speed Limit -120-','Speed Limit -20-','Speed Limit -30-','Speed Limit -40-','Speed Limit -50-','Speed Limit -60-','Speed Limit -70-','Speed Limit -80-','Speed Limit -90-', 'Traffic Green', 'Traffic Red', 'Traffic Yellow']
 
 roboflow:
   workspace: dph
