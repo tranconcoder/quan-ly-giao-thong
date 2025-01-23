@@ -10,3 +10,6 @@ Speed Limit -60-
 Speed Limit -70-
 Speed Limit -80-
 Speed Limit -90-
+Traffic Green
+Traffic Red
+Traffic Yellow
