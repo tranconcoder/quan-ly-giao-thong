@@ -52,7 +52,6 @@ $<TARGET_FILE:__idf_esp_netif>
 $<TARGET_FILE:__idf_wpa_supplicant>
 $<TARGET_FILE:__idf_esp_coex>
 $<TARGET_FILE:__idf_esp_wifi>
-$<TARGET_FILE:__idf_bt>
 $<TARGET_FILE:__idf_unity>
 $<TARGET_FILE:__idf_cmock>
 $<TARGET_FILE:__idf_console>
@@ -89,12 +88,12 @@ $<TARGET_FILE:__idf_abobija__rc522>
 $<TARGET_FILE:__idf_common_struct>
 $<TARGET_FILE:__idf_esp-websocket_client>
 $<TARGET_FILE:__idf_espressif__esp32-camera>
+$<TARGET_FILE:__idf_espressif__qrcode>
 $<TARGET_FILE:__idf_espressif__esp_modem>
 $<TARGET_FILE:__idf_espressif__usb_host_cdc_acm>
 $<TARGET_FILE:__idf_espressif__esp_modem_usb_dte>
 $<TARGET_FILE:__idf_espressif__tinyusb>
 $<TARGET_FILE:__idf_espressif__esp_tinyusb>
-$<TARGET_FILE:__idf_espressif__qrcode>
 $<TARGET_FILE:__idf_espressif__iot_bridge>
 $<TARGET_FILE:__idf_espressif__mesh_lite>
 $<TARGET_FILE:__idf_setup_esp32_cam>

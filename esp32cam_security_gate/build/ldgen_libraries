@@ -52,7 +52,6 @@
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/wpa_supplicant/libwpa_supplicant.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/esp_coex/libesp_coex.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/esp_wifi/libesp_wifi.a
-/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/bt/libbt.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/unity/libunity.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/cmock/libcmock.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/console/libconsole.a
@@ -89,12 +88,12 @@
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/common_struct/libcommon_struct.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/esp-websocket_client/libesp-websocket_client.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/espressif__esp32-camera/libespressif__esp32-camera.a
+/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/espressif__qrcode/libespressif__qrcode.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/espressif__esp_modem/libespressif__esp_modem.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/espressif__usb_host_cdc_acm/libespressif__usb_host_cdc_acm.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/espressif__esp_modem_usb_dte/libespressif__esp_modem_usb_dte.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/espressif__tinyusb/libespressif__tinyusb.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/espressif__esp_tinyusb/libespressif__esp_tinyusb.a
-/home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/espressif__qrcode/libespressif__qrcode.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/espressif__iot_bridge/libespressif__iot_bridge.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/espressif__mesh_lite/libespressif__mesh_lite.a
 /home/tvconss/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/setup_esp32_cam/libsetup_esp32_cam.a

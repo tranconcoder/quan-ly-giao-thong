@@ -1,3 +1,13 @@
+## 1.7.1
+
+- NCM: Changed default NTB config to decrease DRAM memory usage (fix for DRAM overflow on ESP32S2)
+
+## 1.7.0
+
+- NCM: Added possibility to configure NCM Transfer Blocks (NTB) via menuconfig
+- esp_tinyusb: Added option to select TinyUSB peripheral on esp32p4 via menuconfig (USB_PHY_SUPPORTS_P4_OTG11 in esp-idf is required)
+- esp_tinyusb: Fixed uninstall tinyusb driver with not default task configuration
+
 ## 1.6.0
 
 - CDC-ACM: Fixed memory leak on deinit

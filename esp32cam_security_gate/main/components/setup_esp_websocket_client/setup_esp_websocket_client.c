@@ -42,7 +42,7 @@ void task_send_image_to_websocket(void *ws_client)
           if (!fb)
           {
                ESP_LOGE(TAG, "Camera Capture Failed");
-               vTaskDelay(1000 / portTICK_PERIOD_MS); // Add delay on error
+               vTaskDelay(pdMS_TO_TICKS(1000)); // Add delay on error
                continue;
           }
 
@@ -70,7 +70,7 @@ void task_send_image_to_websocket(void *ws_client)
           }
 
           // Add small delay to prevent tight loop
-          // vTaskDelay(10 / portTICK_PERIOD_MS);
+          // vTaskDelay(pdMS_TO_TICKS(100));
      }
 }
 
@@ -87,7 +87,7 @@ void setup_esp_websocket_client_init()
          .uri = uri,
          .buffer_size = 32 * 1024,
          .reconnect_timeout_ms = 500,
-         .network_timeout_ms = 5000,
+         .network_timeout_ms = 10000,
      };
      esp_websocket_client_handle_t ws_client = esp_websocket_client_init(&ws_cfg);
 

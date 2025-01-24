@@ -60,6 +60,8 @@ class Detector(
         val inputShape = interpreter.getInputTensor(0)?.shape()
         val outputShape = interpreter.getOutputTensor(0)?.shape()
 
+        Log.d(Global.TAG.toString(), "Input Shape: ${inputShape?.contentToString()}")
+
         if (inputShape != null) {
             tensorWidth = inputShape[1]
             tensorHeight = inputShape[2]

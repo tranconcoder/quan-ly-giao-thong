@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2020-2024 Espressif Systems (Shanghai) CO LTD
+ * SPDX-FileCopyrightText: 2020-2025 Espressif Systems (Shanghai) CO LTD
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -32,6 +32,13 @@ esp_err_t tinyusb_driver_install(const tinyusb_config_t *config)
     usb_phy_config_t phy_conf = {
         .controller = USB_PHY_CTRL_OTG,
         .otg_mode = USB_OTG_MODE_DEVICE,
+#if (USB_PHY_SUPPORTS_P4_OTG11)
+        .otg_speed = (TUD_OPT_HIGH_SPEED) ? USB_PHY_SPEED_HIGH : USB_PHY_SPEED_FULL,
+#else
+#if (CONFIG_IDF_TARGET_ESP32P4 && CONFIG_TINYUSB_RHPORT_FS)
+#error "USB PHY for OTG1.1 is not supported, please update your esp-idf."
+#endif // IDF_TARGET_ESP32P4 && CONFIG_TINYUSB_RHPORT_FS
+#endif // USB_PHY_SUPPORTS_P4_OTG11
     };
 
     // External PHY IOs config
@@ -73,16 +80,11 @@ esp_err_t tinyusb_driver_install(const tinyusb_config_t *config)
 
 esp_err_t tinyusb_driver_uninstall(void)
 {
-    esp_err_t ret = tusb_stop_task();
-
-    if (ret != ESP_OK) {
-        return ret;
-    }
-
-    if (!tusb_teardown()) {
-        return ESP_ERR_NOT_FINISHED;
-    }
-
+#if !CONFIG_TINYUSB_NO_DEFAULT_TASK
+    ESP_RETURN_ON_ERROR(tusb_stop_task(), TAG, "Unable to stop TinyUSB task");
+#endif // !CONFIG_TINYUSB_NO_DEFAULT_TASK
+    ESP_RETURN_ON_FALSE(tusb_teardown(), ESP_ERR_NOT_FINISHED, TAG, "Unable to teardown TinyUSB");
     tinyusb_free_descriptors();
-    return usb_del_phy(phy_hdl);
+    ESP_RETURN_ON_ERROR(usb_del_phy(phy_hdl), TAG, "Unable to delete PHY");
+    return ESP_OK;
 }

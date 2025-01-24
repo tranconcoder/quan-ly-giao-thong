@@ -1,12 +1,9 @@
 dependencies:
   abobija/rc522: '*'
-  espressif/tinyusb: '^0.17.0~1'
-  espressif/esp_tinyusb: '^1.5.0'
-  espressif/esp_modem_usb_dte: '^1.2.1'
   setup_esp32_cam:
-    path: './components/setup_esp32_cam'
+    path: ./components/setup_esp32_cam
   setup_esp_websocket_client:
-    path: './components/setup_esp_websocket_client'
+    path: ./components/setup_esp_websocket_client
   common_struct:
     path: ../../components/common_struct
   esp-websocket_client:
@@ -22,3 +19,5 @@ dependencies:
     rules:
       - if: target in [esp32s2, esp32s3]
       - if: idf_version < 5.1.4
+  # espressif/esp_tinyusb: ^1.7.1
+  # espressif/tinyusb: ^0.17.0~2

@@ -1,7 +1,7 @@
 #include "esp32cam_security_gate.h"
 
 // TASK STACK SIZE
-#define STACK_SIZE 4 * 1024
+#define STACK_SIZE 32 * 1024
 
 static int s_retry_num = 0;
 static const char *TAG = "main";
@@ -128,6 +128,7 @@ void app_main()
 
     ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
     wifi_init_sta();
+    ESP_LOGI(TAG, "Camera inited");
 
     // Init camera
     esp_err_t init_camera = setup_esp32_cam();
@@ -142,7 +143,6 @@ void app_main()
     sensor_t *s = esp_camera_sensor_get();
     s->set_hmirror(s, 1);
     s->set_vflip(s, 1);
-    s->set_framesize(s, FRAMESIZE_XGA);
 
     setup_esp_websocket_client_init();
 }

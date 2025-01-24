@@ -65,11 +65,11 @@ dependencies:
       require: private
       version: '>=0.1.28,<2.0.0'
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
     version: 1.2.1
   espressif/esp_tinyusb:
-    component_hash: 3f273ea23ce1a9573f6708729c02f46d75c8110bc88a61daa07c3a03789f718f
+    component_hash: fe1135e7a419b0c6034117aea46d4ad8048618de50f3ae774b1526ae571f1ec6
     dependencies:
     - name: idf
       require: private
@@ -79,9 +79,9 @@ dependencies:
       require: public
       version: '>=0.14.2'
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
-    version: 1.6.0
+    version: 1.7.1
   espressif/iot_bridge:
     component_hash: a2443074914abe08455474e63a4dbab298697625e00e6931a08b1ddaa57d1c23
     dependencies:
@@ -151,7 +151,7 @@ dependencies:
       require: private
       version: '>=5.0'
     source:
-      registry_url: https://components.espressif.com/
+      registry_url: https://components.espressif.com
       type: service
     targets:
     - esp32s2
@@ -189,13 +189,10 @@ direct_dependencies:
 - common_struct
 - esp-websocket_client
 - espressif/esp32-camera
-- espressif/esp_modem_usb_dte
-- espressif/esp_tinyusb
 - espressif/mesh_lite
-- espressif/tinyusb
 - idf
 - setup_esp32_cam
 - setup_esp_websocket_client
-manifest_hash: 3056edb57e8433c5e607a0ea9abf4a767b8c8fd113b1123932553dd1b5312d84
+manifest_hash: 8d472566921ee85c8e5f4d02a766cf59c39cd0fcb37680f86e5e0edf1aac9907
 target: esp32s3
 version: 2.0.0
