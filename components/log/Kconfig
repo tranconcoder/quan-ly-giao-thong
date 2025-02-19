@@ -1,7 +1,0 @@
-menu "Log"
-
-    orsource "./Kconfig.level"
-
-    orsource "./Kconfig.format"
-
-endmenu

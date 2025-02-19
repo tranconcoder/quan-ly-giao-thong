@@ -1,2 +1,0 @@
-class LabelStudioXMLSyntaxErrorSentryIgnored(Exception):
-    pass
