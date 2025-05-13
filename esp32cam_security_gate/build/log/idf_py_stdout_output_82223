@@ -1,0 +1,133 @@
+-- IDF_TARGET is not set, guessed 'esp32s3' from sdkconfig '/home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/sdkconfig'
+-- Found Git: /usr/bin/git (found version "2.43.0") 
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /home/tranv/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/tranv/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/tranv/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32s3
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: usb_device
+NOTICE: Skipping optional dependency: usb_device
+NOTICE: Skipping optional dependency: usb_device
+NOTICE: Using component placed at /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp32_cam for dependency "setup_esp32_cam", specified in /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/idf_component.yml
+NOTICE: Using component placed at /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp_websocket_client for dependency "setup_esp_websocket_client", specified in /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/idf_component.yml
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: usb_device
+NOTICE: Processing 15 dependencies:
+NOTICE: [1/15] abobija/rc522 (3.3.1)
+NOTICE: [2/15] espressif/cmake_utilities (0.5.3)
+NOTICE: [3/15] espressif/esp32-camera (2.0.15)
+NOTICE: [4/15] espressif/esp_modem (1.4.0)
+NOTICE: [5/15] espressif/esp_modem_usb_dte (1.2.1)
+NOTICE: [6/15] espressif/esp_tinyusb (1.7.4~1)
+NOTICE: [7/15] espressif/esp_websocket_client (1.4.0)
+NOTICE: [8/15] espressif/iot_bridge (0.11.9)
+NOTICE: [9/15] espressif/mesh_lite (1.0.1)
+NOTICE: [10/15] espressif/qrcode (0.1.0~2)
+NOTICE: [11/15] espressif/tinyusb (0.18.0~2)
+NOTICE: [12/15] espressif/usb_host_cdc_acm (2.1.0)
+NOTICE: [13/15] setup_esp32_cam (*) (/home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp32_cam)
+NOTICE: [14/15] setup_esp_websocket_client (*) (/home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp_websocket_client)
+NOTICE: [15/15] idf (5.4.1)
+NOTICE: Skipping optional dependency: usb_device
+NOTICE: Skipping optional dependency: espressif/esp_modem
+-- Project sdkconfig file /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/sdkconfig
+Loading defaults file /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/sdkconfig.defaults...
+/home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/sdkconfig.defaults:7 CONFIG_CONSOLE_UART_BAUDRATE was replaced with CONFIG_ESP_CONSOLE_UART_BAUDRATE 
+/home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/sdkconfig.defaults:31 CONFIG_ESP32_ENABLE_COREDUMP was replaced with CONFIG_ESP_COREDUMP_ENABLE 
+/home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/sdkconfig.defaults:37 CONFIG_ESP32_WIFI_AMPDU_TX_ENABLED was replaced with CONFIG_ESP_WIFI_AMPDU_TX_ENABLED 
+/home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/sdkconfig.defaults:38 CONFIG_ESP32_WIFI_AMPDU_RX_ENABLED was replaced with CONFIG_ESP_WIFI_AMPDU_RX_ENABLED 
+/tmp/kconfgen_tmpml3w1p37:37 line was updated to CONFIG_ESP_WIFI_AMPDU_TX_ENABLED=n
+/tmp/kconfgen_tmpml3w1p37:38 line was updated to CONFIG_ESP_WIFI_AMPDU_RX_ENABLED=n
+-- Compiler supported targets: xtensa-esp-elf
+-- Found Python3: /home/tranv/.espressif/python_env/idf5.4_py3.12_env/bin/python (found version "3.12.3") found components: Interpreter 
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
+-- App "mesh_local_control" version: 4c75ce1aa-dirty
+-- Adding linker script /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /home/tranv/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script /home/tranv/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script /home/tranv/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.bt_funcs.ld
+-- Adding linker script /home/tranv/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script /home/tranv/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.wdt.ld
+-- Adding linker script /home/tranv/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script /home/tranv/esp/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script /home/tranv/esp/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- IOT_BRIDGE: 0.11.9
+-- MESH_LITE: 1.0.1
+-- Components: abobija__rc522 app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_cam esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_security esp_system esp_timer esp_vfs_console esp_wifi espcoredump espressif__cmake_utilities espressif__esp32-camera espressif__esp_modem espressif__esp_modem_usb_dte espressif__esp_tinyusb espressif__esp_websocket_client espressif__iot_bridge espressif__mesh_lite espressif__qrcode espressif__tinyusb espressif__usb_host_cdc_acm esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread rt sdmmc setup_esp32_cam setup_esp_websocket_client soc spi_flash spiffs tcp_transport touch_element ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/managed_components/abobija__rc522 /home/tranv/esp/esp-idf/components/app_trace /home/tranv/esp/esp-idf/components/app_update /home/tranv/esp/esp-idf/components/bootloader /home/tranv/esp/esp-idf/components/bootloader_support /home/tranv/esp/esp-idf/components/bt /home/tranv/esp/esp-idf/components/cmock /home/tranv/esp/esp-idf/components/console /home/tranv/esp/esp-idf/components/cxx /home/tranv/esp/esp-idf/components/driver /home/tranv/esp/esp-idf/components/efuse /home/tranv/esp/esp-idf/components/esp-tls /home/tranv/esp/esp-idf/components/esp_adc /home/tranv/esp/esp-idf/components/esp_app_format /home/tranv/esp/esp-idf/components/esp_bootloader_format /home/tranv/esp/esp-idf/components/esp_coex /home/tranv/esp/esp-idf/components/esp_common /home/tranv/esp/esp-idf/components/esp_driver_ana_cmpr /home/tranv/esp/esp-idf/components/esp_driver_cam /home/tranv/esp/esp-idf/components/esp_driver_dac /home/tranv/esp/esp-idf/components/esp_driver_gpio /home/tranv/esp/esp-idf/components/esp_driver_gptimer /home/tranv/esp/esp-idf/components/esp_driver_i2c /home/tranv/esp/esp-idf/components/esp_driver_i2s /home/tranv/esp/esp-idf/components/esp_driver_isp /home/tranv/esp/esp-idf/components/esp_driver_jpeg /home/tranv/esp/esp-idf/components/esp_driver_ledc /home/tranv/esp/esp-idf/components/esp_driver_mcpwm /home/tranv/esp/esp-idf/components/esp_driver_parlio /home/tranv/esp/esp-idf/components/esp_driver_pcnt /home/tranv/esp/esp-idf/components/esp_driver_ppa /home/tranv/esp/esp-idf/components/esp_driver_rmt /home/tranv/esp/esp-idf/components/esp_driver_sdio /home/tranv/esp/esp-idf/components/esp_driver_sdm /home/tranv/esp/esp-idf/components/esp_driver_sdmmc /home/tranv/esp/esp-idf/components/esp_driver_sdspi /home/tranv/esp/esp-idf/components/esp_driver_spi /home/tranv/esp/esp-idf/components/esp_driver_touch_sens /home/tranv/esp/esp-idf/components/esp_driver_tsens /home/tranv/esp/esp-idf/components/esp_driver_uart /home/tranv/esp/esp-idf/components/esp_driver_usb_serial_jtag /home/tranv/esp/esp-idf/components/esp_eth /home/tranv/esp/esp-idf/components/esp_event /home/tranv/esp/esp-idf/components/esp_gdbstub /home/tranv/esp/esp-idf/components/esp_hid /home/tranv/esp/esp-idf/components/esp_http_client /home/tranv/esp/esp-idf/components/esp_http_server /home/tranv/esp/esp-idf/components/esp_https_ota /home/tranv/esp/esp-idf/components/esp_https_server /home/tranv/esp/esp-idf/components/esp_hw_support /home/tranv/esp/esp-idf/components/esp_lcd /home/tranv/esp/esp-idf/components/esp_local_ctrl /home/tranv/esp/esp-idf/components/esp_mm /home/tranv/esp/esp-idf/components/esp_netif /home/tranv/esp/esp-idf/components/esp_netif_stack /home/tranv/esp/esp-idf/components/esp_partition /home/tranv/esp/esp-idf/components/esp_phy /home/tranv/esp/esp-idf/components/esp_pm /home/tranv/esp/esp-idf/components/esp_psram /home/tranv/esp/esp-idf/components/esp_ringbuf /home/tranv/esp/esp-idf/components/esp_rom /home/tranv/esp/esp-idf/components/esp_security /home/tranv/esp/esp-idf/components/esp_system /home/tranv/esp/esp-idf/components/esp_timer /home/tranv/esp/esp-idf/components/esp_vfs_console /home/tranv/esp/esp-idf/components/esp_wifi /home/tranv/esp/esp-idf/components/espcoredump /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/managed_components/espressif__cmake_utilities /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/managed_components/espressif__esp32-camera /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/managed_components/espressif__esp_modem /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/managed_components/espressif__esp_modem_usb_dte /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/managed_components/espressif__esp_tinyusb /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/managed_components/espressif__esp_websocket_client /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/managed_components/espressif__iot_bridge /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/managed_components/espressif__mesh_lite /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/managed_components/espressif__qrcode /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/managed_components/espressif__tinyusb /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/managed_components/espressif__usb_host_cdc_acm /home/tranv/esp/esp-idf/components/esptool_py /home/tranv/esp/esp-idf/components/fatfs /home/tranv/esp/esp-idf/components/freertos /home/tranv/esp/esp-idf/components/hal /home/tranv/esp/esp-idf/components/heap /home/tranv/esp/esp-idf/components/http_parser /home/tranv/esp/esp-idf/components/idf_test /home/tranv/esp/esp-idf/components/ieee802154 /home/tranv/esp/esp-idf/components/json /home/tranv/esp/esp-idf/components/log /home/tranv/esp/esp-idf/components/lwip /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main /home/tranv/esp/esp-idf/components/mbedtls /home/tranv/esp/esp-idf/components/mqtt /home/tranv/esp/esp-idf/components/newlib /home/tranv/esp/esp-idf/components/nvs_flash /home/tranv/esp/esp-idf/components/nvs_sec_provider /home/tranv/esp/esp-idf/components/openthread /home/tranv/esp/esp-idf/components/partition_table /home/tranv/esp/esp-idf/components/perfmon /home/tranv/esp/esp-idf/components/protobuf-c /home/tranv/esp/esp-idf/components/protocomm /home/tranv/esp/esp-idf/components/pthread /home/tranv/esp/esp-idf/components/rt /home/tranv/esp/esp-idf/components/sdmmc /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp32_cam /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp_websocket_client /home/tranv/esp/esp-idf/components/soc /home/tranv/esp/esp-idf/components/spi_flash /home/tranv/esp/esp-idf/components/spiffs /home/tranv/esp/esp-idf/components/tcp_transport /home/tranv/esp/esp-idf/components/touch_element /home/tranv/esp/esp-idf/components/ulp /home/tranv/esp/esp-idf/components/unity /home/tranv/esp/esp-idf/components/usb /home/tranv/esp/esp-idf/components/vfs /home/tranv/esp/esp-idf/components/wear_levelling /home/tranv/esp/esp-idf/components/wifi_provisioning /home/tranv/esp/esp-idf/components/wpa_supplicant /home/tranv/esp/esp-idf/components/xtensa
+-- Configuring done (13.5s)
+-- Generating done (0.7s)
+-- Build files have been written to: /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build

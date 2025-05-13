@@ -1,0 +1,13 @@
+{
+	"git.ignoreLimitWarning": true,
+	"files.associations": {
+		"*.js": "javascript",
+		"freertosconfig.h": "c",
+		"ringbuf.h": "c",
+		"stdbool.h": "c",
+		"stdexcept": "cpp",
+		"esp32cam_security_gate.h": "c",
+		"setup_esp_websocket_client.h": "c",
+		"setup_esp32_cam.h": "c"
+	}
+}

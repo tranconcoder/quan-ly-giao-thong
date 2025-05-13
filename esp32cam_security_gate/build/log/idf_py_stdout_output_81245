@@ -1,0 +1,3 @@
+-- IDF_TARGET is not set, guessed 'esp32s3' from sdkconfig '/home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/sdkconfig'
+-- Found Git: /usr/bin/git (found version "2.43.0") 
+-- The C compiler identification is GNU 14.2.0

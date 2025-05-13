@@ -1,0 +1,23 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/bootloader/esp-idf/esptool_py && /home/tranv/.espressif/python_env/idf5.4_py3.12_env/bin/python /home/tranv/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/bootloader/bootloader.bin
+Bootloader binary size 0x5170 bytes. 0x2e90 bytes (36%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/setup_esp_websocket_client/CMakeFiles/__idf_setup_esp_websocket_client.dir/setup_esp_websocket_client.c.obj
+In file included from /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp_websocket_client/include/setup_esp_websocket_client.h:2,
+                 from /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp_websocket_client/setup_esp_websocket_client.c:1:
+/home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp32_cam/include/setup_esp32_cam.h:10:18: warning: 'init_camera' declared 'static' but never defined [-Wunused-function]
+   10 | static esp_err_t init_camera(void);
+      |                  ^~~~~~~~~~~
+[5/9] Linking C static library esp-idf/setup_esp_websocket_client/libsetup_esp_websocket_client.a
+[6/9] Generating ld/sections.ld
+warning: the int symbol BRIDGE_SOFTAP_MAX_CONNECT_NUMBER (defined at /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/managed_components/espressif__iot_bridge/Kconfig:108) has a non-int default BRIDGE_CUSTOM_MAX_CONNECT_NUMBER (undefined)
+[7/9] Linking CXX executable mesh_local_control.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/mesh_local_control.bin
+[9/9] cd /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/esptool_py && /home/tranv/.espressif/python_env/idf5.4_py3.12_env/bin/python /home/tranv/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/partition_table/partition-table.bin /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/mesh_local_control.bin
+mesh_local_control.bin binary size 0xe9200 bytes. Smallest app partition is 0x1e0000 bytes. 0xf6e00 bytes (51%) free.

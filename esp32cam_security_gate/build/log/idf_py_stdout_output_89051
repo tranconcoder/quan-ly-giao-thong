@@ -1,0 +1,7 @@
+[1/4] cd /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/esp-idf/esptool_py && /home/tranv/.espressif/python_env/idf5.4_py3.12_env/bin/python /home/tranv/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/partition_table/partition-table.bin /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/mesh_local_control.bin
+mesh_local_control.bin binary size 0xe9200 bytes. Smallest app partition is 0x1e0000 bytes. 0xf6e00 bytes (51%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] cd /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/bootloader/esp-idf/esptool_py && /home/tranv/.espressif/python_env/idf5.4_py3.12_env/bin/python /home/tranv/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/build/bootloader/bootloader.bin
+Bootloader binary size 0x5170 bytes. 0x2e90 bytes (36%) free.
+[3/4] No install step for 'bootloader'
+[4/4] Completed 'bootloader'

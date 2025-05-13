@@ -1,0 +1,11 @@
+CMake Error at /home/tranv/esp/esp-idf/tools/cmake/build.cmake:318 (message):
+  Failed to resolve component 'common_struct' required by component
+  'setup_esp32_cam': unknown name.
+Call Stack (most recent call first):
+  /home/tranv/esp/esp-idf/tools/cmake/build.cmake:361 (__build_resolve_and_add_req)
+  /home/tranv/esp/esp-idf/tools/cmake/build.cmake:368 (__build_expand_requirements)
+  /home/tranv/esp/esp-idf/tools/cmake/build.cmake:665 (__build_expand_requirements)
+  /home/tranv/esp/esp-idf/tools/cmake/project.cmake:717 (idf_build_process)
+  CMakeLists.txt:7 (project)
+
+

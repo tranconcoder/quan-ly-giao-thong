@@ -1,0 +1,45 @@
+-- IDF_TARGET is not set, guessed 'esp32s3' from sdkconfig '/home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/sdkconfig'
+-- Found Git: /usr/bin/git (found version "2.43.0") 
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /home/tranv/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /home/tranv/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /home/tranv/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32s3
+NOTICE: Manifest files have changed, solving dependencies.
+NOTICE: Skipping optional dependency: usb_device
+NOTICE: Skipping optional dependency: usb_device
+NOTICE: Using component placed at /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp32_cam for dependency "setup_esp32_cam", specified in /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/idf_component.yml
+NOTICE: Using component placed at /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp_websocket_client for dependency "setup_esp_websocket_client", specified in /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/idf_component.yml
+.......NOTICE: Skipping optional dependency: espressif/esp_modem
+NOTICE: Skipping optional dependency: espressif/esp_modem
+....................NOTICE: Skipping optional dependency: usb_device
+NOTICE: Updating lock file at /home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/dependencies.lock
+NOTICE: Processing 15 dependencies:
+NOTICE: [1/15] abobija/rc522 (3.2.4)
+NOTICE: [2/15] espressif/cmake_utilities (0.5.3)
+NOTICE: [3/15] espressif/esp32-camera (2.0.15)
+NOTICE: [4/15] espressif/esp_modem (1.4.0)
+NOTICE: [5/15] espressif/esp_modem_usb_dte (1.2.1)
+NOTICE: [6/15] espressif/esp_tinyusb (1.7.4~1)
+NOTICE: [7/15] espressif/esp_websocket_client (1.4.0)
+NOTICE: [8/15] espressif/iot_bridge (0.11.9)
+NOTICE: [9/15] espressif/mesh_lite (1.0.1)
+NOTICE: [10/15] espressif/qrcode (0.1.0~2)
+NOTICE: [11/15] espressif/tinyusb (0.18.0~2)
+NOTICE: [12/15] espressif/usb_host_cdc_acm (2.1.0)
+NOTICE: [13/15] setup_esp32_cam (*) (/home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp32_cam)
+NOTICE: [14/15] setup_esp_websocket_client (*) (/home/tranv/Workspace/quan-ly-giao-thong/esp32cam_security_gate/main/components/setup_esp_websocket_client)
+NOTICE: [15/15] idf (5.4.1)
+NOTICE: Skipping optional dependency: usb_device
+NOTICE: Skipping optional dependency: espressif/esp_modem
+-- Configuring incomplete, errors occurred!
